@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Type / Priority / Status | Bug / High / Open（機制已確認；「重試是否真的關閉」待查） |
+| Type / Priority / Status | Bug / High / Mitigated（重試關閉並發布後 20 次無拼接；樣本小） |
 | Component | chatbot-flow、model |
 | Found in | chat-001（42 次請求中 3 次）；chat-002 再 1 次；Dify 日誌追蹤已確認機制 |
 | Reported | 2026-11-21 JST |
@@ -29,16 +29,17 @@ A1、A3 各重跑 10 次（20 次請求，當時認為重試已關閉）：仍�
 ## Root cause
 - **Confirmed（機制）**：Gemini 在串流中途回傳「high demand」錯誤 → LLM 節點重試 → 已串流出去的殘缺文字留在回答裡，後面接重試的完整答案。
 - **Suspected（為什麼會過載）**：免費層優先順序低，尖峰時較容易遇到；尚未驗證。請求量遠低於 RPM／RPD 上限，錯誤文字也不是 quota 的文字，所以不像額度問題，但沒有證明。
-- **Open**：chat-002 時 LLM 節點的重試是否真的關閉並已「發布」。日誌證明該筆有重試，所以若當時設定為關，代表設定沒有生效（例如未發布）。待使用者確認。
+- **Confirmed**：chat-002 時重試其實是開著的。編排頁顯示「已發布 3 小時前」（約 22:30），早於 chat-002（23:43–23:46）；關閉重試只改了草稿，沒有發布。API 用的是已發布版本。
 
 ## Resolution / Workaround（提案）
-1. 確認 Dify 的 LLM 節點重試設定與是否已發布；關閉重試後，過載錯誤會變成明確的失敗，而不是殘缺文字加完整答案（失敗比拼接更容易被發現與處理）。
+1. ~~確認重試設定與是否已發布~~：已發布（版本 #2），見 Verification。關閉重試後，過載錯誤會變成明確的失敗，而不是殘缺文字加完整答案（失敗比拼接更容易被發現與處理）。
 2. 錯誤處理改成「失敗分支」，失敗時回固定訊息，避免殘缺文字。
 3. 用 Gemini 3.8 Flash 或付費層對照（FKB-006），看過載頻率是否下降。
 4. 評分腳本已能標出 `glued_output`；Dify 日誌的 Partial Success 可作為第二個佐證。
 
 ## Verification
-未完成。`glued_output` 是啟發式，已用 Dify 日誌的 Partial Success 狀態對照：chat-001 A3 #2、chat-002 A3 #4 一致；chat-001 A1 日誌有 3 筆 Partial，我們只標了 2 筆拼接，另 1 筆未查；chat-001 A13 第一次也是 Partial 但未被標記，待查。
+**chat-003（2026-11-22 JST，LLM 節點重試關閉並已發布為版本 #2，A1、A3 各 10 次）**：20/20 請求成功，**沒有拼接**，也沒有請求失敗；單次耗時 2.6–4.5 秒，沒有 chat-002 那種 7 秒的長尾。對照：重試開啟時 A1、A3 為 4/26 次拼接，若比率不變，20 次一次都沒有的機率約 4%，支持但不能證明；樣本小，且 Google 過載本身是間歇性的。Dify 日誌的 Partial Success 狀態尚未對照 chat-003 的時段（待使用者查）。
+未完成的部分：`glued_output` 是啟發式，已用 Dify 日誌的 Partial Success 狀態對照：chat-001 A3 #2、chat-002 A3 #4 一致；chat-001 A1 日誌有 3 筆 Partial，我們只標了 2 筆拼接，另 1 筆未查；chat-001 A13 第一次也是 Partial 但未被標記，待查。
 
 ## Lessons learned
 - 猜測要用實驗檢驗，但實驗的前提也要檢驗：我們以為重試已關閉，日誌卻顯示有重試。設定改完要確認「已發布」，並用日誌核對。

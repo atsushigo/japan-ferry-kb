@@ -1,0 +1,26 @@
+{
+  "run": "chat-003",
+  "date": "2026-11-22",
+  "note": "A1,A3 x10. Retry OFF and PUBLISHED (published #2 at ~01:46 JST 11/22; chat-002 ran on an unpublished setting, so retry was actually ON)",
+  "model_label": "gemini-3.5-flash-lite",
+  "prompt_version": "v2",
+  "git": {
+    "commit": "bd3189a",
+    "dirty": false
+  },
+  "repeat": 10,
+  "delay_s": 5.0,
+  "questions_file": "chatbot/test-conversations.csv",
+  "questions_sha256": "3ef9496b50f786c2",
+  "questions_run": [
+    "A1",
+    "A3"
+  ],
+  "knowledge_files": {
+    "kansai-shanghai-shinganjin.md": "466da1784a151659",
+    "osaka-busan-panstar.md": "d517e2b310fe10b6"
+  },
+  "completed_requests": 20,
+  "planned_requests": 20,
+  "stopped_early": null
+}

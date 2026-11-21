@@ -204,6 +204,8 @@
 
 **追加實驗（chat-002，關閉 LLM 節點的失敗重試，A1、A3 各 10 次）**：拼接仍出現 1 次。事後查 Dify 日誌發現該筆有「1 重試」（Gemini 回「high demand」，串流中途失敗後節點重試，殘缺的前半段被保留），所以當時「重試已關閉」的前提並不成立，需確認設定是否已發布；錯價再出現 1 次，三次錯價（預覽 1、API 2）全部在「陽台套房」這一列，其中兩次是同一個數字（₩2,500,000）。這比「隨機亂寫」更像是與輸出格式有關的系統性問題，下一步是針對該列改變輸出格式做對照。見 [FKB-007](issues/FKB-007-nondeterministic-price-hallucination.md)、[FKB-008](issues/FKB-008-glued-two-generations.md)。
 
+**追加實驗（chat-003，重試關閉且已發布，A1、A3 各 10 次）**：20/20 成功、**0 次拼接**，耗時 2.6–4.5 秒；錯價仍出現 1 次（A1 #7 陽台套房 ₩2,000，第 4 次、仍在同一列）。所以拼接與重試有關、錯價無關。見 [FKB-007](issues/FKB-007-nondeterministic-price-hallucination.md)、[FKB-008](issues/FKB-008-glued-two-generations.md)。
+
 ## 5. 設計決策
 
 | 決策 | 理由 | 取捨 |
