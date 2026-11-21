@@ -29,13 +29,12 @@
 
 ```mermaid
 flowchart LR
-  A["官方網站與 PDF<br/>panstar.jp · panstarcruise.com · shinganjin.com"] --> B["查證與整理<br/>平行 agent 讀取 + 人工核對"]
-  B --> C["knowledge/*.md<br/>一段一個主題，附來源與確認日期"]
-  C --> D["Dify Cloud 知識庫<br/>gemini-embedding-2 · 分段 1500 字"]
+  A["官方網站與 PDF<br/>查證、整理、人工核對"] --> C["knowledge/*.md<br/>一段一個主題<br/>附來源與確認日期"]
+  C --> D["Dify 知識庫<br/>gemini-embedding-2"]
   D --> E["向量檢索<br/>Top K 5 · 閾值 0.71"]
-  E --> F["聊天機器人<br/>Dify 聊天流 · Gemini 3.5 Flash-Lite"]
+  E --> F["聊天機器人<br/>Gemini 3.5 Flash-Lite"]
   F --> G["使用者"]
-  F -.-> H["Phase 2：FastAPI + PostgreSQL"]
+  F -.-> H["Phase 2<br/>FastAPI + PostgreSQL"]
 ```
 
 ## 聊天機器人的回答流程

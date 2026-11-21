@@ -28,13 +28,12 @@
 
 ```mermaid
 flowchart LR
-  A["公式サイトと PDF<br/>panstar.jp · panstarcruise.com · shinganjin.com"] --> B["調査と整理<br/>並列エージェントで読取 + 人手で確認"]
-  B --> C["knowledge/*.md<br/>1 チャンク 1 トピック・出典と確認日付き"]
-  C --> D["Dify Cloud ナレッジベース<br/>gemini-embedding-2 · 分割 1500 字"]
+  A["公式サイトと PDF<br/>調査・整理・人手で確認"] --> C["knowledge/*.md<br/>1 チャンク 1 トピック<br/>出典と確認日つき"]
+  C --> D["Dify ナレッジベース<br/>gemini-embedding-2"]
   D --> E["ベクトル検索<br/>Top K 5 · 閾値 0.71"]
-  E --> F["チャットボット<br/>Dify チャットフロー · Gemini 3.5 Flash-Lite"]
+  E --> F["チャットボット<br/>Gemini 3.5 Flash-Lite"]
   F --> G["ユーザー"]
-  F -.-> H["Phase 2：FastAPI + PostgreSQL"]
+  F -.-> H["Phase 2<br/>FastAPI + PostgreSQL"]
 ```
 
 ## チャットボットの回答フロー
