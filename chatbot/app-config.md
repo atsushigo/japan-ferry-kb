@@ -32,6 +32,8 @@ Note that Q20-type questions that do pass the threshold still reach the LLM, so 
 - Single-node test with empty context ("你好" / the same fare question): the model answered "the knowledge base has no such data" and did not invent a price.
 - Cost per request reported by Dify: about USD 0.0003 (no retrieval) to ~0.002 (with four chunks) on Flash-Lite (estimate for the latter).
 
+- After prompt v2: FKB-002 and FKB-003 did not recur in 3 reruns + A13; one rerun produced a wrong price (FKB-007).
+
 ## Still to do
 
 Export the app DSL (YAML) into `chatbot/` after the prompt is stable. Check it for dataset IDs and API keys before committing.

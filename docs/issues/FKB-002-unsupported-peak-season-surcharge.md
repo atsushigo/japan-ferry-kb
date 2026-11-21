@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Type / Priority / Status | Bug / High / Open（修法已提案，尚未重測） |
+| Type / Priority / Status | Bug / High / Done（Gemini 3.5 Flash-Lite 上驗證，n=3 + A13） |
 | Component | chatbot-prompt |
 | Found in | 提示詞 v1.1、Gemini 3.5 Flash-Lite、知識文件 v3 |
 | Reported | 2026-11-21 JST |
@@ -31,14 +31,19 @@
 ## Root cause（Suspected）
 提示詞規則 2 只禁止「編造數字」，沒有禁止「把質性說法延伸成檢索結果沒有的結論」。模型為了整理出簡潔的注意事項，把相鄰的兩個事實（旺季、另計費用）合併成一句。尚未用其他模型對照驗證。
 
-## Resolution / Workaround（提案，未驗證）
+## Resolution
 在提示詞規則 2 後新增：
 
 ```text
 2-1. 只轉述檢索結果的原話範圍，不要把「另計」「加價」「免費」「可用」「不可用」等說法延伸成檢索結果沒有寫的結論。例如檢索結果只說旺季不能使用折扣，就不能說旺季票價較貴。
 ```
 
-## Verification
+## Verification result（2026-11-21 JST，提示詞 v2，gemini-3.5-flash-lite，手動預覽）
+- 「大阪到釜山船票多少錢？」重跑 3 次：3 次都沒有出現「旺季加價」，只寫「稅金與燃油附加費另計」。
+- A13「大阪釜山旺季票價會比較貴嗎？」：回答「知識庫沒有記載旺季票價比較貴的資訊，僅說明旺季日不能使用折扣與免費乘船券」，通過。
+- 限制：樣本只有 4 次，只在一個模型上；Gemini 3.8 Flash 的對照留待 FKB-006。同一輪重測發現另一類錯誤，見 FKB-007。
+
+## Verification（原定通過條件）
 - 用同一題重跑 3 次，三次都不得出現「旺季加價」。
 - 新增測試題 A13：`大阪釜山旺季票價會比較貴嗎？`，預期回答「知識庫沒有寫旺季的票價差額，只寫旺季日不能使用折扣」。
 - 通過條件：A13 回答不含「較貴／加價／漲價」等斷言；同一題在 Gemini 3.8 Flash 上也要重測（FKB-006）。

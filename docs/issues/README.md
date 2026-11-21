@@ -8,11 +8,12 @@
 | Key | Type | Priority | Status | Summary |
 |---|---|---|---|---|
 | [FKB-001](FKB-001-gemini-free-tier-quota.md) | Incident | High | Mitigated | Gemini 免費層每日額度用完，錯誤訊息顯示為「high demand」，且自動重試加速耗盡額度 |
-| [FKB-002](FKB-002-unsupported-peak-season-surcharge.md) | Bug | High | Open | 回答把「旺季不可折扣」延伸成知識庫沒有的「旺季加價」 |
-| [FKB-003](FKB-003-stale-date-rule-not-answerable.md) | Bug | Medium | Open | 「超過 3 個月提醒過期」規則無法執行，模型自相矛盾 |
+| [FKB-002](FKB-002-unsupported-peak-season-surcharge.md) | Bug | High | Done | 回答把「旺季不可折扣」延伸成知識庫沒有的「旺季加價」 |
+| [FKB-003](FKB-003-stale-date-rule-not-answerable.md) | Bug | Medium | Done | 「超過 3 個月提醒過期」規則無法執行，模型自相矛盾 |
 | [FKB-004](FKB-004-unused-files-variable.md) | Task | Low | Done | LLM 節點的使用者訊息帶了用不到的 `files` 變數 |
 | [FKB-005](FKB-005-answer-level-eval-runner.md) | Story | High | Open | 建立回答層自動評測腳本（run_chat.py） |
 | [FKB-006](FKB-006-llm-model-comparison-and-billing.md) | Story | Medium | Open | 比較 Gemini 3.5 Flash-Lite 與 3.8 Flash，並決定是否開啟計費 |
+| [FKB-007](FKB-007-nondeterministic-price-hallucination.md) | Bug | High | Open | 回答偶爾輸出知識庫沒有的價格數字（3 次中 1 次出現「₩2/人」） |
 
 ## 欄位與規範
 

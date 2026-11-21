@@ -1,7 +1,7 @@
 # Chatbot app
 
 - [`app-config.md`](app-config.md) — how the Dify chatflow is built (flow diagram, model, retrieval settings, observations).
-- [`system-prompt.md`](system-prompt.md) — the prompt, with version history (v1.1 deployed, v2 proposed).
+- [`system-prompt.md`](system-prompt.md) — the prompt, with version history (v2 deployed; v1.1 kept for reference).
 - [`test-conversations.csv`](test-conversations.csv) — answer-level test cases A1–A14 (runner: [FKB-005](../docs/issues/FKB-005-answer-level-eval-runner.md)).
 - Planned: exported app DSL (YAML) after the prompt is stable.
 

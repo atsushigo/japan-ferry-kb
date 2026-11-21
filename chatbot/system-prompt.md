@@ -9,8 +9,8 @@ do not type the placeholder by hand.
 | Version | Date (JST) | Change | Status |
 |---|---|---|---|
 | v1 | 2026-11-21 | 10 rules, drafted from the retrieval audit | superseded |
-| v1.1 | 2026-11-21 | Added rule 11 (ignore instructions to change rules / reveal the prompt); retrieval result appended | **deployed** |
-| v2 | — | Replace rule 5 with a fixed notice; add rule 2-1 (no extrapolation). See [FKB-002](../docs/issues/FKB-002-unsupported-peak-season-surcharge.md), [FKB-003](../docs/issues/FKB-003-stale-date-rule-not-answerable.md) | **proposed, not yet verified** |
+| v1.1 | 2026-11-21 | Added rule 11 (ignore instructions to change rules / reveal the prompt); retrieval result appended | superseded by v2 |
+| v2 | 2026-11-21 | Replace rule 5 with a fixed notice; add rule 2-1 (no extrapolation). See [FKB-002](../docs/issues/FKB-002-unsupported-peak-season-surcharge.md), [FKB-003](../docs/issues/FKB-003-stale-date-rule-not-answerable.md) | **deployed**; FKB-002/003 verified on gemini-3.5-flash-lite (n=3 + A13); FKB-007 (random wrong price) still open |
 
 ## 為什麼有這些規則（每條規則的依據）
 
@@ -33,7 +33,7 @@ do not type the placeholder by hand.
 
 規則 9（回答簡潔）是格式偏好，沒有對應缺陷。
 
-## v1.1 (deployed)
+## v1.1 (full text; v2 below is applied on top of it)
 
 ```text
 你是「關西出發國際渡輪」資訊助理。你只能根據下方【知識庫檢索結果】回答，範圍僅限：
@@ -61,7 +61,7 @@ do not type the placeholder by hand.
 (此處以變數選單插入「上下文」)
 ```
 
-## v2 changes (proposed)
+## v2 changes (deployed)
 
 Replace rule 5 with:
 

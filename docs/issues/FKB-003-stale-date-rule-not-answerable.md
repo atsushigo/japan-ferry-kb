@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Type / Priority / Status | Bug / Medium / Open（修法已提案，尚未重測） |
+| Type / Priority / Status | Bug / Medium / Done（Gemini 3.5 Flash-Lite 上驗證，n=3） |
 | Component | chatbot-prompt |
 | Found in | 提示詞 v1.1、Gemini 3.5 Flash-Lite |
 | Reported | 2026-11-21 JST |
@@ -25,7 +25,7 @@
 ## Root cause（Confirmed）
 提示詞規則 5 要求「資料超過 3 個月就提醒過期」，但模型在這個流程裡**拿不到今天的日期**，無法比較。這是提示詞設計錯誤，不是模型能力問題。
 
-## Resolution / Workaround（提案，未驗證）
+## Resolution
 把規則 5 換成固定語句，不讓模型判斷日期：
 
 ```text
@@ -34,7 +34,12 @@
 
 之後若要做「過期提醒」，應在流程中用程式節點取得當前日期，再與確認日期比較，把結果當變數傳給 LLM。
 
-## Verification
+## Verification result（2026-11-21 JST，提示詞 v2，gemini-3.5-flash-lite，手動預覽）
+- 「大阪到釜山船票多少錢？」重跑 3 次：3 次都沒有「超過 3 個月」等對資料新舊的判斷，且都帶固定結尾句「價格與班次可能變動，請以官方最新公告為準。」及來源與確認日期。
+- A14（「這個價格是最新的嗎？」）尚未測。
+- 限制：樣本小、單一模型。
+
+## Verification（原定通過條件）
 - 重跑「大阪到釜山船票多少錢？」，回答不得出現「超過 3 個月」或任何對資料新舊的判斷。
 - 新增測試題 A14：`這個價格是最新的嗎？`，預期標示確認日期並建議查官方，不宣稱過期或最新。
 

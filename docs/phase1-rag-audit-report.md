@@ -178,8 +178,11 @@
 
 | Key | 現象 | 狀態 |
 |---|---|---|
-| [FKB-002](issues/FKB-002-unsupported-peak-season-surcharge.md) | 把「旺季日不能使用折扣」寫成「旺季加價另計」，知識庫沒有這個結論 | Open（修法已提案，未重測） |
-| [FKB-003](issues/FKB-003-stale-date-rule-not-answerable.md) | 宣稱「確認日期已超過 3 個月」，但確認日期就是當天；模型拿不到今天的日期 | Open（修法已提案，未重測） |
+| [FKB-002](issues/FKB-002-unsupported-peak-season-surcharge.md) | 把「旺季日不能使用折扣」寫成「旺季加價另計」，知識庫沒有這個結論 | Done（修法已驗證，n=3 + A13） |
+| [FKB-003](issues/FKB-003-stale-date-rule-not-answerable.md) | 宣稱「確認日期已超過 3 個月」，但確認日期就是當天；模型拿不到今天的日期 | Done（n=3） |
+| [FKB-007](issues/FKB-007-nondeterministic-price-hallucination.md) | 修正後重跑同一題 3 次，其中 1 次出現知識庫沒有的價格「₩2/人」（正確為 ₩500,000） | Open |
+
+提示詞修正後重跑：FKB-002、003 的問題在 3 次重跑與 A13 都沒有再出現；但第 2 次重跑出現了新的價格錯誤（FKB-007），說明單次測試無法看出非確定性的錯誤，需要重複測量與規則式的數字檢查。
 
 這說明檢索層全數通過（Hit rate 1.0）不等於回答可信，兩層必須分開評估。另一個與可用性有關的事件見 [FKB-001](issues/FKB-001-gemini-free-tier-quota.md)（免費層額度用完，錯誤訊息被顯示為「high demand」）。
 此外，單步測試中上下文為空時，模型回答「知識庫目前沒有這項資料」而沒有編造價格，這是單題觀察，不能推論到全部題目。完整問題清單見 [issues/README.md](issues/README.md)。
