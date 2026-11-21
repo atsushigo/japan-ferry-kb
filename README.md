@@ -66,6 +66,7 @@ japan-ferry-kb/
 │   ├── osaka-busan-panstar.md
 │   ├── kansai-shanghai-shinganjin.md
 │   └── history/                    曾上傳並測試過的舊版本（對應測試紀錄）
+├── chatbot/                        Dify 聊天流設定、系統提示詞（含版本）、回答層測試題
 ├── evaluation/
 │   ├── questions.csv          測試題、預期行為與預期段落
 │   ├── run_recall.py          呼叫 Dify 知識庫 API 跑召回測試
@@ -77,6 +78,7 @@ japan-ferry-kb/
     ├── dify-setup.md               Dify 設定與重現步驟
     ├── sources.md                  資料來源與查證紀錄
     ├── coverage-matrix.md          航線 × 主題的資料覆蓋盤點
+    ├── issues/                     問題與改善紀錄（Jira 格式，FKB-001～）
     └── assets/
         ├── threshold-calibration.png  閾值校準圖（本頁上方）
         ├── retrieval-scores.png       第一輪（舊版文件）分數分佈
