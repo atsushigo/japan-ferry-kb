@@ -59,7 +59,7 @@ LLM 這一步由系統提示詞的規則決定怎麼回答（完整規則與每�
 
 ### 已知限制
 
-- 日文、英文提問目前仍常得到中文回答（[FKB-009](docs/issues/FKB-009-answer-language-mismatch.md)，已決定延後處理；設計選項見 [`docs/multilingual-design-options.md`](docs/multilingual-design-options.md)）。
+- 日文、英文提問目前仍常得到中文內容：加入語言規則後，日英單語題的正文語言正確率約 8/20（原本 0/15），三語合一按鈕約 3/15（[FKB-009](docs/issues/FKB-009-answer-language-mismatch.md)，其餘已決定延後；設計選項見 [`docs/multilingual-design-options.md`](docs/multilingual-design-options.md)）。
 - 使用 Gemini 免費層，額度與暫時過載會影響測試（[FKB-001](docs/issues/FKB-001-gemini-free-tier-quota.md)）。
 
 ## 問題處理狀態

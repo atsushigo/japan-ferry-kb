@@ -1,0 +1,30 @@
+{
+  "run": "chat-012",
+  "date": "2026-11-22",
+  "note": "v5 (full) plus closing-language line. Combined trilingual button texts. retry OFF, published.",
+  "model_label": "gemini-3.5-flash-lite",
+  "prompt_version": "v5+closing-language-line",
+  "git": {
+    "commit": "a09b6ee",
+    "dirty": false
+  },
+  "repeat": 3,
+  "delay_s": 5.0,
+  "questions_file": "chatbot/test-conversations.csv",
+  "questions_sha256": "800e328c5db8ed09",
+  "questions_run": [
+    "A25",
+    "A26",
+    "A27",
+    "A28",
+    "A29"
+  ],
+  "knowledge_files": {
+    "kansai-shanghai-shinganjin.md": "466da1784a151659",
+    "osaka-busan-panstar.md": "d517e2b310fe10b6",
+    "overview-routes.md": "f0d8a8643a027742"
+  },
+  "completed_requests": 15,
+  "planned_requests": 15,
+  "stopped_early": null
+}

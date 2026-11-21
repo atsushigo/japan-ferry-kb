@@ -1,0 +1,925 @@
+query_id,repeat,language,query,answer,n_retrieved,retrieved_scores,retrieved_docs,retrieved_text,total_tokens,total_price_usd,latency_s,error
+A7,1,ja,大阪港から釜山までの荷物制限は？,"大阪港から釜山までのパンスターミラクル号の荷物制限に関する情報は以下の通りです。
+
+一般行李（韓文官網 FAQ 為主）：
+- 隨身行李（大阪航線）：三邊合計 200cm 以內、30kg 以內，符合條件則數量不限、免費。釜山國際客運站出入境審查區內不能使用行李推車。
+- 託運行李：沒有免費額度，在 1 樓行李區依重量計費：1～20kg ₩10,000，每多 5kg 加 ₩5,000。託運需簽「託運行李免責同意書」。
+- 日文約款對照（2020 年修訂，可能過時）：託運三邊合計 200cm、30kg；隨身 150cm、15kg；託運行李賠償上限每人 30,000 日圓。以官網現行說明為準。
+- 只有本人搭乘時才能託運行李，不能只寄行李不搭船。
+- 貴重品、易碎品託運前要事先告知櫃檯，否則賠償可能受限；自行車、樂器、畫作等高價物品不可託運，應放在套房客艙。
+- 食品與藥材：可攜帶，但須在下船前吃完；要帶入日本，須自行確認日本檢疫與通關規定。
+
+高爾夫球袋、自行車與特殊行李：
+- 高爾夫球袋（Miracle 號）：不可帶進客房，一定要當託運行李。出航日 3 天前事先申請：免費憑證；當天在售票處申請：單程 ₩20,000、來回 ₩40,000（來回只發 1 張憑證）。流程：售票處（3 樓）出示護照領憑證並簽免責同意書 → 託運行李櫃檯（1 樓）貼憑證託運 → 出境櫃檯辦理出境。沒貼憑證的球袋不能託運；名貴球具請自行投保；建議出航前 2 小時到達。
+- 自行車：客房不能放，只能託運（含折疊式）：一般自行車單程 ₩40,000、折疊式單程 ₩20,000。高價自行車請妥善包裝。須簽託運免責同意書。
+
+電池與危險物品限制：
+- 禁止攜帶：內建鋰電池的電動自行車、電動滑板車等行動工具。
+- 限制攜帶：內建鋰電池的攜帶式電子設備、行動電源。鋰電池 100Wh 以下；一般電池 160Wh 以下；超過 160Wh 一律不可攜帶；每人最多 5 個。
+- 船上禁止充電與使用電池；須把電池從設備取下保管；不可放進行李箱，要隨身攜帶或放在座位前口袋。
+- 例外：行動不便者用的電動輪椅等步行輔助器具，須事先取得船公司批准。
+- 發現電池撞擊、過熱或膨脹，立即通知船員。
+
+來源：https://www.panstarcruise.com/support/faq（確認日期 2026-11-21）、https://www.panstarcruise.com/product/osaka/price（確認日期 2026-11-21）、https://www.panstar.jp/article/（確認日期 2026-11-21）、https://www.panstarcruise.com/support/notice/313（確認日期 2026-11-21）、https://www.panstarcruise.com/support/notice/256（確認日期 2026-11-21）
+
+価格や運航日程は変更される場合があります。最新の公式情報をご確認ください。",3,0.757;0.7201;0.7177,osaka-busan-panstar.md#1;osaka-busan-panstar.md#2;osaka-busan-panstar.md#3,"【釜山航線｜パンスターミラクル号】行李規定（一般行李）
+以韓文官網 FAQ（較新）為主，日文約款（2020 年修訂，可能過時）僅供對照。
+- 隨身行李（FAQ Q22，大阪航線）：三邊合計 200cm 以內、30kg 以內，符合條件則數量不限、免費。釜山國際客運站出入境審查區內不能使用行李推車。
+- 託運行李：沒有免費額度，在 1 樓行李區依重量計費：1～20kg ₩10,000，每多 5kg 加 ₩5,000（價格頁）。託運需簽「託運行李免責同意書」。
+- 日文約款對照（2020）：託運三邊合計 200cm、30kg；隨身 150cm、15kg；託運行李賠償上限每人 30,000 日圓。兩者數字不同，以官網現行說明為準。
+- 只有本人搭乘時才能託運行李，不能只寄行李不搭船（Q19）。
+- 貴重品、易碎品託運前要事先告知櫃檯，否則賠償可能受限；自行車、樂器、畫作等高價物品不可託運，應放在套房客艙（Q20）。
+- 食品與藥材：可攜帶，但須在下船前吃完；要帶入日本，須自行確認日本檢疫與通關規定（Q21）。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/faq（Q19、Q20、Q21、Q22）；https://www.panstarcruise.com/product/osaka/price ；https://www.panstar.jp/article/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】高爾夫球袋、自行車與特殊行李
+- 高爾夫球袋（Miracle 號，公告 2026-10-26）：不可帶進客房，一定要當託運行李。出航日 3 天前事先申請：免費憑證；當天在售票處申請：單程 ₩20,000、來回 ₩40,000（來回只發 1 張憑證）。流程：售票處（3 樓）出示護照領憑證並簽免責同意書 → 託運行李櫃檯（1 樓）貼憑證託運 → 出境櫃檯辦理出境。沒貼憑證的球袋不能託運；名貴球具請自行投保；建議出航前 2 小時到達。
+- 自行車（FAQ Q32）：客房不能放，只能託運（含折疊式）：一般自行車單程 ₩40,000、折疊式單程 ₩20,000。高價自行車請妥善包裝。須簽託運免責同意書。
+- 特殊行李（Q23）：自行車、釣具等體積大或易損的行李。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/313 ；https://www.panstarcruise.com/support/faq（Q23、Q24、Q32）；https://www.panstarcruise.com/product/osaka/price
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】電池與危險物品限制
+- 公告 2026-02-23，為防火而限制攜帶電池。
+- 禁止攜帶：內建鋰電池的電動自行車、電動滑板車等行動工具。
+- 限制攜帶：內建鋰電池的攜帶式電子設備、行動電源。鋰電池 100Wh 以下；一般電池 160Wh 以下；超過 160Wh 一律不可攜帶；每人最多 5 個。
+- 船上禁止充電與使用電池；須把電池從設備取下保管；不可放進行李箱，要隨身攜帶或放在座位前口袋。
+- 例外：行動不便者用的電動輪椅等步行輔助器具，須事先取得船公司批准。
+- 發現電池撞擊、過熱或膨脹，立即通知船員。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/256",3046,0.0029422,6.01,
+A7,2,ja,大阪港から釜山までの荷物制限は？,"大阪港から釜山までのパンスターミラクル号の荷物制限（一般行李、高爾夫球袋、自行車、特殊行李、電池與危險物品限制）如下：
+
+* 一般行李
+  * 隨身行李（韓文官網 FAQ Q22）：三邊合計 200cm 以內、30kg 以內，符合條件則數量不限、免費。（釜山國際客運站出入境審查區內不能使用行李推車）
+  * 託運行李：沒有免費額度，在 1 樓行李區依重量計費：1～20kg ₩10,000，每多 5kg 加 ₩5,000。託運需簽「託運行李免責同意書」。
+  * 日文約款對照（2020）：託運三邊合計 200cm、30kg；隨身 150cm、15kg；託運行李賠償上限每人 30,000 日圓。兩者數字不同，以官網現行說明為準。
+  * 限制：只有本人搭乘時才能託運行李，不能只寄行李不搭船（Q19）。貴重品、易碎品託運前要事先告知櫃檯，否則賠償可能受限；自行車、樂器、畫作等高價物品不可託運，應放在套房客艙（Q20）。食品與藥材可攜帶，但須在下船前吃完；要帶入日本，須自行確認日本檢疫與通關規定（Q21）。
+
+* 高爾夫球袋、自行車與特殊行李
+  * 高爾夫球袋（Miracle 號）：不可帶進客房，一定要當託運行李。出航日 3 天前事先申請：免費憑證；當天在售票處申請：單程 ₩20,000、來回 ₩40,000（來回只發 1 張憑證）。流程：售票處（3 樓）出示護照領憑證並簽免責同意書 → 託運行李櫃檯（1 樓）貼憑證託運 → 出境櫃檯辦理出境。沒貼憑證的球袋不能託運；名貴球具請自行投保；建議出航前 2 小時到達。
+  * 自行車（FAQ Q32）：客房不能放，只能託運（含折疊式）：一般自行車單程 ₩40,000、折疊式單程 ₩20,000。高價自行車請妥善包裝。須簽託運免責同意書。
+  * 特殊行李（Q23）：自行車、釣具等體積大或易損的行李。
+
+* 電池與危險物品限制
+  * 禁止攜帶：內建鋰電池的電動自行車、電動滑板車等行動工具。
+  * 限制攜帶：內建鋰電池的攜帶式電子設備、行動電源。鋰電池 100Wh 以下；一般電池 160Wh 以下；超過 160Wh 一律不可攜帶；每人最多 5 個。
+  * 規定：船上禁止充電與使用電池；須把電池從設備取下保管；不可放進行李箱，要隨身攜帶或放在座位前口袋。
+  * 例外：行動不便者用的電動輪椅等步行輔助器具，須事先取得船公司批准。發現電池撞擊、過熱或膨脹，立即通知船員。
+
+來源：https://www.panstarcruise.com/support/faq（Q19、Q20、Q21、Q22、Q23、Q24、Q32）；https://www.panstarcruise.com/product/osaka/price ；https://www.panstar.jp/article/ ；https://www.panstarcruise.com/support/notice/313 ；https://www.panstarcruise.com/support/notice/256（確認日期：2026-11-21）
+
+価格や運航日程は変更される場合があります。最新の公式情報をご確認ください。",3,0.757;0.7201;0.7177,osaka-busan-panstar.md#1;osaka-busan-panstar.md#2;osaka-busan-panstar.md#3,"【釜山航線｜パンスターミラクル号】行李規定（一般行李）
+以韓文官網 FAQ（較新）為主，日文約款（2020 年修訂，可能過時）僅供對照。
+- 隨身行李（FAQ Q22，大阪航線）：三邊合計 200cm 以內、30kg 以內，符合條件則數量不限、免費。釜山國際客運站出入境審查區內不能使用行李推車。
+- 託運行李：沒有免費額度，在 1 樓行李區依重量計費：1～20kg ₩10,000，每多 5kg 加 ₩5,000（價格頁）。託運需簽「託運行李免責同意書」。
+- 日文約款對照（2020）：託運三邊合計 200cm、30kg；隨身 150cm、15kg；託運行李賠償上限每人 30,000 日圓。兩者數字不同，以官網現行說明為準。
+- 只有本人搭乘時才能託運行李，不能只寄行李不搭船（Q19）。
+- 貴重品、易碎品託運前要事先告知櫃檯，否則賠償可能受限；自行車、樂器、畫作等高價物品不可託運，應放在套房客艙（Q20）。
+- 食品與藥材：可攜帶，但須在下船前吃完；要帶入日本，須自行確認日本檢疫與通關規定（Q21）。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/faq（Q19、Q20、Q21、Q22）；https://www.panstarcruise.com/product/osaka/price ；https://www.panstar.jp/article/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】高爾夫球袋、自行車與特殊行李
+- 高爾夫球袋（Miracle 號，公告 2026-10-26）：不可帶進客房，一定要當託運行李。出航日 3 天前事先申請：免費憑證；當天在售票處申請：單程 ₩20,000、來回 ₩40,000（來回只發 1 張憑證）。流程：售票處（3 樓）出示護照領憑證並簽免責同意書 → 託運行李櫃檯（1 樓）貼憑證託運 → 出境櫃檯辦理出境。沒貼憑證的球袋不能託運；名貴球具請自行投保；建議出航前 2 小時到達。
+- 自行車（FAQ Q32）：客房不能放，只能託運（含折疊式）：一般自行車單程 ₩40,000、折疊式單程 ₩20,000。高價自行車請妥善包裝。須簽託運免責同意書。
+- 特殊行李（Q23）：自行車、釣具等體積大或易損的行李。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/313 ；https://www.panstarcruise.com/support/faq（Q23、Q24、Q32）；https://www.panstarcruise.com/product/osaka/price
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】電池與危險物品限制
+- 公告 2026-02-23，為防火而限制攜帶電池。
+- 禁止攜帶：內建鋰電池的電動自行車、電動滑板車等行動工具。
+- 限制攜帶：內建鋰電池的攜帶式電子設備、行動電源。鋰電池 100Wh 以下；一般電池 160Wh 以下；超過 160Wh 一律不可攜帶；每人最多 5 個。
+- 船上禁止充電與使用電池；須把電池從設備取下保管；不可放進行李箱，要隨身攜帶或放在座位前口袋。
+- 例外：行動不便者用的電動輪椅等步行輔助器具，須事先取得船公司批准。
+- 發現電池撞擊、過熱或膨脹，立即通知船員。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/256",3084,0.0030372,3.74,
+A8,1,en,What documents do I need for the Osaka–Busan ferry?,"For the Osaka–Busan ferry (パンスターミラクル号), you need the following documents:
+
+* Passport: Required for both ticket pickup and immigration. No passport means no ticket. The official FAQ recommends that your international travel passport has at least 6 months of remaining validity.
+* Student ID: Required for students.
+* Discount proof documents: Must be handed over on the day of departure when picking up your ticket, otherwise additional fees may apply.
+* Visa: For sightseeing and visiting purposes, a 90-day visa exemption applies (the FAQ does not specify applicable nationalities, so please check with your government's foreign affairs department or the Japanese Immigration Services Agency).
+* Korea Entry: Paper arrival card and e-Arrival card are used concurrently (extension announced on 2026-01-06, until further notice).
+
+來源：https://www.panstarcruise.com/support/faq（Q9、Q10、Q51）；https://www.panstarcruise.com/support/notice/265 ；https://www.panstar.jp/（確認日期：2026-11-21）
+
+Prices and schedules may change. Please check the latest official announcements.",4,0.7755;0.7656;0.7368;0.725,osaka-busan-panstar.md#1;osaka-busan-panstar.md#2;overview-routes.md#3;osaka-busan-panstar.md#4,"【釜山航線｜パンスターミラクル号】報到與登船手續（最晚何時要到：官方寫法不一致）
+- 登船券只能在**出發當天、在出發港**領取，無法預先取票；沒有護照不能領票。
+- 最晚辦理時間，官方各處寫法不同：約款與 FAQ 寫「出航前 90 分鐘」（大阪 17:00 班為 15:30）；韓文公告（2026-03-30，4/1 起）寫發票截止為出航前 1 小時 10 分（大阪出發 15:50、釜山出發 14:50），截止後不可登船也不能退票；韓文班次頁的登船表寫大阪出發售票 15:00–16:10、報到 15:40–16:20。建議至少提前 90 分鐘抵達。
+- 週日釜山出發（15:00）公告建議 13:30 前到售票處。
+- 大阪出發：車輛截止 13:00；託運行李 15:00–16:00。
+- 預訂需要：姓名、英文姓名、生日、護照號碼、聯絡方式、居住地址。
+- 領票地點：大阪港國際渡輪碼頭，出示護照（學生需出示學生證）。折扣證明文件要在出航當天領票時交出，沒帶可能追加費用。
+- 代領票：同行者全員已在碼頭內時，代表人拿全員護照可代辦；進入出入境區時仍須本人持護照。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/265 ；https://www.panstarcruise.com/support/faq（Q7、Q8、Q18、Q47、Q51、Q53）；https://www.panstarcruise.com/product/osaka/info ；https://www.panstar.jp/article/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】護照、簽證與入境
+- 領票與出境都需要護照；沒有護照不能領票。
+- 護照效期（FAQ Q10）：官網寫「海外旅行護照效期至少要剩 6 個月以上」，依登船當天剩餘效期，可能無法出境。實際規定以各國政府為準。
+- 日本簽證（FAQ Q9）：官網寫「觀光與訪問目的可免簽證停留 90 天；其他目的須事先向日本領事館洽詢」。**FAQ 沒有註明適用的國籍**（網站為韓文，推測面向韓國旅客），其他國籍不可直接套用，請向各國外交部或日本入國管理局確認。
+- 韓國入境：2026-01-06 公告，搭乘本船入境韓國時，紙本入境卡與電子入境（e-Arrival card）併用期限延長，另行通知。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/faq（Q9、Q10、Q51）；https://www.panstar.jp/
+<<<chunk>>>
+【總覽｜關西出發的國際渡輪】有哪些航線？從大阪可以去哪裡？
+這個知識庫涵蓋從大阪（及神戶）出發的兩條國際渡輪航線。這一段只是總覽，細節（票價、班次、取消、行李、證件等）以各航線段落為準。
+| 航線 | 營運公司與船名 | 目前狀態（2026-11-21 確認） |
+|---|---|---|
+| 大阪 ⇄ 釜山（韓國） | PANSTAR Cruise Ferry（日本代理 株式会社サンスターライン）／パンスターミラクル号 | 官網未見 2026 年大阪航線停航公告；仍須向營運公司確認最新班表 |
+| 大阪／神戶 ⇄ 上海（中國） | 日中国際フェリー株式会社／鑑真号 | **旅客運送暫停**（2025-12-08 公告，再開未定）；請勿告訴使用者可以訂票或搭乘 |
+- 從大阪出發可以搭船去：**釜山**（週一・三・五 17:00 出港，約 17 小時，翌日 10:00 抵達）；**上海**（目前旅客運送暫停，官網船班表不區分旅客與貨物，不代表現在可以搭乘）。
+- 其他航線與國內渡輪不在這個知識庫的範圍內。
+- 可以詢問的主題：船班、票價、取消與退票、行李、證件、附加費與稅金、天候與停航。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】附加費、稅金與旺季
+- 燃油附加費（每人，2026-11-01 起，公告 2026-10-23）：釜山出發 ₩27,000（原 ₩25,000）；大阪出發 ¥2,700（原 ¥2,500）。6 歲以下免。
+- 從大阪出發：大阪港碼頭使用費 700 日圓。國際觀光旅客稅 3,000 日圓（2 歲以上，2026-07-01 起由 1,000 日圓調漲；2026-06-30 前完成預訂並付款者維持 1,000 日圓）。
+- 從釜山出發：碼頭使用費與觀光振興金 ₩7,000。
+- 旺季（2026-07-01～12-31 公告）：釜山–大阪航線的旺季日為 7/30、31；8/2、3、10–14、16；9/18、20–25、28（公告列的日期只到 9/28）。旺季日不能使用折扣與免費乘船券；公告沒有寫票價差額；日期可能因運航情況調整。
+- 2026-11-01 起，日本免稅店購物改為「事後退稅」：先付含稅價，購買後 90 日內出境、由海關確認商品後退稅。大阪港無法現金退稅，公告建議用信用卡付款。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/310 ；https://www.panstarcruise.com/support/notice/280 ；https://www.panstarcruise.com/support/notice/272 ；https://www.panstarcruise.com/support/notice/304",3032,0.0014904,3.72,
+A8,2,en,What documents do I need for the Osaka–Busan ferry?,"搭乘大阪—釜山航線（パンスターミラクル号）需要準備護照；沒有護照不能領票與出境。
+
+- 護照效期：官網寫海外旅行護照效期至少要剩 6 個月以上，依登船當天剩餘效期，可能無法出境，實際規定以各國政府為準。
+- 日本簽證：觀光與訪問目的可免簽證停留 90 天；其他目的須事先向日本領事館洽詢。FAQ 沒有註明適用的國籍，其他國籍請向各國外交部或日本入國管理局確認。
+- 韓國入境：搭乘本船入境韓國時，紙本入境卡與電子入境（e-Arrival card）併用期限延長，另行通知。
+- 領票與通關：領票時需出示護照（學生需出示學生證）。折扣證明文件要在出航當天領票時交出。
+
+來源：https://www.panstarcruise.com/support/notice/265 ；https://www.panstarcruise.com/support/faq（Q9、Q10、Q51）；https://www.panstar.jp/（確認日期 2026-11-21）
+
+Prices and schedules may change. Please check the latest official announcements.",4,0.7755;0.7656;0.7368;0.725,osaka-busan-panstar.md#1;osaka-busan-panstar.md#2;overview-routes.md#3;osaka-busan-panstar.md#4,"【釜山航線｜パンスターミラクル号】報到與登船手續（最晚何時要到：官方寫法不一致）
+- 登船券只能在**出發當天、在出發港**領取，無法預先取票；沒有護照不能領票。
+- 最晚辦理時間，官方各處寫法不同：約款與 FAQ 寫「出航前 90 分鐘」（大阪 17:00 班為 15:30）；韓文公告（2026-03-30，4/1 起）寫發票截止為出航前 1 小時 10 分（大阪出發 15:50、釜山出發 14:50），截止後不可登船也不能退票；韓文班次頁的登船表寫大阪出發售票 15:00–16:10、報到 15:40–16:20。建議至少提前 90 分鐘抵達。
+- 週日釜山出發（15:00）公告建議 13:30 前到售票處。
+- 大阪出發：車輛截止 13:00；託運行李 15:00–16:00。
+- 預訂需要：姓名、英文姓名、生日、護照號碼、聯絡方式、居住地址。
+- 領票地點：大阪港國際渡輪碼頭，出示護照（學生需出示學生證）。折扣證明文件要在出航當天領票時交出，沒帶可能追加費用。
+- 代領票：同行者全員已在碼頭內時，代表人拿全員護照可代辦；進入出入境區時仍須本人持護照。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/265 ；https://www.panstarcruise.com/support/faq（Q7、Q8、Q18、Q47、Q51、Q53）；https://www.panstarcruise.com/product/osaka/info ；https://www.panstar.jp/article/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】護照、簽證與入境
+- 領票與出境都需要護照；沒有護照不能領票。
+- 護照效期（FAQ Q10）：官網寫「海外旅行護照效期至少要剩 6 個月以上」，依登船當天剩餘效期，可能無法出境。實際規定以各國政府為準。
+- 日本簽證（FAQ Q9）：官網寫「觀光與訪問目的可免簽證停留 90 天；其他目的須事先向日本領事館洽詢」。**FAQ 沒有註明適用的國籍**（網站為韓文，推測面向韓國旅客），其他國籍不可直接套用，請向各國外交部或日本入國管理局確認。
+- 韓國入境：2026-01-06 公告，搭乘本船入境韓國時，紙本入境卡與電子入境（e-Arrival card）併用期限延長，另行通知。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/faq（Q9、Q10、Q51）；https://www.panstar.jp/
+<<<chunk>>>
+【總覽｜關西出發的國際渡輪】有哪些航線？從大阪可以去哪裡？
+這個知識庫涵蓋從大阪（及神戶）出發的兩條國際渡輪航線。這一段只是總覽，細節（票價、班次、取消、行李、證件等）以各航線段落為準。
+| 航線 | 營運公司與船名 | 目前狀態（2026-11-21 確認） |
+|---|---|---|
+| 大阪 ⇄ 釜山（韓國） | PANSTAR Cruise Ferry（日本代理 株式会社サンスターライン）／パンスターミラクル号 | 官網未見 2026 年大阪航線停航公告；仍須向營運公司確認最新班表 |
+| 大阪／神戶 ⇄ 上海（中國） | 日中国際フェリー株式会社／鑑真号 | **旅客運送暫停**（2025-12-08 公告，再開未定）；請勿告訴使用者可以訂票或搭乘 |
+- 從大阪出發可以搭船去：**釜山**（週一・三・五 17:00 出港，約 17 小時，翌日 10:00 抵達）；**上海**（目前旅客運送暫停，官網船班表不區分旅客與貨物，不代表現在可以搭乘）。
+- 其他航線與國內渡輪不在這個知識庫的範圍內。
+- 可以詢問的主題：船班、票價、取消與退票、行李、證件、附加費與稅金、天候與停航。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】附加費、稅金與旺季
+- 燃油附加費（每人，2026-11-01 起，公告 2026-10-23）：釜山出發 ₩27,000（原 ₩25,000）；大阪出發 ¥2,700（原 ¥2,500）。6 歲以下免。
+- 從大阪出發：大阪港碼頭使用費 700 日圓。國際觀光旅客稅 3,000 日圓（2 歲以上，2026-07-01 起由 1,000 日圓調漲；2026-06-30 前完成預訂並付款者維持 1,000 日圓）。
+- 從釜山出發：碼頭使用費與觀光振興金 ₩7,000。
+- 旺季（2026-07-01～12-31 公告）：釜山–大阪航線的旺季日為 7/30、31；8/2、3、10–14、16；9/18、20–25、28（公告列的日期只到 9/28）。旺季日不能使用折扣與免費乘船券；公告沒有寫票價差額；日期可能因運航情況調整。
+- 2026-11-01 起，日本免稅店購物改為「事後退稅」：先付含稅價，購買後 90 日內出境、由海關確認商品後退稅。大阪港無法現金退稅，公告建議用信用卡付款。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/310 ；https://www.panstarcruise.com/support/notice/280 ；https://www.panstarcruise.com/support/notice/272 ；https://www.panstarcruise.com/support/notice/304",3068,0.0015804,2.34,
+A15,1,en,How much is a ferry ticket from Osaka to Busan?,"The ticket prices for the Osaka to Busan route on the パンスターミラクル号 are as follows (one-way and round-trip per person in KRW):
+
+- PRESIDENTIAL SUITE：單程 ₩1,200,000／來回 ₩2,400,000（客房人數：2 人）
+- ROYAL SUITE：單程 ₩700,000／來回 ₩1,400,000（客房人數：3 人）
+- BALCONY SUITE：單程 ₩500,000／來回 ₩1,000,000（客房人數：2 人）
+- OCEAN VIEW：單程 ₩250,000／來回 ₩500,000（客房人數：4 人）
+- INSIDE CABIN：單程 ₩200,000／來回 ₩400,000（客房人數：4 人）
+- GROUP：單程 ₩180,000／來回 ₩360,000（客房人數：8 人）
+
+Prices and schedules may change. Please check the latest official announcements.
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）",4,0.7514;0.7392;0.7379;0.7298,osaka-busan-panstar.md#1;osaka-busan-panstar.md#2;overview-routes.md#3;osaka-busan-panstar.md#4,"【釜山航線｜パンスターミラクル号】票價 Fare（只有韓元 KRW 公布；每人，單程／來回）
+| 艙等 | 單程 | 來回 | 人數 |
+|---|---|---|---|
+| 總統套房 PRESIDENTIAL SUITE | ₩1,200,000 | ₩2,400,000 | 2 人 |
+| 皇家套房 ROYAL SUITE | ₩700,000 | ₩1,400,000 | 3 人 |
+| 陽台套房 BALCONY SUITE | ₩500,000 | ₩1,000,000 | 2 人 |
+| 海景房 OCEAN VIEW | ₩250,000 | ₩500,000 | 4 人 |
+| 內側房 INSIDE CABIN | ₩200,000 | ₩400,000 | 4 人 |
+| 團體房 GROUP | ₩180,000 | ₩360,000 | 8 人 |
+- 單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計，見「附加費、稅金與旺季」。
+- 4 人房（內側、海景）1 人訂房時，會與同性別的其他旅客共用客房，不能 1 人獨用；2 人以上想獨用，每張空床單程加收 ₩100,000。
+- 男女同行：2 人套房可同住；4 人房預設依性別分房。
+- 最大房型為 4 人房（團體房 8 人）。
+- 日圓票價：官方沒有公布。價格頁沒有標示更新日期。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q42、Q43、Q44）
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】附加費、稅金與旺季
+- 燃油附加費（每人，2026-11-01 起，公告 2026-10-23）：釜山出發 ₩27,000（原 ₩25,000）；大阪出發 ¥2,700（原 ¥2,500）。6 歲以下免。
+- 從大阪出發：大阪港碼頭使用費 700 日圓。國際觀光旅客稅 3,000 日圓（2 歲以上，2026-07-01 起由 1,000 日圓調漲；2026-06-30 前完成預訂並付款者維持 1,000 日圓）。
+- 從釜山出發：碼頭使用費與觀光振興金 ₩7,000。
+- 旺季（2026-07-01～12-31 公告）：釜山–大阪航線的旺季日為 7/30、31；8/2、3、10–14、16；9/18、20–25、28（公告列的日期只到 9/28）。旺季日不能使用折扣與免費乘船券；公告沒有寫票價差額；日期可能因運航情況調整。
+- 2026-11-01 起，日本免稅店購物改為「事後退稅」：先付含稅價，購買後 90 日內出境、由海關確認商品後退稅。大阪港無法現金退稅，公告建議用信用卡付款。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/310 ；https://www.panstarcruise.com/support/notice/280 ；https://www.panstarcruise.com/support/notice/272 ；https://www.panstarcruise.com/support/notice/304
+<<<chunk>>>
+【總覽｜關西出發的國際渡輪】有哪些航線？從大阪可以去哪裡？
+這個知識庫涵蓋從大阪（及神戶）出發的兩條國際渡輪航線。這一段只是總覽，細節（票價、班次、取消、行李、證件等）以各航線段落為準。
+| 航線 | 營運公司與船名 | 目前狀態（2026-11-21 確認） |
+|---|---|---|
+| 大阪 ⇄ 釜山（韓國） | PANSTAR Cruise Ferry（日本代理 株式会社サンスターライン）／パンスターミラクル号 | 官網未見 2026 年大阪航線停航公告；仍須向營運公司確認最新班表 |
+| 大阪／神戶 ⇄ 上海（中國） | 日中国際フェリー株式会社／鑑真号 | **旅客運送暫停**（2025-12-08 公告，再開未定）；請勿告訴使用者可以訂票或搭乘 |
+- 從大阪出發可以搭船去：**釜山**（週一・三・五 17:00 出港，約 17 小時，翌日 10:00 抵達）；**上海**（目前旅客運送暫停，官網船班表不區分旅客與貨物，不代表現在可以搭乘）。
+- 其他航線與國內渡輪不在這個知識庫的範圍內。
+- 可以詢問的主題：船班、票價、取消與退票、行李、證件、附加費與稅金、天候與停航。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】船班 Timetable（官方網站記載）
+營運公司：PANSTAR Cruise Ferry／日本代理店 株式会社サンスターライン。船名：パンスターミラクル号（팬스타 미라클호）。
+營運狀態：官網未見 2026 年大阪航線停航公告（2026 年僅有 Miracle 號定期檢修 2/19–3/18，已結束）；仍須向營運公司確認最新班表。
+電話：大阪（日文）06-6614-2516／韓國客服 1577-9996；日本營業處可用韓語應對。
+| 方向 | 星期 | 出港 | 抵達 |
+|---|---|---|---|
+| 大阪 → 釜山 | 一・三・五 | 17:00 | 翌日 10:00 |
+| 釜山 → 大阪 | 二・四 | 16:00 | 翌日 09:00 |
+| 釜山 → 大阪 | 日 | 15:00 | 翌日 08:30 |
+- 約 17 小時。週日釜山出發 15:00 是自 2026-05-17 起的新時刻（原 16:00，韓文公告 2026-05-06）。
+- 路線：釜山 → 對馬 → 關門橋 → 瀨戶大橋 → 明石海峽大橋 → 大阪。
+- 大阪市內免費接駁巴士（コスモスクエア駅 → 大阪国際旅客ターミナル），2026-04-01 起：14:10 / 14:30 / 14:50 / 15:10。
+- 港灣管理頁（無日期）寫 3 班／週、約 18 小時、停靠 KF-2 岸壁，與官網約 17 小時略有出入。
+來源（確認日期 2026-11-21）：https://www.panstar.jp/ ；https://www.panstarcruise.com/product/osaka/info ；https://www.panstarcruise.com/support/notice/273",3332,0.0017278,3.08,
+A15,2,en,How much is a ferry ticket from Osaka to Busan?,"Prices for the Osaka to Busan ferry route on the パンスターミラクル号 are as follows:
+
+* 總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000／來回 ₩2,400,000（客房人數：2 人）
+* 皇家套房 ROYAL SUITE：單程 ₩700,000／來回 ₩1,400,000（客房人數：3 人）
+* 陽台套房 BALCONY SUITE：單程 ₩500,000／來回 ₩1,000,000（客房人數：2 人）
+* 海景房 OCEAN VIEW：單程 ₩250,000／來回 ₩500,000（客房人數：4 人）
+* 內側房 INSIDE CABIN：單程 ₩200,000／來回 ₩400,000（客房人數：4 人）
+* 團體房 GROUP：單程 ₩180,000／來回 ₩360,000（客房人數：8 人）
+
+Prices and schedules may change. Please check the latest official announcements.
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）",4,0.7514;0.7392;0.7379;0.7298,osaka-busan-panstar.md#1;osaka-busan-panstar.md#2;overview-routes.md#3;osaka-busan-panstar.md#4,"【釜山航線｜パンスターミラクル号】票價 Fare（只有韓元 KRW 公布；每人，單程／來回）
+| 艙等 | 單程 | 來回 | 人數 |
+|---|---|---|---|
+| 總統套房 PRESIDENTIAL SUITE | ₩1,200,000 | ₩2,400,000 | 2 人 |
+| 皇家套房 ROYAL SUITE | ₩700,000 | ₩1,400,000 | 3 人 |
+| 陽台套房 BALCONY SUITE | ₩500,000 | ₩1,000,000 | 2 人 |
+| 海景房 OCEAN VIEW | ₩250,000 | ₩500,000 | 4 人 |
+| 內側房 INSIDE CABIN | ₩200,000 | ₩400,000 | 4 人 |
+| 團體房 GROUP | ₩180,000 | ₩360,000 | 8 人 |
+- 單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計，見「附加費、稅金與旺季」。
+- 4 人房（內側、海景）1 人訂房時，會與同性別的其他旅客共用客房，不能 1 人獨用；2 人以上想獨用，每張空床單程加收 ₩100,000。
+- 男女同行：2 人套房可同住；4 人房預設依性別分房。
+- 最大房型為 4 人房（團體房 8 人）。
+- 日圓票價：官方沒有公布。價格頁沒有標示更新日期。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q42、Q43、Q44）
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】附加費、稅金與旺季
+- 燃油附加費（每人，2026-11-01 起，公告 2026-10-23）：釜山出發 ₩27,000（原 ₩25,000）；大阪出發 ¥2,700（原 ¥2,500）。6 歲以下免。
+- 從大阪出發：大阪港碼頭使用費 700 日圓。國際觀光旅客稅 3,000 日圓（2 歲以上，2026-07-01 起由 1,000 日圓調漲；2026-06-30 前完成預訂並付款者維持 1,000 日圓）。
+- 從釜山出發：碼頭使用費與觀光振興金 ₩7,000。
+- 旺季（2026-07-01～12-31 公告）：釜山–大阪航線的旺季日為 7/30、31；8/2、3、10–14、16；9/18、20–25、28（公告列的日期只到 9/28）。旺季日不能使用折扣與免費乘船券；公告沒有寫票價差額；日期可能因運航情況調整。
+- 2026-11-01 起，日本免稅店購物改為「事後退稅」：先付含稅價，購買後 90 日內出境、由海關確認商品後退稅。大阪港無法現金退稅，公告建議用信用卡付款。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/310 ；https://www.panstarcruise.com/support/notice/280 ；https://www.panstarcruise.com/support/notice/272 ；https://www.panstarcruise.com/support/notice/304
+<<<chunk>>>
+【總覽｜關西出發的國際渡輪】有哪些航線？從大阪可以去哪裡？
+這個知識庫涵蓋從大阪（及神戶）出發的兩條國際渡輪航線。這一段只是總覽，細節（票價、班次、取消、行李、證件等）以各航線段落為準。
+| 航線 | 營運公司與船名 | 目前狀態（2026-11-21 確認） |
+|---|---|---|
+| 大阪 ⇄ 釜山（韓國） | PANSTAR Cruise Ferry（日本代理 株式会社サンスターライン）／パンスターミラクル号 | 官網未見 2026 年大阪航線停航公告；仍須向營運公司確認最新班表 |
+| 大阪／神戶 ⇄ 上海（中國） | 日中国際フェリー株式会社／鑑真号 | **旅客運送暫停**（2025-12-08 公告，再開未定）；請勿告訴使用者可以訂票或搭乘 |
+- 從大阪出發可以搭船去：**釜山**（週一・三・五 17:00 出港，約 17 小時，翌日 10:00 抵達）；**上海**（目前旅客運送暫停，官網船班表不區分旅客與貨物，不代表現在可以搭乘）。
+- 其他航線與國內渡輪不在這個知識庫的範圍內。
+- 可以詢問的主題：船班、票價、取消與退票、行李、證件、附加費與稅金、天候與停航。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】船班 Timetable（官方網站記載）
+營運公司：PANSTAR Cruise Ferry／日本代理店 株式会社サンスターライン。船名：パンスターミラクル号（팬스타 미라클호）。
+營運狀態：官網未見 2026 年大阪航線停航公告（2026 年僅有 Miracle 號定期檢修 2/19–3/18，已結束）；仍須向營運公司確認最新班表。
+電話：大阪（日文）06-6614-2516／韓國客服 1577-9996；日本營業處可用韓語應對。
+| 方向 | 星期 | 出港 | 抵達 |
+|---|---|---|---|
+| 大阪 → 釜山 | 一・三・五 | 17:00 | 翌日 10:00 |
+| 釜山 → 大阪 | 二・四 | 16:00 | 翌日 09:00 |
+| 釜山 → 大阪 | 日 | 15:00 | 翌日 08:30 |
+- 約 17 小時。週日釜山出發 15:00 是自 2026-05-17 起的新時刻（原 16:00，韓文公告 2026-05-06）。
+- 路線：釜山 → 對馬 → 關門橋 → 瀨戶大橋 → 明石海峽大橋 → 大阪。
+- 大阪市內免費接駁巴士（コスモスクエア駅 → 大阪国際旅客ターミナル），2026-04-01 起：14:10 / 14:30 / 14:50 / 15:10。
+- 港灣管理頁（無日期）寫 3 班／週、約 18 小時、停靠 KF-2 岸壁，與官網約 17 小時略有出入。
+來源（確認日期 2026-11-21）：https://www.panstar.jp/ ；https://www.panstarcruise.com/product/osaka/info ；https://www.panstarcruise.com/support/notice/273",3342,0.0017528,2.36,
+A16,1,ja,大阪から釜山までのフェリー運賃はいくらですか？,"パンスターミラクル号（大阪—釜山）の運賃は、片道と往復の客室タイプごとに以下の通りです。
+
+- 總統套房 PRESIDENTIAL SUITE：片道 ₩1,200,000 ／往復 ₩2,400,000（客房人數：2 人）
+- 皇家套房 ROYAL SUITE：片道 ₩700,000 ／往復 ₩1,400,000（客房人數：3 人）
+- 陽台套房 BALCONY SUITE：片道 ₩500,000 ／往復 ₩1,000,000（客房人數：2 人）
+- 海景房 OCEAN VIEW：片道 ₩250,000 ／往復 ₩500,000（客房人數：4 人）
+- 內側房 INSIDE CABIN：片道 ₩200,000 ／往復 ₩400,000（客房人數：4 人）
+- 團體房 GROUP：片道 ₩180,000 ／往復 ₩360,000（客房人數：8 人）
+
+- 單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。
+- 官方沒有公布日圓票價。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+価格や運航日程は変更される場合があります。最新の公式情報をご確認ください。",4,0.7489;0.7287;0.7274;0.7207,osaka-busan-panstar.md#1;osaka-busan-panstar.md#2;overview-routes.md#3;osaka-busan-panstar.md#4,"【釜山航線｜パンスターミラクル号】票價 Fare（只有韓元 KRW 公布；每人，單程／來回）
+| 艙等 | 單程 | 來回 | 人數 |
+|---|---|---|---|
+| 總統套房 PRESIDENTIAL SUITE | ₩1,200,000 | ₩2,400,000 | 2 人 |
+| 皇家套房 ROYAL SUITE | ₩700,000 | ₩1,400,000 | 3 人 |
+| 陽台套房 BALCONY SUITE | ₩500,000 | ₩1,000,000 | 2 人 |
+| 海景房 OCEAN VIEW | ₩250,000 | ₩500,000 | 4 人 |
+| 內側房 INSIDE CABIN | ₩200,000 | ₩400,000 | 4 人 |
+| 團體房 GROUP | ₩180,000 | ₩360,000 | 8 人 |
+- 單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計，見「附加費、稅金與旺季」。
+- 4 人房（內側、海景）1 人訂房時，會與同性別的其他旅客共用客房，不能 1 人獨用；2 人以上想獨用，每張空床單程加收 ₩100,000。
+- 男女同行：2 人套房可同住；4 人房預設依性別分房。
+- 最大房型為 4 人房（團體房 8 人）。
+- 日圓票價：官方沒有公布。價格頁沒有標示更新日期。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q42、Q43、Q44）
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】附加費、稅金與旺季
+- 燃油附加費（每人，2026-11-01 起，公告 2026-10-23）：釜山出發 ₩27,000（原 ₩25,000）；大阪出發 ¥2,700（原 ¥2,500）。6 歲以下免。
+- 從大阪出發：大阪港碼頭使用費 700 日圓。國際觀光旅客稅 3,000 日圓（2 歲以上，2026-07-01 起由 1,000 日圓調漲；2026-06-30 前完成預訂並付款者維持 1,000 日圓）。
+- 從釜山出發：碼頭使用費與觀光振興金 ₩7,000。
+- 旺季（2026-07-01～12-31 公告）：釜山–大阪航線的旺季日為 7/30、31；8/2、3、10–14、16；9/18、20–25、28（公告列的日期只到 9/28）。旺季日不能使用折扣與免費乘船券；公告沒有寫票價差額；日期可能因運航情況調整。
+- 2026-11-01 起，日本免稅店購物改為「事後退稅」：先付含稅價，購買後 90 日內出境、由海關確認商品後退稅。大阪港無法現金退稅，公告建議用信用卡付款。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/310 ；https://www.panstarcruise.com/support/notice/280 ；https://www.panstarcruise.com/support/notice/272 ；https://www.panstarcruise.com/support/notice/304
+<<<chunk>>>
+【總覽｜關西出發的國際渡輪】有哪些航線？從大阪可以去哪裡？
+這個知識庫涵蓋從大阪（及神戶）出發的兩條國際渡輪航線。這一段只是總覽，細節（票價、班次、取消、行李、證件等）以各航線段落為準。
+| 航線 | 營運公司與船名 | 目前狀態（2026-11-21 確認） |
+|---|---|---|
+| 大阪 ⇄ 釜山（韓國） | PANSTAR Cruise Ferry（日本代理 株式会社サンスターライン）／パンスターミラクル号 | 官網未見 2026 年大阪航線停航公告；仍須向營運公司確認最新班表 |
+| 大阪／神戶 ⇄ 上海（中國） | 日中国際フェリー株式会社／鑑真号 | **旅客運送暫停**（2025-12-08 公告，再開未定）；請勿告訴使用者可以訂票或搭乘 |
+- 從大阪出發可以搭船去：**釜山**（週一・三・五 17:00 出港，約 17 小時，翌日 10:00 抵達）；**上海**（目前旅客運送暫停，官網船班表不區分旅客與貨物，不代表現在可以搭乘）。
+- 其他航線與國內渡輪不在這個知識庫的範圍內。
+- 可以詢問的主題：船班、票價、取消與退票、行李、證件、附加費與稅金、天候與停航。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】船班 Timetable（官方網站記載）
+營運公司：PANSTAR Cruise Ferry／日本代理店 株式会社サンスターライン。船名：パンスターミラクル号（팬스타 미라클호）。
+營運狀態：官網未見 2026 年大阪航線停航公告（2026 年僅有 Miracle 號定期檢修 2/19–3/18，已結束）；仍須向營運公司確認最新班表。
+電話：大阪（日文）06-6614-2516／韓國客服 1577-9996；日本營業處可用韓語應對。
+| 方向 | 星期 | 出港 | 抵達 |
+|---|---|---|---|
+| 大阪 → 釜山 | 一・三・五 | 17:00 | 翌日 10:00 |
+| 釜山 → 大阪 | 二・四 | 16:00 | 翌日 09:00 |
+| 釜山 → 大阪 | 日 | 15:00 | 翌日 08:30 |
+- 約 17 小時。週日釜山出發 15:00 是自 2026-05-17 起的新時刻（原 16:00，韓文公告 2026-05-06）。
+- 路線：釜山 → 對馬 → 關門橋 → 瀨戶大橋 → 明石海峽大橋 → 大阪。
+- 大阪市內免費接駁巴士（コスモスクエア駅 → 大阪国際旅客ターミナル），2026-04-01 起：14:10 / 14:30 / 14:50 / 15:10。
+- 港灣管理頁（無日期）寫 3 班／週、約 18 小時、停靠 KF-2 岸壁，與官網約 17 小時略有出入。
+來源（確認日期 2026-11-21）：https://www.panstar.jp/ ；https://www.panstarcruise.com/product/osaka/info ；https://www.panstarcruise.com/support/notice/273",3396,0.0018812,3.51,
+A16,2,ja,大阪から釜山までのフェリー運賃はいくらですか？,"パンスターミラクル号の大阪から釜山までの運賃は以下の通りです。
+
+スイート・客室の運賃（片道／往復）：
+- 總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000／來回 ₩2,400,000（客房人數：2 人）
+- 皇家套房 ROYAL SUITE：單程 ₩700,000／來回 ₩1,400,000（客房人數：3 人）
+- 陽台套房 BALCONY SUITE：單程 ₩500,000／來回 ₩1,000,000（客房人數：2 人）
+- 海景房 OCEAN VIEW：單程 ₩250,000／來回 ₩500,000（客房人數：4 人）
+- 內側房 INSIDE CABIN：單程 ₩200,000／來回 ₩400,000（客房人數：4 人）
+- 團體房 GROUP：單程 ₩180,000／來回 ₩360,000（客房人數：8 人）
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+価格や運航日程は変更される場合があります。最新の公式情報をご確認ください。",4,0.7489;0.7287;0.7274;0.7207,osaka-busan-panstar.md#1;osaka-busan-panstar.md#2;overview-routes.md#3;osaka-busan-panstar.md#4,"【釜山航線｜パンスターミラクル号】票價 Fare（只有韓元 KRW 公布；每人，單程／來回）
+| 艙等 | 單程 | 來回 | 人數 |
+|---|---|---|---|
+| 總統套房 PRESIDENTIAL SUITE | ₩1,200,000 | ₩2,400,000 | 2 人 |
+| 皇家套房 ROYAL SUITE | ₩700,000 | ₩1,400,000 | 3 人 |
+| 陽台套房 BALCONY SUITE | ₩500,000 | ₩1,000,000 | 2 人 |
+| 海景房 OCEAN VIEW | ₩250,000 | ₩500,000 | 4 人 |
+| 內側房 INSIDE CABIN | ₩200,000 | ₩400,000 | 4 人 |
+| 團體房 GROUP | ₩180,000 | ₩360,000 | 8 人 |
+- 單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計，見「附加費、稅金與旺季」。
+- 4 人房（內側、海景）1 人訂房時，會與同性別的其他旅客共用客房，不能 1 人獨用；2 人以上想獨用，每張空床單程加收 ₩100,000。
+- 男女同行：2 人套房可同住；4 人房預設依性別分房。
+- 最大房型為 4 人房（團體房 8 人）。
+- 日圓票價：官方沒有公布。價格頁沒有標示更新日期。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q42、Q43、Q44）
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】附加費、稅金與旺季
+- 燃油附加費（每人，2026-11-01 起，公告 2026-10-23）：釜山出發 ₩27,000（原 ₩25,000）；大阪出發 ¥2,700（原 ¥2,500）。6 歲以下免。
+- 從大阪出發：大阪港碼頭使用費 700 日圓。國際觀光旅客稅 3,000 日圓（2 歲以上，2026-07-01 起由 1,000 日圓調漲；2026-06-30 前完成預訂並付款者維持 1,000 日圓）。
+- 從釜山出發：碼頭使用費與觀光振興金 ₩7,000。
+- 旺季（2026-07-01～12-31 公告）：釜山–大阪航線的旺季日為 7/30、31；8/2、3、10–14、16；9/18、20–25、28（公告列的日期只到 9/28）。旺季日不能使用折扣與免費乘船券；公告沒有寫票價差額；日期可能因運航情況調整。
+- 2026-11-01 起，日本免稅店購物改為「事後退稅」：先付含稅價，購買後 90 日內出境、由海關確認商品後退稅。大阪港無法現金退稅，公告建議用信用卡付款。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/310 ；https://www.panstarcruise.com/support/notice/280 ；https://www.panstarcruise.com/support/notice/272 ；https://www.panstarcruise.com/support/notice/304
+<<<chunk>>>
+【總覽｜關西出發的國際渡輪】有哪些航線？從大阪可以去哪裡？
+這個知識庫涵蓋從大阪（及神戶）出發的兩條國際渡輪航線。這一段只是總覽，細節（票價、班次、取消、行李、證件等）以各航線段落為準。
+| 航線 | 營運公司與船名 | 目前狀態（2026-11-21 確認） |
+|---|---|---|
+| 大阪 ⇄ 釜山（韓國） | PANSTAR Cruise Ferry（日本代理 株式会社サンスターライン）／パンスターミラクル号 | 官網未見 2026 年大阪航線停航公告；仍須向營運公司確認最新班表 |
+| 大阪／神戶 ⇄ 上海（中國） | 日中国際フェリー株式会社／鑑真号 | **旅客運送暫停**（2025-12-08 公告，再開未定）；請勿告訴使用者可以訂票或搭乘 |
+- 從大阪出發可以搭船去：**釜山**（週一・三・五 17:00 出港，約 17 小時，翌日 10:00 抵達）；**上海**（目前旅客運送暫停，官網船班表不區分旅客與貨物，不代表現在可以搭乘）。
+- 其他航線與國內渡輪不在這個知識庫的範圍內。
+- 可以詢問的主題：船班、票價、取消與退票、行李、證件、附加費與稅金、天候與停航。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】船班 Timetable（官方網站記載）
+營運公司：PANSTAR Cruise Ferry／日本代理店 株式会社サンスターライン。船名：パンスターミラクル号（팬스타 미라클호）。
+營運狀態：官網未見 2026 年大阪航線停航公告（2026 年僅有 Miracle 號定期檢修 2/19–3/18，已結束）；仍須向營運公司確認最新班表。
+電話：大阪（日文）06-6614-2516／韓國客服 1577-9996；日本營業處可用韓語應對。
+| 方向 | 星期 | 出港 | 抵達 |
+|---|---|---|---|
+| 大阪 → 釜山 | 一・三・五 | 17:00 | 翌日 10:00 |
+| 釜山 → 大阪 | 二・四 | 16:00 | 翌日 09:00 |
+| 釜山 → 大阪 | 日 | 15:00 | 翌日 08:30 |
+- 約 17 小時。週日釜山出發 15:00 是自 2026-05-17 起的新時刻（原 16:00，韓文公告 2026-05-06）。
+- 路線：釜山 → 對馬 → 關門橋 → 瀨戶大橋 → 明石海峽大橋 → 大阪。
+- 大阪市內免費接駁巴士（コスモスクエア駅 → 大阪国際旅客ターミナル），2026-04-01 起：14:10 / 14:30 / 14:50 / 15:10。
+- 港灣管理頁（無日期）寫 3 班／週、約 18 小時、停靠 KF-2 岸壁，與官網約 17 小時略有出入。
+來源（確認日期 2026-11-21）：https://www.panstar.jp/ ；https://www.panstarcruise.com/product/osaka/info ；https://www.panstarcruise.com/support/notice/273",3364,0.0018012,2.73,
+A17,1,en,How are cancellation fees calculated for the Osaka–Busan ferry?,"For the Osaka–Busan ferry (パンスターミラクル号), cancellation fees have two different sets of rules provided by the official website (Korean and Japanese versions), and the official site does not specify which one applies to tickets purchased in Japan. Please check with your point of purchase.
+
+* **Korean Official Website** (General tickets / Osaka route):
+  * From payment to 3 days before departure: Full refund
+  * 2 days before: 10% deduction
+  * 1 day before: 30% deduction
+  * Departure day to 2 hours before: 50% deduction
+  * From 2 hours before departure onward: No refund
+  * Discount tickets: 24 hours after booking to 7 days before departure: 30% deduction; 6 to 1 day before: 50% deduction; On the day of departure: No refund. First-time bookings can be changed or canceled without a fee within 24 hours.
+* **Japanese Official Website** (Passenger transport terms, revised February 15, 2020; purchase page rules are identical without a date):
+  * Cancellation fees as a percentage of the fare:
+  * 10 days before departure or earlier: 10%
+  * 9 to 7 days before: 15%
+  * 6 to 1 day before: 20%
+  * Departure day to 2 hours before: 30%
+  * From 2 hours before departure onward: No refund
+  * Company cancellation or suspension: Full refund. Cancellations must be made by phone at 06-6614-2516 before departure; refunds can only be processed at the ticket counter with ID and the ship ticket.
+* **Round-trip tickets**: The outbound portion cannot be canceled separately after purchase; the return portion can be partially canceled and is subject to fees according to the terms.
+* **Additional services (e.g., onboard meals)**: Full refund up to 1 day before departure; no refund on the day of departure.
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q48）；https://www.panstar.jp/article/ ；https://www.panstar.jp/ticketpurchase/（確認日期：2026-11-21）
+
+Prices and schedules may change. Please check the latest official announcements.",4,0.7868;0.7352;0.735;0.7324,osaka-busan-panstar.md#1;osaka-busan-panstar.md#2;kansai-shanghai-shinganjin.md#3;osaka-busan-panstar.md#4,"【釜山航線｜パンスターミラクル号】取消與退票 Cancellation（韓文官網與日文官網兩套說法）
+**韓文官網**（價格頁與 FAQ Q48 兩處一致；大阪航線一般票）：付款後～出航 3 天前：全額退款；2 天前扣 10%；1 天前扣 30%；出航當天～2 小時前扣 50%；出航 2 小時前以後不可退款。折扣票：付款 24 小時後～出航 7 天前扣 30%；6～1 天前扣 50%；當天不退。首次預訂後 24 小時內變更或取消免手續費。
+**日文官網**（旅客運送約款，2020-02-15 修訂；日文購票說明頁寫法相同，無日期）：取消料為票價的百分比：出航 10 日前以前 10%；9～7 日前 15%；6～1 日前 20%；當日～2 小時前 30%；2 小時前以後不可退款。船公司停航或取消：全額退款。取消須在出航前電話 06-6614-2516；退款只能在購票處辦理，需帶身分證與船票。
+兩套數字不一致，韓文版較寬鬆（3 日前可全額退）。官方沒有說明哪一套適用於日本購票。回答時兩邊並列，並提醒向購票處確認。
+來回票：購買後不可只取消去程；回程可部分取消，須依約款收手續費。附加服務（如船上餐）：出航前 1 天可全額退，當天不退。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q48）；https://www.panstar.jp/article/ ；https://www.panstar.jp/ticketpurchase/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】附加費、稅金與旺季
+- 燃油附加費（每人，2026-11-01 起，公告 2026-10-23）：釜山出發 ₩27,000（原 ₩25,000）；大阪出發 ¥2,700（原 ¥2,500）。6 歲以下免。
+- 從大阪出發：大阪港碼頭使用費 700 日圓。國際觀光旅客稅 3,000 日圓（2 歲以上，2026-07-01 起由 1,000 日圓調漲；2026-06-30 前完成預訂並付款者維持 1,000 日圓）。
+- 從釜山出發：碼頭使用費與觀光振興金 ₩7,000。
+- 旺季（2026-07-01～12-31 公告）：釜山–大阪航線的旺季日為 7/30、31；8/2、3、10–14、16；9/18、20–25、28（公告列的日期只到 9/28）。旺季日不能使用折扣與免費乘船券；公告沒有寫票價差額；日期可能因運航情況調整。
+- 2026-11-01 起，日本免稅店購物改為「事後退稅」：先付含稅價，購買後 90 日內出境、由海關確認商品後退稅。大阪港無法現金退稅，公告建議用信用卡付款。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/310 ；https://www.panstarcruise.com/support/notice/280 ；https://www.panstarcruise.com/support/notice/272 ；https://www.panstarcruise.com/support/notice/304
+<<<chunk>>>
+【上海航線｜鑑真号】取消與退票（日本出發）
+- 取消料（以乘船券票價的百分比，出港時刻基準）：出港 7 日前まで 10%；7 日前以降～48 時間前 30%；48 時間前以降～24 時間前 50%；24 時間以内不可退款。
+- 退款有效期限：含出港日在內 90 日以內。網上可申請取消。
+- 變更：手續費每張乘船券 1,000 円，出港 24 小時前まで，限 1 次，原定日前後 60 日以內。
+- 旅客運送暫停期間：公告表示已預訂船票「キャンセル料なし」處理。暫停以外時間是否適用上述取消料：官方未說明。
+來源（確認日期 2026-11-21）：https://www.shinganjin.com/boarding-information/faq.php ；https://www.shinganjin.com/wp/wp-content/uploads/2025/11/640593de212d47d22537fa937591fbd7.pdf
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】兒童與折扣
+- 年齡以出航日的滿年齡計算（大阪航線，與瀨戶內海航線同）：滿 0 歲～未滿 6 歲：每名成人可免費帶 1 名；滿 6 歲～未滿 12 歲：該客房成人票價的 50%。
+- 2 歲以上需繳部分稅金。
+- 身心障礙等折扣見官網；折扣證明於出航當天領票時提交。
+- 折扣票的退票、改期規定與一般票不同，見取消與變更段落。
+- 旺季日不可使用折扣票。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q3、Q4、Q18）",3116,0.0021228,4.07,
+A17,2,en,How are cancellation fees calculated for the Osaka–Busan ferry?,"The Osaka–Busan ferry (operated by Pan Star / パンスターミラクル号) has two sets of cancellation fee rules provided by the official website, and the official site does not specify which one applies to purchases made in Japan. Please confirm with your ticket issuer.
+
+* **Korean Official Website (General Tickets)**:
+  * Payment to 3 days before departure: Full refund
+  * 2 days before departure: 10% penalty
+  * 1 day before departure: 30% penalty
+  * Departure day to 2 hours before departure: 50% penalty
+  * From 2 hours before departure onwards: No refund
+  * *Note*: First-time booking changes or cancellations within 24 hours are free of charge. Discount tickets follow a different schedule (cancellation fees apply earlier).
+* **Japanese Official Website (Passenger Transport Agreement, revised 2020-02-15)**:
+  * Cancellation fees as a percentage of the fare:
+    * 10 days before departure or earlier: 10%
+    * 9 to 7 days before departure: 15%
+    * 6 to 1 days before departure: 20%
+    * Departure day to 2 hours before departure: 30%
+    * From 2 hours before departure onwards: No refund
+  * Company cancellation or suspension: Full refund
+  * Cancellations must be made by phone at 06-6614-2516 before departure; refunds can only be processed at the ticketing location with ID and the ticket.
+
+来源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q48）；https://www.panstar.jp/article/ ；https://www.panstar.jp/ticketpurchase/（確認日期：2026-11-21）
+
+Prices and schedules may change. Please check the latest official announcements.",4,0.7868;0.7352;0.735;0.7324,osaka-busan-panstar.md#1;osaka-busan-panstar.md#2;kansai-shanghai-shinganjin.md#3;osaka-busan-panstar.md#4,"【釜山航線｜パンスターミラクル号】取消與退票 Cancellation（韓文官網與日文官網兩套說法）
+**韓文官網**（價格頁與 FAQ Q48 兩處一致；大阪航線一般票）：付款後～出航 3 天前：全額退款；2 天前扣 10%；1 天前扣 30%；出航當天～2 小時前扣 50%；出航 2 小時前以後不可退款。折扣票：付款 24 小時後～出航 7 天前扣 30%；6～1 天前扣 50%；當天不退。首次預訂後 24 小時內變更或取消免手續費。
+**日文官網**（旅客運送約款，2020-02-15 修訂；日文購票說明頁寫法相同，無日期）：取消料為票價的百分比：出航 10 日前以前 10%；9～7 日前 15%；6～1 日前 20%；當日～2 小時前 30%；2 小時前以後不可退款。船公司停航或取消：全額退款。取消須在出航前電話 06-6614-2516；退款只能在購票處辦理，需帶身分證與船票。
+兩套數字不一致，韓文版較寬鬆（3 日前可全額退）。官方沒有說明哪一套適用於日本購票。回答時兩邊並列，並提醒向購票處確認。
+來回票：購買後不可只取消去程；回程可部分取消，須依約款收手續費。附加服務（如船上餐）：出航前 1 天可全額退，當天不退。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q48）；https://www.panstar.jp/article/ ；https://www.panstar.jp/ticketpurchase/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】附加費、稅金與旺季
+- 燃油附加費（每人，2026-11-01 起，公告 2026-10-23）：釜山出發 ₩27,000（原 ₩25,000）；大阪出發 ¥2,700（原 ¥2,500）。6 歲以下免。
+- 從大阪出發：大阪港碼頭使用費 700 日圓。國際觀光旅客稅 3,000 日圓（2 歲以上，2026-07-01 起由 1,000 日圓調漲；2026-06-30 前完成預訂並付款者維持 1,000 日圓）。
+- 從釜山出發：碼頭使用費與觀光振興金 ₩7,000。
+- 旺季（2026-07-01～12-31 公告）：釜山–大阪航線的旺季日為 7/30、31；8/2、3、10–14、16；9/18、20–25、28（公告列的日期只到 9/28）。旺季日不能使用折扣與免費乘船券；公告沒有寫票價差額；日期可能因運航情況調整。
+- 2026-11-01 起，日本免稅店購物改為「事後退稅」：先付含稅價，購買後 90 日內出境、由海關確認商品後退稅。大阪港無法現金退稅，公告建議用信用卡付款。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/310 ；https://www.panstarcruise.com/support/notice/280 ；https://www.panstarcruise.com/support/notice/272 ；https://www.panstarcruise.com/support/notice/304
+<<<chunk>>>
+【上海航線｜鑑真号】取消與退票（日本出發）
+- 取消料（以乘船券票價的百分比，出港時刻基準）：出港 7 日前まで 10%；7 日前以降～48 時間前 30%；48 時間前以降～24 時間前 50%；24 時間以内不可退款。
+- 退款有效期限：含出港日在內 90 日以內。網上可申請取消。
+- 變更：手續費每張乘船券 1,000 円，出港 24 小時前まで，限 1 次，原定日前後 60 日以內。
+- 旅客運送暫停期間：公告表示已預訂船票「キャンセル料なし」處理。暫停以外時間是否適用上述取消料：官方未說明。
+來源（確認日期 2026-11-21）：https://www.shinganjin.com/boarding-information/faq.php ；https://www.shinganjin.com/wp/wp-content/uploads/2025/11/640593de212d47d22537fa937591fbd7.pdf
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】兒童與折扣
+- 年齡以出航日的滿年齡計算（大阪航線，與瀨戶內海航線同）：滿 0 歲～未滿 6 歲：每名成人可免費帶 1 名；滿 6 歲～未滿 12 歲：該客房成人票價的 50%。
+- 2 歲以上需繳部分稅金。
+- 身心障礙等折扣見官網；折扣證明於出航當天領票時提交。
+- 折扣票的退票、改期規定與一般票不同，見取消與變更段落。
+- 旺季日不可使用折扣票。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q3、Q4、Q18）",3011,0.0018603,2.9,
+A18,1,ja,大阪―釜山のキャンセル料はどう計算されますか？,"大阪―釜山航線（パンスターミラクル号）のキャンセル料については、韓文官網與日文官網有兩套不同的規定：
+
+**1. 韓文官網（大阪航線一般票）**
+- 付款後～出航 3 天前：全額退款
+- 2 天前：扣 10%
+- 1 天前：扣 30%
+- 出航當天～2 小時前：扣 50%
+- 出航 2 小時前以後：不可退款
+- 折扣票規定：付款 24 小時後～出航 7 天前扣 30%；6～1 天前扣 50%；當天不退。首次預訂後 24 小時內變更或取消免手續費。
+
+**2. 日文官網（旅客運送約款）**
+- 出航 10 日前以前：10%
+- 9～7 日前：15%
+- 6～1 日前：20%
+- 當日～2 小時前：30%
+- 2 小時前以後：不可退款
+- 船公司停航或取消：全額退款。取消須在出航前電話 06-6614-2516；退款只能在購票處辦理，需帶身分證與船票。
+- 另外，來回票購買後不可只取消去程；回程可部分取消，須依約款收手續費。附加服務（如船上餐）出航前 1 天可全額退，當天不退。
+
+官方沒有說明哪一套適用於日本購票，請向購票處確認。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q48）；https://www.panstar.jp/article/ ；https://www.panstar.jp/ticketpurchase/（確認日期：2026-11-21）
+
+価格や運航日程は変更される場合があります。最新の公式情報をご確認ください。",4,0.7767;0.7182;0.7131;0.7115,osaka-busan-panstar.md#1;osaka-busan-panstar.md#2;osaka-busan-panstar.md#3;kansai-shanghai-shinganjin.md#4,"【釜山航線｜パンスターミラクル号】取消與退票 Cancellation（韓文官網與日文官網兩套說法）
+**韓文官網**（價格頁與 FAQ Q48 兩處一致；大阪航線一般票）：付款後～出航 3 天前：全額退款；2 天前扣 10%；1 天前扣 30%；出航當天～2 小時前扣 50%；出航 2 小時前以後不可退款。折扣票：付款 24 小時後～出航 7 天前扣 30%；6～1 天前扣 50%；當天不退。首次預訂後 24 小時內變更或取消免手續費。
+**日文官網**（旅客運送約款，2020-02-15 修訂；日文購票說明頁寫法相同，無日期）：取消料為票價的百分比：出航 10 日前以前 10%；9～7 日前 15%；6～1 日前 20%；當日～2 小時前 30%；2 小時前以後不可退款。船公司停航或取消：全額退款。取消須在出航前電話 06-6614-2516；退款只能在購票處辦理，需帶身分證與船票。
+兩套數字不一致，韓文版較寬鬆（3 日前可全額退）。官方沒有說明哪一套適用於日本購票。回答時兩邊並列，並提醒向購票處確認。
+來回票：購買後不可只取消去程；回程可部分取消，須依約款收手續費。附加服務（如船上餐）：出航前 1 天可全額退，當天不退。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q48）；https://www.panstar.jp/article/ ；https://www.panstar.jp/ticketpurchase/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】兒童與折扣
+- 年齡以出航日的滿年齡計算（大阪航線，與瀨戶內海航線同）：滿 0 歲～未滿 6 歲：每名成人可免費帶 1 名；滿 6 歲～未滿 12 歲：該客房成人票價的 50%。
+- 2 歲以上需繳部分稅金。
+- 身心障礙等折扣見官網；折扣證明於出航當天領票時提交。
+- 折扣票的退票、改期規定與一般票不同，見取消與變更段落。
+- 旺季日不可使用折扣票。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q3、Q4、Q18）
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】附加費、稅金與旺季
+- 燃油附加費（每人，2026-11-01 起，公告 2026-10-23）：釜山出發 ₩27,000（原 ₩25,000）；大阪出發 ¥2,700（原 ¥2,500）。6 歲以下免。
+- 從大阪出發：大阪港碼頭使用費 700 日圓。國際觀光旅客稅 3,000 日圓（2 歲以上，2026-07-01 起由 1,000 日圓調漲；2026-06-30 前完成預訂並付款者維持 1,000 日圓）。
+- 從釜山出發：碼頭使用費與觀光振興金 ₩7,000。
+- 旺季（2026-07-01～12-31 公告）：釜山–大阪航線的旺季日為 7/30、31；8/2、3、10–14、16；9/18、20–25、28（公告列的日期只到 9/28）。旺季日不能使用折扣與免費乘船券；公告沒有寫票價差額；日期可能因運航情況調整。
+- 2026-11-01 起，日本免稅店購物改為「事後退稅」：先付含稅價，購買後 90 日內出境、由海關確認商品後退稅。大阪港無法現金退稅，公告建議用信用卡付款。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/310 ；https://www.panstarcruise.com/support/notice/280 ；https://www.panstarcruise.com/support/notice/272 ；https://www.panstarcruise.com/support/notice/304
+<<<chunk>>>
+【上海航線｜鑑真号】取消與退票（日本出發）
+- 取消料（以乘船券票價的百分比，出港時刻基準）：出港 7 日前まで 10%；7 日前以降～48 時間前 30%；48 時間前以降～24 時間前 50%；24 時間以内不可退款。
+- 退款有效期限：含出港日在內 90 日以內。網上可申請取消。
+- 變更：手續費每張乘船券 1,000 円，出港 24 小時前まで，限 1 次，原定日前後 60 日以內。
+- 旅客運送暫停期間：公告表示已預訂船票「キャンセル料なし」處理。暫停以外時間是否適用上述取消料：官方未說明。
+來源（確認日期 2026-11-21）：https://www.shinganjin.com/boarding-information/faq.php ；https://www.shinganjin.com/wp/wp-content/uploads/2025/11/640593de212d47d22537fa937591fbd7.pdf",3065,0.0019997,5.5,
+A18,2,ja,大阪―釜山のキャンセル料はどう計算されますか？,"大阪—釜山航線（パンスターミラクル号）的取消規定在韓文官網與日文官網各有不同說法，官方沒有說明哪一套適用於日本購票，建議向購票處確認。
+
+取消料的計算方式如下：
+
+* **韓文官網（大阪航線一般票）**
+  * 付款後～出航 3 天前：全額退款
+  * 2 天前：扣 10%
+  * 1 天前：扣 30%
+  * 出航當天～2 小時前：扣 50%
+  * 出航 2 小時前以後：不可退款
+  * 折扣票：付款 24 小時後～出航 7 天前扣 30%；6～1 天前扣 50%；當天不退。首次預訂後 24 小時內變更或取消免手續費。
+
+* **日文官網（旅客運送約款）**
+  * 取消料為票價的百分比：出航 10 日前以前 10%；9～7 日前 15%；6～1 日前 20%；當日～2 小時前 30%；2 小時前以後不可退款。
+  * 船公司停航或取消：全額退款。
+  * 取消須在出航前電話 06-6614-2516；退款只能在購票處辦理，需帶身分證與船票。
+
+* **其他相關規定**
+  * 來回票：購買後不可只取消去程；回程可部分取消，須依約款收手續費。
+  * 附加服務（如船上餐）：出航前 1 天可全額退，當天不退。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q48）；https://www.panstar.jp/article/ ；https://www.panstar.jp/ticketpurchase/（確認日期：2026-11-21）
+
+価格や運航日程は変更される場合があります。最新の公式情報をご確認ください。",4,0.7767;0.7182;0.7131;0.7115,osaka-busan-panstar.md#1;osaka-busan-panstar.md#2;osaka-busan-panstar.md#3;kansai-shanghai-shinganjin.md#4,"【釜山航線｜パンスターミラクル号】取消與退票 Cancellation（韓文官網與日文官網兩套說法）
+**韓文官網**（價格頁與 FAQ Q48 兩處一致；大阪航線一般票）：付款後～出航 3 天前：全額退款；2 天前扣 10%；1 天前扣 30%；出航當天～2 小時前扣 50%；出航 2 小時前以後不可退款。折扣票：付款 24 小時後～出航 7 天前扣 30%；6～1 天前扣 50%；當天不退。首次預訂後 24 小時內變更或取消免手續費。
+**日文官網**（旅客運送約款，2020-02-15 修訂；日文購票說明頁寫法相同，無日期）：取消料為票價的百分比：出航 10 日前以前 10%；9～7 日前 15%；6～1 日前 20%；當日～2 小時前 30%；2 小時前以後不可退款。船公司停航或取消：全額退款。取消須在出航前電話 06-6614-2516；退款只能在購票處辦理，需帶身分證與船票。
+兩套數字不一致，韓文版較寬鬆（3 日前可全額退）。官方沒有說明哪一套適用於日本購票。回答時兩邊並列，並提醒向購票處確認。
+來回票：購買後不可只取消去程；回程可部分取消，須依約款收手續費。附加服務（如船上餐）：出航前 1 天可全額退，當天不退。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q48）；https://www.panstar.jp/article/ ；https://www.panstar.jp/ticketpurchase/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】兒童與折扣
+- 年齡以出航日的滿年齡計算（大阪航線，與瀨戶內海航線同）：滿 0 歲～未滿 6 歲：每名成人可免費帶 1 名；滿 6 歲～未滿 12 歲：該客房成人票價的 50%。
+- 2 歲以上需繳部分稅金。
+- 身心障礙等折扣見官網；折扣證明於出航當天領票時提交。
+- 折扣票的退票、改期規定與一般票不同，見取消與變更段落。
+- 旺季日不可使用折扣票。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q3、Q4、Q18）
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】附加費、稅金與旺季
+- 燃油附加費（每人，2026-11-01 起，公告 2026-10-23）：釜山出發 ₩27,000（原 ₩25,000）；大阪出發 ¥2,700（原 ¥2,500）。6 歲以下免。
+- 從大阪出發：大阪港碼頭使用費 700 日圓。國際觀光旅客稅 3,000 日圓（2 歲以上，2026-07-01 起由 1,000 日圓調漲；2026-06-30 前完成預訂並付款者維持 1,000 日圓）。
+- 從釜山出發：碼頭使用費與觀光振興金 ₩7,000。
+- 旺季（2026-07-01～12-31 公告）：釜山–大阪航線的旺季日為 7/30、31；8/2、3、10–14、16；9/18、20–25、28（公告列的日期只到 9/28）。旺季日不能使用折扣與免費乘船券；公告沒有寫票價差額；日期可能因運航情況調整。
+- 2026-11-01 起，日本免稅店購物改為「事後退稅」：先付含稅價，購買後 90 日內出境、由海關確認商品後退稅。大阪港無法現金退稅，公告建議用信用卡付款。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/310 ；https://www.panstarcruise.com/support/notice/280 ；https://www.panstarcruise.com/support/notice/272 ；https://www.panstarcruise.com/support/notice/304
+<<<chunk>>>
+【上海航線｜鑑真号】取消與退票（日本出發）
+- 取消料（以乘船券票價的百分比，出港時刻基準）：出港 7 日前まで 10%；7 日前以降～48 時間前 30%；48 時間前以降～24 時間前 50%；24 時間以内不可退款。
+- 退款有效期限：含出港日在內 90 日以內。網上可申請取消。
+- 變更：手續費每張乘船券 1,000 円，出港 24 小時前まで，限 1 次，原定日前後 60 日以內。
+- 旅客運送暫停期間：公告表示已預訂船票「キャンセル料なし」處理。暫停以外時間是否適用上述取消料：官方未說明。
+來源（確認日期 2026-11-21）：https://www.shinganjin.com/boarding-information/faq.php ；https://www.shinganjin.com/wp/wp-content/uploads/2025/11/640593de212d47d22537fa937591fbd7.pdf",3087,0.0020547,4.0,
+A19,1,en,Is the Shanghai ferry running now?,"上海航線目前的旅客運送已暫停，官方未公告再開時間；官網雖然仍有船班表，但未說明是否恢復載客，這項資料不代表現在可以購買或搭乘。請直接向日中国際フェリー確認。
+
+Prices and schedules may change. Please check the latest official announcements.
+
+來源：https://www.shinganjin.com/news/ ；https://www.shinganjin.com/status/?pram=jianzhenhao ；https://www.shinganjin.com/wp/wp-content/uploads/2025/06/Notice-of-the-passenger-transportation-resumption.pdf（確認日期：2026-11-21）",4,0.7761;0.7376;0.7357;0.7228,kansai-shanghai-shinganjin.md#1;kansai-shanghai-shinganjin.md#2;kansai-shanghai-shinganjin.md#3;kansai-shanghai-shinganjin.md#4,"【上海航線｜鑑真号】目前狀態（最重要）
+營運公司：日中国際フェリー株式会社（中日国際輪渡有限公司）。**旅客運送目前暫停**，請勿告訴使用者可以訂票或搭乘，除非官方發布再開公告。
+- 2025-06-19 官方公告（英文 PDF）：2020-01 起中斷的旅客運送，於 2025-06-28 上海出發恢復。唯一的客船是「鑑真号」，另一艘「新鑑真」只做貨運。船每週一早晨抵達（神戶與大阪交替）、週二早晨辦理出境並出發。前 4 航次為確認航次，一般旅客自 2025-07-12 上海出發的 V.0113 起可搭乘。
+- **2025-12-08 公告「旅客輸送中断のお知らせ」**：「12月6日上海発便から当面の間、中国側の申し入れで皆様の日中間の渡航の安全が確保できないということから、鑑真号での旅客サービスを暫く中断致します」「再開については未定ですが、情勢が変わり次第、速やかにご案内申し上げます」。已預訂的船票「キャンセル料なし」處理。
+- 2025-12-08 之後，官網**沒有**宣布旅客運送恢復的公告。
+- 「鑑真号」運航狀況頁（2026-11-21 13:30 現在）仍列出班次，例如上海→神戶 V.0249（11/21 出港）、神戶→上海 V.0250（11/24 出港）。該頁**不區分旅客或貨物**，也沒有說明是否載客。
+- 官網運航表（含 2026-11-18 公告的「2027年上半期」）是「鑑真号」與「新鑑真」兩船合併的表，同樣不區分旅客與貨物。
+- 回答原則：使用者問上海航線時，說明「官方 2025-12-08 公告旅客運送暫停、再開未定；官網仍有船班表，但未說明是否恢復載客，請直接向日中国際フェリー確認」。
+來源（確認日期 2026-11-21）：https://www.shinganjin.com/news/ ；https://www.shinganjin.com/status/?pram=jianzhenhao ；https://www.shinganjin.com/wp/wp-content/uploads/2025/06/Notice-of-the-passenger-transportation-resumption.pdf
+<<<chunk>>>
+【上海航線｜鑑真号】港口與地址
+- 神戶：神戶港（神戶ポートターミナル）新港第4突堤，神戶市中央区新港町4-5；報到在ポートターミナルビル 2F。
+- 大阪：大阪港国際フェリーターミナル 南港 KF-1 岸壁，大阪市住之江区南港北1丁目20-52；Metro コスモスクエア駅 搭免費巡迴巴士約 5 分。
+- 上海：官網要求**不要直接前往上海港（軍工路ターミナル）**，須在指定接送點集合：上海悠方ショッピングモール 2 号門 臨時駐車エリア（上海市楊浦区淞沪路 1388 号，地鐵 10 號線新江灣城站 6 號出口旁）。上海出港週六 9:00–10:30 接駁；上海到港週四無接送。
+- 日本總代理店：日中国際フェリー株式会社，大阪市中央区南本町1丁目8番14号 JRE堺筋本町ビル 9F，TEL 06-6262-6541（事務所，非碼頭）。上海事務所：TEL 86-21-65956888。
+來源（確認日期 2026-11-21）：https://www.shinganjin.com/boarding-information/access.php
+<<<chunk>>>
+【上海航線｜鑑真号】航線與時刻（僅供參考，旅客是否可搭乘見上方）
+- 每週二出港，神戶港與大阪港交替；上海出發為週六。
+- 航行時間：官網未直接載明，依時刻表推算約 2 天（例：大阪 11:30 出港 → 上海 2 天後 13:00 抵達）。這是推算值，非官方文字。
+- 港灣管理頁（無日期）寫上海航線約每週 2.5 班、約 48 小時、停靠大阪港 KF-1 岸壁，神戶與大阪隔週營運；神戶市港灣頁（2025-09-08）也列有上海航線。兩頁都不是 2026-11 的確認資料。
+- 2027 年上半期運航表中，2027-02-09～02-15 大阪休航；2026-12-25～12-30 神戶休航。
+來源（確認日期 2026-11-21）：https://www.shinganjin.com/schedule/ ；https://hanshinport.co.jp/en/facilities/ferry/ ；https://www.city.kobe.lg.jp/a45623/kurashi/access/harbor/ferry/index.html
+<<<chunk>>>
+【上海航線｜鑑真号】已知缺口（不要補編）
+- **目前是否恢復載客**：官方未說明。官網運航狀況頁與運航表仍列「鑑真号」的航次，但不區分旅客與貨物。
+- 國際觀光旅客稅：官網運賃頁（3,000 円）與 PDF／簡報（1,000 円）寫法不同，以日本現行規定為準。
+- 票價的適用期間：官網運賃頁沒有標示；上海出發的人民幣價也沒有生效期間。
+- 2026 年 7 月以後的票價是否調整：未取得。
+- 簽證與護照規定：官網沒有此項，**不要自行回答**，請使用者查證各國外交部規定。
+- 天候與停航的處理規定：官網沒有說明。
+- 官網未提供大阪／神戶–上海以外的航線。",2767,0.0011975,3.05,
+A19,2,en,Is the Shanghai ferry running now?,"上海航線目前的旅客運送已暫停，官方未公告再開時間；官網雖然仍有船班表，但未說明是否恢復載客，這項資料不代表現在可以購買或搭乘。
+
+官方於 2025-12-08 公告，自 12 月 6 日上海發車的航班起暫停鑑真号的旅客服務，再開時間未定，已預訂的船票則以免取消手續費方式處理。
+
+來源：https://www.shinganjin.com/news/ （確認日期：2026-11-21）
+
+Prices and schedules may change. Please check the latest official announcements.",4,0.7761;0.7376;0.7357;0.7228,kansai-shanghai-shinganjin.md#1;kansai-shanghai-shinganjin.md#2;kansai-shanghai-shinganjin.md#3;kansai-shanghai-shinganjin.md#4,"【上海航線｜鑑真号】目前狀態（最重要）
+營運公司：日中国際フェリー株式会社（中日国際輪渡有限公司）。**旅客運送目前暫停**，請勿告訴使用者可以訂票或搭乘，除非官方發布再開公告。
+- 2025-06-19 官方公告（英文 PDF）：2020-01 起中斷的旅客運送，於 2025-06-28 上海出發恢復。唯一的客船是「鑑真号」，另一艘「新鑑真」只做貨運。船每週一早晨抵達（神戶與大阪交替）、週二早晨辦理出境並出發。前 4 航次為確認航次，一般旅客自 2025-07-12 上海出發的 V.0113 起可搭乘。
+- **2025-12-08 公告「旅客輸送中断のお知らせ」**：「12月6日上海発便から当面の間、中国側の申し入れで皆様の日中間の渡航の安全が確保できないということから、鑑真号での旅客サービスを暫く中断致します」「再開については未定ですが、情勢が変わり次第、速やかにご案内申し上げます」。已預訂的船票「キャンセル料なし」處理。
+- 2025-12-08 之後，官網**沒有**宣布旅客運送恢復的公告。
+- 「鑑真号」運航狀況頁（2026-11-21 13:30 現在）仍列出班次，例如上海→神戶 V.0249（11/21 出港）、神戶→上海 V.0250（11/24 出港）。該頁**不區分旅客或貨物**，也沒有說明是否載客。
+- 官網運航表（含 2026-11-18 公告的「2027年上半期」）是「鑑真号」與「新鑑真」兩船合併的表，同樣不區分旅客與貨物。
+- 回答原則：使用者問上海航線時，說明「官方 2025-12-08 公告旅客運送暫停、再開未定；官網仍有船班表，但未說明是否恢復載客，請直接向日中国際フェリー確認」。
+來源（確認日期 2026-11-21）：https://www.shinganjin.com/news/ ；https://www.shinganjin.com/status/?pram=jianzhenhao ；https://www.shinganjin.com/wp/wp-content/uploads/2025/06/Notice-of-the-passenger-transportation-resumption.pdf
+<<<chunk>>>
+【上海航線｜鑑真号】港口與地址
+- 神戶：神戶港（神戶ポートターミナル）新港第4突堤，神戶市中央区新港町4-5；報到在ポートターミナルビル 2F。
+- 大阪：大阪港国際フェリーターミナル 南港 KF-1 岸壁，大阪市住之江区南港北1丁目20-52；Metro コスモスクエア駅 搭免費巡迴巴士約 5 分。
+- 上海：官網要求**不要直接前往上海港（軍工路ターミナル）**，須在指定接送點集合：上海悠方ショッピングモール 2 号門 臨時駐車エリア（上海市楊浦区淞沪路 1388 号，地鐵 10 號線新江灣城站 6 號出口旁）。上海出港週六 9:00–10:30 接駁；上海到港週四無接送。
+- 日本總代理店：日中国際フェリー株式会社，大阪市中央区南本町1丁目8番14号 JRE堺筋本町ビル 9F，TEL 06-6262-6541（事務所，非碼頭）。上海事務所：TEL 86-21-65956888。
+來源（確認日期 2026-11-21）：https://www.shinganjin.com/boarding-information/access.php
+<<<chunk>>>
+【上海航線｜鑑真号】航線與時刻（僅供參考，旅客是否可搭乘見上方）
+- 每週二出港，神戶港與大阪港交替；上海出發為週六。
+- 航行時間：官網未直接載明，依時刻表推算約 2 天（例：大阪 11:30 出港 → 上海 2 天後 13:00 抵達）。這是推算值，非官方文字。
+- 港灣管理頁（無日期）寫上海航線約每週 2.5 班、約 48 小時、停靠大阪港 KF-1 岸壁，神戶與大阪隔週營運；神戶市港灣頁（2025-09-08）也列有上海航線。兩頁都不是 2026-11 的確認資料。
+- 2027 年上半期運航表中，2027-02-09～02-15 大阪休航；2026-12-25～12-30 神戶休航。
+來源（確認日期 2026-11-21）：https://www.shinganjin.com/schedule/ ；https://hanshinport.co.jp/en/facilities/ferry/ ；https://www.city.kobe.lg.jp/a45623/kurashi/access/harbor/ferry/index.html
+<<<chunk>>>
+【上海航線｜鑑真号】已知缺口（不要補編）
+- **目前是否恢復載客**：官方未說明。官網運航狀況頁與運航表仍列「鑑真号」的航次，但不區分旅客與貨物。
+- 國際觀光旅客稅：官網運賃頁（3,000 円）與 PDF／簡報（1,000 円）寫法不同，以日本現行規定為準。
+- 票價的適用期間：官網運賃頁沒有標示；上海出發的人民幣價也沒有生效期間。
+- 2026 年 7 月以後的票價是否調整：未取得。
+- 簽證與護照規定：官網沒有此項，**不要自行回答**，請使用者查證各國外交部規定。
+- 天候與停航的處理規定：官網沒有說明。
+- 官網未提供大阪／神戶–上海以外的航線。",2754,0.001165,3.71,
+A20,1,ja,上海航路は今、運航していますか？,"大阪—上海航線（鑑真号）的旅客運送目前暫停，官方 2025-12-08 公告因中國側提出日中之間渡航安全無法確保，自 12 月 6 日上海發船起暫停旅客服務，再開時間未定；這項資料不代表現在可以購買或搭乘。官網仍有船班表與運航狀況頁，但未說明是否恢復載客，請直接向日中国際フェリー確認。
+
+- 官方 2025-12-08 公告旅客運送暫停、再開未定。
+- 官網運航狀況頁與運航表仍列出「鑑真号」航次，但未說明是否恢復載客。
+
+來源：https://www.shinganjin.com/news/ ；https://www.shinganjin.com/status/?pram=jianzhenhao ；https://www.shinganjin.com/wp/wp-content/uploads/2025/06/Notice-of-the-passenger-transportation-resumption.pdf（確認日期：2026-11-21）
+
+価格や運航日程は変更される場合があります。最新の公式情報をご確認ください。",4,0.7807;0.7416;0.734;0.7171,kansai-shanghai-shinganjin.md#1;kansai-shanghai-shinganjin.md#2;kansai-shanghai-shinganjin.md#3;kansai-shanghai-shinganjin.md#4,"【上海航線｜鑑真号】目前狀態（最重要）
+營運公司：日中国際フェリー株式会社（中日国際輪渡有限公司）。**旅客運送目前暫停**，請勿告訴使用者可以訂票或搭乘，除非官方發布再開公告。
+- 2025-06-19 官方公告（英文 PDF）：2020-01 起中斷的旅客運送，於 2025-06-28 上海出發恢復。唯一的客船是「鑑真号」，另一艘「新鑑真」只做貨運。船每週一早晨抵達（神戶與大阪交替）、週二早晨辦理出境並出發。前 4 航次為確認航次，一般旅客自 2025-07-12 上海出發的 V.0113 起可搭乘。
+- **2025-12-08 公告「旅客輸送中断のお知らせ」**：「12月6日上海発便から当面の間、中国側の申し入れで皆様の日中間の渡航の安全が確保できないということから、鑑真号での旅客サービスを暫く中断致します」「再開については未定ですが、情勢が変わり次第、速やかにご案内申し上げます」。已預訂的船票「キャンセル料なし」處理。
+- 2025-12-08 之後，官網**沒有**宣布旅客運送恢復的公告。
+- 「鑑真号」運航狀況頁（2026-11-21 13:30 現在）仍列出班次，例如上海→神戶 V.0249（11/21 出港）、神戶→上海 V.0250（11/24 出港）。該頁**不區分旅客或貨物**，也沒有說明是否載客。
+- 官網運航表（含 2026-11-18 公告的「2027年上半期」）是「鑑真号」與「新鑑真」兩船合併的表，同樣不區分旅客與貨物。
+- 回答原則：使用者問上海航線時，說明「官方 2025-12-08 公告旅客運送暫停、再開未定；官網仍有船班表，但未說明是否恢復載客，請直接向日中国際フェリー確認」。
+來源（確認日期 2026-11-21）：https://www.shinganjin.com/news/ ；https://www.shinganjin.com/status/?pram=jianzhenhao ；https://www.shinganjin.com/wp/wp-content/uploads/2025/06/Notice-of-the-passenger-transportation-resumption.pdf
+<<<chunk>>>
+【上海航線｜鑑真号】航線與時刻（僅供參考，旅客是否可搭乘見上方）
+- 每週二出港，神戶港與大阪港交替；上海出發為週六。
+- 航行時間：官網未直接載明，依時刻表推算約 2 天（例：大阪 11:30 出港 → 上海 2 天後 13:00 抵達）。這是推算值，非官方文字。
+- 港灣管理頁（無日期）寫上海航線約每週 2.5 班、約 48 小時、停靠大阪港 KF-1 岸壁，神戶與大阪隔週營運；神戶市港灣頁（2025-09-08）也列有上海航線。兩頁都不是 2026-11 的確認資料。
+- 2027 年上半期運航表中，2027-02-09～02-15 大阪休航；2026-12-25～12-30 神戶休航。
+來源（確認日期 2026-11-21）：https://www.shinganjin.com/schedule/ ；https://hanshinport.co.jp/en/facilities/ferry/ ；https://www.city.kobe.lg.jp/a45623/kurashi/access/harbor/ferry/index.html
+<<<chunk>>>
+【上海航線｜鑑真号】已知缺口（不要補編）
+- **目前是否恢復載客**：官方未說明。官網運航狀況頁與運航表仍列「鑑真号」的航次，但不區分旅客與貨物。
+- 國際觀光旅客稅：官網運賃頁（3,000 円）與 PDF／簡報（1,000 円）寫法不同，以日本現行規定為準。
+- 票價的適用期間：官網運賃頁沒有標示；上海出發的人民幣價也沒有生效期間。
+- 2026 年 7 月以後的票價是否調整：未取得。
+- 簽證與護照規定：官網沒有此項，**不要自行回答**，請使用者查證各國外交部規定。
+- 天候與停航的處理規定：官網沒有說明。
+- 官網未提供大阪／神戶–上海以外的航線。
+<<<chunk>>>
+【上海航線｜鑑真号】港口與地址
+- 神戶：神戶港（神戶ポートターミナル）新港第4突堤，神戶市中央区新港町4-5；報到在ポートターミナルビル 2F。
+- 大阪：大阪港国際フェリーターミナル 南港 KF-1 岸壁，大阪市住之江区南港北1丁目20-52；Metro コスモスクエア駅 搭免費巡迴巴士約 5 分。
+- 上海：官網要求**不要直接前往上海港（軍工路ターミナル）**，須在指定接送點集合：上海悠方ショッピングモール 2 号門 臨時駐車エリア（上海市楊浦区淞沪路 1388 号，地鐵 10 號線新江灣城站 6 號出口旁）。上海出港週六 9:00–10:30 接駁；上海到港週四無接送。
+- 日本總代理店：日中国際フェリー株式会社，大阪市中央区南本町1丁目8番14号 JRE堺筋本町ビル 9F，TEL 06-6262-6541（事務所，非碼頭）。上海事務所：TEL 86-21-65956888。
+來源（確認日期 2026-11-21）：https://www.shinganjin.com/boarding-information/access.php",2889,0.0014937,3.69,
+A20,2,ja,上海航路は今、運航していますか？,"鑑真号の旅客運送は現在暫定的に中断されており、官方 2025-12-08 公告旅客運送暫停、再開未定；官網仍有船班表，但未說明是否恢復載客，請直接向日中国際フェリー確認。這項資料不代表現在可以購買或搭乘。
+
+- 官方 2025-12-08 公告指出，自 12 月 6 日上海發車班次起，因中方提出無法確保日中之間渡航安全，暫時中斷鑑真号的旅客服務，重開時間未定。
+- 官網的運航狀況頁與運航表中仍列有「鑑真号」的航次，但未區分旅客或貨物，亦未說明是否恢復載客。
+
+來源：https://www.shinganjin.com/news/ ；https://www.shinganjin.com/status/?pram=jianzhenhao ；https://www.shinganjin.com/wp/wp-content/uploads/2025/06/Notice-of-the-passenger-transportation-resumption.pdf（確認日期：2026-11-21）
+
+価格や運航日程は変更される場合があります。最新の公式情報をご確認ください。",4,0.7807;0.7416;0.734;0.7171,kansai-shanghai-shinganjin.md#1;kansai-shanghai-shinganjin.md#2;kansai-shanghai-shinganjin.md#3;kansai-shanghai-shinganjin.md#4,"【上海航線｜鑑真号】目前狀態（最重要）
+營運公司：日中国際フェリー株式会社（中日国際輪渡有限公司）。**旅客運送目前暫停**，請勿告訴使用者可以訂票或搭乘，除非官方發布再開公告。
+- 2025-06-19 官方公告（英文 PDF）：2020-01 起中斷的旅客運送，於 2025-06-28 上海出發恢復。唯一的客船是「鑑真号」，另一艘「新鑑真」只做貨運。船每週一早晨抵達（神戶與大阪交替）、週二早晨辦理出境並出發。前 4 航次為確認航次，一般旅客自 2025-07-12 上海出發的 V.0113 起可搭乘。
+- **2025-12-08 公告「旅客輸送中断のお知らせ」**：「12月6日上海発便から当面の間、中国側の申し入れで皆様の日中間の渡航の安全が確保できないということから、鑑真号での旅客サービスを暫く中断致します」「再開については未定ですが、情勢が変わり次第、速やかにご案内申し上げます」。已預訂的船票「キャンセル料なし」處理。
+- 2025-12-08 之後，官網**沒有**宣布旅客運送恢復的公告。
+- 「鑑真号」運航狀況頁（2026-11-21 13:30 現在）仍列出班次，例如上海→神戶 V.0249（11/21 出港）、神戶→上海 V.0250（11/24 出港）。該頁**不區分旅客或貨物**，也沒有說明是否載客。
+- 官網運航表（含 2026-11-18 公告的「2027年上半期」）是「鑑真号」與「新鑑真」兩船合併的表，同樣不區分旅客與貨物。
+- 回答原則：使用者問上海航線時，說明「官方 2025-12-08 公告旅客運送暫停、再開未定；官網仍有船班表，但未說明是否恢復載客，請直接向日中国際フェリー確認」。
+來源（確認日期 2026-11-21）：https://www.shinganjin.com/news/ ；https://www.shinganjin.com/status/?pram=jianzhenhao ；https://www.shinganjin.com/wp/wp-content/uploads/2025/06/Notice-of-the-passenger-transportation-resumption.pdf
+<<<chunk>>>
+【上海航線｜鑑真号】航線與時刻（僅供參考，旅客是否可搭乘見上方）
+- 每週二出港，神戶港與大阪港交替；上海出發為週六。
+- 航行時間：官網未直接載明，依時刻表推算約 2 天（例：大阪 11:30 出港 → 上海 2 天後 13:00 抵達）。這是推算值，非官方文字。
+- 港灣管理頁（無日期）寫上海航線約每週 2.5 班、約 48 小時、停靠大阪港 KF-1 岸壁，神戶與大阪隔週營運；神戶市港灣頁（2025-09-08）也列有上海航線。兩頁都不是 2026-11 的確認資料。
+- 2027 年上半期運航表中，2027-02-09～02-15 大阪休航；2026-12-25～12-30 神戶休航。
+來源（確認日期 2026-11-21）：https://www.shinganjin.com/schedule/ ；https://hanshinport.co.jp/en/facilities/ferry/ ；https://www.city.kobe.lg.jp/a45623/kurashi/access/harbor/ferry/index.html
+<<<chunk>>>
+【上海航線｜鑑真号】已知缺口（不要補編）
+- **目前是否恢復載客**：官方未說明。官網運航狀況頁與運航表仍列「鑑真号」的航次，但不區分旅客與貨物。
+- 國際觀光旅客稅：官網運賃頁（3,000 円）與 PDF／簡報（1,000 円）寫法不同，以日本現行規定為準。
+- 票價的適用期間：官網運賃頁沒有標示；上海出發的人民幣價也沒有生效期間。
+- 2026 年 7 月以後的票價是否調整：未取得。
+- 簽證與護照規定：官網沒有此項，**不要自行回答**，請使用者查證各國外交部規定。
+- 天候與停航的處理規定：官網沒有說明。
+- 官網未提供大阪／神戶–上海以外的航線。
+<<<chunk>>>
+【上海航線｜鑑真号】港口與地址
+- 神戶：神戶港（神戶ポートターミナル）新港第4突堤，神戶市中央区新港町4-5；報到在ポートターミナルビル 2F。
+- 大阪：大阪港国際フェリーターミナル 南港 KF-1 岸壁，大阪市住之江区南港北1丁目20-52；Metro コスモスクエア駅 搭免費巡迴巴士約 5 分。
+- 上海：官網要求**不要直接前往上海港（軍工路ターミナル）**，須在指定接送點集合：上海悠方ショッピングモール 2 号門 臨時駐車エリア（上海市楊浦区淞沪路 1388 号，地鐵 10 號線新江灣城站 6 號出口旁）。上海出港週六 9:00–10:30 接駁；上海到港週四無接送。
+- 日本總代理店：日中国際フェリー株式会社，大阪市中央区南本町1丁目8番14号 JRE堺筋本町ビル 9F，TEL 06-6262-6541（事務所，非碼頭）。上海事務所：TEL 86-21-65956888。
+來源（確認日期 2026-11-21）：https://www.shinganjin.com/boarding-information/access.php",2903,0.0015287,3.09,
+A22,1,ja,大阪―釜山のフェリーに乗るには、どんな書類が必要ですか？,"大阪―釜山航線（パンスターミラクル号）の乗船および領票（乗船券の受け取り）には、護照（パスポート）が必須です。護照がない場合、乗船券を受け取ることはできません。
+
+要点：
+- 護照（パスポート）：領票與出境都需要護照；沒有護照不能領票。
+- 護照效期：官網寫海外旅行護照效期至少要剩 6 個月以上，依登船當天剩餘效期，可能無法出境。實際規定以各國政府為準。
+- 日本簽證：觀光與訪問目的可免簽證停留 90 天；其他目的須事先向日本領事館洽詢。FAQ 沒有註明適用的國籍（網站為韓文，推測面向韓國旅客），其他國籍不可直接套用，請向各國外交部或日本入國管理局確認。
+- 韓國入境：搭乘本船入境韓國時，紙本入境卡與電子入境（e-Arrival card）併用期限延長，另行通知。
+- 學生與折扣：學生需出示學生證。折扣證明文件要在出航當天領票時交出，沒帶可能追加費用。
+
+來源：https://www.panstarcruise.com/support/notice/265 ；https://www.panstarcruise.com/support/faq（Q7、Q8、Q18、Q47、Q51、Q53）；https://www.panstarcruise.com/product/osaka/info ；https://www.panstar.jp/article/ ；https://www.panstarcruise.com/support/faq（Q9、Q10、Q51）；https://www.panstar.jp/（確認日期：2026-11-21）
+
+価格や運航日程は変更される場合があります。最新の公式情報をご確認ください。",3,0.7631;0.7468;0.7294,osaka-busan-panstar.md#1;osaka-busan-panstar.md#2;overview-routes.md#3,"【釜山航線｜パンスターミラクル号】報到與登船手續（最晚何時要到：官方寫法不一致）
+- 登船券只能在**出發當天、在出發港**領取，無法預先取票；沒有護照不能領票。
+- 最晚辦理時間，官方各處寫法不同：約款與 FAQ 寫「出航前 90 分鐘」（大阪 17:00 班為 15:30）；韓文公告（2026-03-30，4/1 起）寫發票截止為出航前 1 小時 10 分（大阪出發 15:50、釜山出發 14:50），截止後不可登船也不能退票；韓文班次頁的登船表寫大阪出發售票 15:00–16:10、報到 15:40–16:20。建議至少提前 90 分鐘抵達。
+- 週日釜山出發（15:00）公告建議 13:30 前到售票處。
+- 大阪出發：車輛截止 13:00；託運行李 15:00–16:00。
+- 預訂需要：姓名、英文姓名、生日、護照號碼、聯絡方式、居住地址。
+- 領票地點：大阪港國際渡輪碼頭，出示護照（學生需出示學生證）。折扣證明文件要在出航當天領票時交出，沒帶可能追加費用。
+- 代領票：同行者全員已在碼頭內時，代表人拿全員護照可代辦；進入出入境區時仍須本人持護照。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/265 ；https://www.panstarcruise.com/support/faq（Q7、Q8、Q18、Q47、Q51、Q53）；https://www.panstarcruise.com/product/osaka/info ；https://www.panstar.jp/article/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】護照、簽證與入境
+- 領票與出境都需要護照；沒有護照不能領票。
+- 護照效期（FAQ Q10）：官網寫「海外旅行護照效期至少要剩 6 個月以上」，依登船當天剩餘效期，可能無法出境。實際規定以各國政府為準。
+- 日本簽證（FAQ Q9）：官網寫「觀光與訪問目的可免簽證停留 90 天；其他目的須事先向日本領事館洽詢」。**FAQ 沒有註明適用的國籍**（網站為韓文，推測面向韓國旅客），其他國籍不可直接套用，請向各國外交部或日本入國管理局確認。
+- 韓國入境：2026-01-06 公告，搭乘本船入境韓國時，紙本入境卡與電子入境（e-Arrival card）併用期限延長，另行通知。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/faq（Q9、Q10、Q51）；https://www.panstar.jp/
+<<<chunk>>>
+【總覽｜關西出發的國際渡輪】有哪些航線？從大阪可以去哪裡？
+這個知識庫涵蓋從大阪（及神戶）出發的兩條國際渡輪航線。這一段只是總覽，細節（票價、班次、取消、行李、證件等）以各航線段落為準。
+| 航線 | 營運公司與船名 | 目前狀態（2026-11-21 確認） |
+|---|---|---|
+| 大阪 ⇄ 釜山（韓國） | PANSTAR Cruise Ferry（日本代理 株式会社サンスターライン）／パンスターミラクル号 | 官網未見 2026 年大阪航線停航公告；仍須向營運公司確認最新班表 |
+| 大阪／神戶 ⇄ 上海（中國） | 日中国際フェリー株式会社／鑑真号 | **旅客運送暫停**（2025-12-08 公告，再開未定）；請勿告訴使用者可以訂票或搭乘 |
+- 從大阪出發可以搭船去：**釜山**（週一・三・五 17:00 出港，約 17 小時，翌日 10:00 抵達）；**上海**（目前旅客運送暫停，官網船班表不區分旅客與貨物，不代表現在可以搭乘）。
+- 其他航線與國內渡輪不在這個知識庫的範圍內。
+- 可以詢問的主題：船班、票價、取消與退票、行李、證件、附加費與稅金、天候與停航。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/",2708,0.0017738,3.72,
+A22,2,ja,大阪―釜山のフェリーに乗るには、どんな書類が必要ですか？,"大阪から釜山へパンスターミラクル号に乗船する場合、以下の書類や情報が必要です。
+
+* 予約および領収書に必要な情報：氏名、英語氏名、生年月日、パスポート番号、連絡先、居住住所。
+* 乗船券の受取と出国に必要な書類：**パスポート**（※海外旅行パスポートの有効残存期間は少なくとも6ヶ月以上必要とされていますが、実際の規定は各国政府に従ってください）。
+* 学生の場合：学生証（割引適用時）。
+* 割引適用時：出航当日のチケット受取時に割引証明書類の提出が必要です。
+
+來源：https://www.panstarcruise.com/support/notice/265 ；https://www.panstarcruise.com/support/faq（Q7、Q8、Q18、Q47、Q51、Q53）；https://www.panstarcruise.com/product/osaka/info ；https://www.panstar.jp/article/（確認日期：2026-11-21）
+
+価格や運航日程は変更される場合があります。最新の公式情報をご確認ください。",3,0.7631;0.7468;0.7294,osaka-busan-panstar.md#1;osaka-busan-panstar.md#2;overview-routes.md#3,"【釜山航線｜パンスターミラクル号】報到與登船手續（最晚何時要到：官方寫法不一致）
+- 登船券只能在**出發當天、在出發港**領取，無法預先取票；沒有護照不能領票。
+- 最晚辦理時間，官方各處寫法不同：約款與 FAQ 寫「出航前 90 分鐘」（大阪 17:00 班為 15:30）；韓文公告（2026-03-30，4/1 起）寫發票截止為出航前 1 小時 10 分（大阪出發 15:50、釜山出發 14:50），截止後不可登船也不能退票；韓文班次頁的登船表寫大阪出發售票 15:00–16:10、報到 15:40–16:20。建議至少提前 90 分鐘抵達。
+- 週日釜山出發（15:00）公告建議 13:30 前到售票處。
+- 大阪出發：車輛截止 13:00；託運行李 15:00–16:00。
+- 預訂需要：姓名、英文姓名、生日、護照號碼、聯絡方式、居住地址。
+- 領票地點：大阪港國際渡輪碼頭，出示護照（學生需出示學生證）。折扣證明文件要在出航當天領票時交出，沒帶可能追加費用。
+- 代領票：同行者全員已在碼頭內時，代表人拿全員護照可代辦；進入出入境區時仍須本人持護照。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/265 ；https://www.panstarcruise.com/support/faq（Q7、Q8、Q18、Q47、Q51、Q53）；https://www.panstarcruise.com/product/osaka/info ；https://www.panstar.jp/article/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】護照、簽證與入境
+- 領票與出境都需要護照；沒有護照不能領票。
+- 護照效期（FAQ Q10）：官網寫「海外旅行護照效期至少要剩 6 個月以上」，依登船當天剩餘效期，可能無法出境。實際規定以各國政府為準。
+- 日本簽證（FAQ Q9）：官網寫「觀光與訪問目的可免簽證停留 90 天；其他目的須事先向日本領事館洽詢」。**FAQ 沒有註明適用的國籍**（網站為韓文，推測面向韓國旅客），其他國籍不可直接套用，請向各國外交部或日本入國管理局確認。
+- 韓國入境：2026-01-06 公告，搭乘本船入境韓國時，紙本入境卡與電子入境（e-Arrival card）併用期限延長，另行通知。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/faq（Q9、Q10、Q51）；https://www.panstar.jp/
+<<<chunk>>>
+【總覽｜關西出發的國際渡輪】有哪些航線？從大阪可以去哪裡？
+這個知識庫涵蓋從大阪（及神戶）出發的兩條國際渡輪航線。這一段只是總覽，細節（票價、班次、取消、行李、證件等）以各航線段落為準。
+| 航線 | 營運公司與船名 | 目前狀態（2026-11-21 確認） |
+|---|---|---|
+| 大阪 ⇄ 釜山（韓國） | PANSTAR Cruise Ferry（日本代理 株式会社サンスターライン）／パンスターミラクル号 | 官網未見 2026 年大阪航線停航公告；仍須向營運公司確認最新班表 |
+| 大阪／神戶 ⇄ 上海（中國） | 日中国際フェリー株式会社／鑑真号 | **旅客運送暫停**（2025-12-08 公告，再開未定）；請勿告訴使用者可以訂票或搭乘 |
+- 從大阪出發可以搭船去：**釜山**（週一・三・五 17:00 出港，約 17 小時，翌日 10:00 抵達）；**上海**（目前旅客運送暫停，官網船班表不區分旅客與貨物，不代表現在可以搭乘）。
+- 其他航線與國內渡輪不在這個知識庫的範圍內。
+- 可以詢問的主題：船班、票價、取消與退票、行李、證件、附加費與稅金、天候與停航。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/",2528,0.0013238,3.21,
+A24,1,en,What is the luggage limit from Osaka to Busan?,"パンスターミラクル号的大阪至釜山航線行李規定如下：
+
+- 隨身行李（大阪航線）：三邊合計 200cm 以內、30kg 以內，符合條件則數量不限、免費。釜山國際客運站出入境審查區內不能使用行李推車。
+- 託運行李：沒有免費額度，在 1 樓行李區依重量計費：1～20kg ₩10,000，每多 5kg 加 ₩5,000。託運需簽「託運行李免責同意書」。
+- 僅限本人搭乘時才能託運行李，不能只寄行李不搭船。
+- 貴重品、易碎品託運前要事先告知櫃檯；自行車、樂器、畫作等高價物品不可託運，應放在套房客艙。
+- 食品與藥材：可攜帶，但須在下船前吃完；要帶入日本，須自行確認日本檢疫與通關規定。
+- 另有日文約款對照（2020）：託運三邊合計 200cm、30kg；隨身 150cm、15kg；託運行李賠償上限每人 30,000 日圓。兩者數字不同，以官網現行說明為準。
+
+來源：https://www.panstarcruise.com/support/faq（Q19、Q20、Q21、Q22）；https://www.panstarcruise.com/product/osaka/price ；https://www.panstar.jp/article/（確認日期：2026-11-21）
+
+Prices and schedules may change. Please check the latest official announcements.",3,0.7645;0.737;0.7125,osaka-busan-panstar.md#1;osaka-busan-panstar.md#2;osaka-busan-panstar.md#3,"【釜山航線｜パンスターミラクル号】行李規定（一般行李）
+以韓文官網 FAQ（較新）為主，日文約款（2020 年修訂，可能過時）僅供對照。
+- 隨身行李（FAQ Q22，大阪航線）：三邊合計 200cm 以內、30kg 以內，符合條件則數量不限、免費。釜山國際客運站出入境審查區內不能使用行李推車。
+- 託運行李：沒有免費額度，在 1 樓行李區依重量計費：1～20kg ₩10,000，每多 5kg 加 ₩5,000（價格頁）。託運需簽「託運行李免責同意書」。
+- 日文約款對照（2020）：託運三邊合計 200cm、30kg；隨身 150cm、15kg；託運行李賠償上限每人 30,000 日圓。兩者數字不同，以官網現行說明為準。
+- 只有本人搭乘時才能託運行李，不能只寄行李不搭船（Q19）。
+- 貴重品、易碎品託運前要事先告知櫃檯，否則賠償可能受限；自行車、樂器、畫作等高價物品不可託運，應放在套房客艙（Q20）。
+- 食品與藥材：可攜帶，但須在下船前吃完；要帶入日本，須自行確認日本檢疫與通關規定（Q21）。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/faq（Q19、Q20、Q21、Q22）；https://www.panstarcruise.com/product/osaka/price ；https://www.panstar.jp/article/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】高爾夫球袋、自行車與特殊行李
+- 高爾夫球袋（Miracle 號，公告 2026-10-26）：不可帶進客房，一定要當託運行李。出航日 3 天前事先申請：免費憑證；當天在售票處申請：單程 ₩20,000、來回 ₩40,000（來回只發 1 張憑證）。流程：售票處（3 樓）出示護照領憑證並簽免責同意書 → 託運行李櫃檯（1 樓）貼憑證託運 → 出境櫃檯辦理出境。沒貼憑證的球袋不能託運；名貴球具請自行投保；建議出航前 2 小時到達。
+- 自行車（FAQ Q32）：客房不能放，只能託運（含折疊式）：一般自行車單程 ₩40,000、折疊式單程 ₩20,000。高價自行車請妥善包裝。須簽託運免責同意書。
+- 特殊行李（Q23）：自行車、釣具等體積大或易損的行李。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/313 ；https://www.panstarcruise.com/support/faq（Q23、Q24、Q32）；https://www.panstarcruise.com/product/osaka/price
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】附加費、稅金與旺季
+- 燃油附加費（每人，2026-11-01 起，公告 2026-10-23）：釜山出發 ₩27,000（原 ₩25,000）；大阪出發 ¥2,700（原 ¥2,500）。6 歲以下免。
+- 從大阪出發：大阪港碼頭使用費 700 日圓。國際觀光旅客稅 3,000 日圓（2 歲以上，2026-07-01 起由 1,000 日圓調漲；2026-06-30 前完成預訂並付款者維持 1,000 日圓）。
+- 從釜山出發：碼頭使用費與觀光振興金 ₩7,000。
+- 旺季（2026-07-01～12-31 公告）：釜山–大阪航線的旺季日為 7/30、31；8/2、3、10–14、16；9/18、20–25、28（公告列的日期只到 9/28）。旺季日不能使用折扣與免費乘船券；公告沒有寫票價差額；日期可能因運航情況調整。
+- 2026-11-01 起，日本免稅店購物改為「事後退稅」：先付含稅價，購買後 90 日內出境、由海關確認商品後退稅。大阪港無法現金退稅，公告建議用信用卡付款。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/310 ；https://www.panstarcruise.com/support/notice/280 ；https://www.panstarcruise.com/support/notice/272 ；https://www.panstarcruise.com/support/notice/304",2786,0.001729,3.79,
+A24,2,en,What is the luggage limit from Osaka to Busan?,"Based on the FAQ (Q22) for the Osaka route, the luggage limits for the パンスターミラクル号 are as follows:
+
+* **Carry-on baggage:** Within 200cm in total dimensions (length + width + height) and under 30kg. As long as these conditions are met, the quantity is unlimited and free of charge. (Note: Luggage carts cannot be used inside the immigration examination area at Busan International Passenger Terminal).
+* **Checked baggage:** There is no free allowance, and fees are charged by weight at the 1st-floor luggage area: ₩10,000 for 1–20kg, and an additional ₩5,000 for every extra 5kg. Checked baggage requires signing a ""Checked Baggage Disclaimer.""
+* **Additional notes:** 
+  * You can only check baggage if you are traveling as a passenger yourself; you cannot ship luggage alone.
+  * Valuables and fragile items must be reported to the counter in advance, otherwise compensation may be limited. High-value items such as bicycles, musical instruments, and paintings cannot be checked and must be kept in your suite cabin.
+  * Food and medicinal materials can be brought, but must be consumed before disembarking; if bringing them into Japan, you must check Japanese quarantine and customs regulations yourself.
+  * *Japanese terms comparison (2020, for reference):* Checked baggage up to 200cm and 30kg; carry-on up to 150cm and 15kg; checked baggage compensation limit up to 30,000 JPY per person. (Current official website explanations take precedence).
+
+Source: https://www.panstarcruise.com/support/faq (Q19, Q20, Q21, Q22); https://www.panstarcruise.com/product/osaka/price; https://www.panstar.jp/article/ (Confirmation date: 2026-11-21)
+
+Prices and schedules may change. Please check the latest official announcements.",3,0.7645;0.737;0.7125,osaka-busan-panstar.md#1;osaka-busan-panstar.md#2;osaka-busan-panstar.md#3,"【釜山航線｜パンスターミラクル号】行李規定（一般行李）
+以韓文官網 FAQ（較新）為主，日文約款（2020 年修訂，可能過時）僅供對照。
+- 隨身行李（FAQ Q22，大阪航線）：三邊合計 200cm 以內、30kg 以內，符合條件則數量不限、免費。釜山國際客運站出入境審查區內不能使用行李推車。
+- 託運行李：沒有免費額度，在 1 樓行李區依重量計費：1～20kg ₩10,000，每多 5kg 加 ₩5,000（價格頁）。託運需簽「託運行李免責同意書」。
+- 日文約款對照（2020）：託運三邊合計 200cm、30kg；隨身 150cm、15kg；託運行李賠償上限每人 30,000 日圓。兩者數字不同，以官網現行說明為準。
+- 只有本人搭乘時才能託運行李，不能只寄行李不搭船（Q19）。
+- 貴重品、易碎品託運前要事先告知櫃檯，否則賠償可能受限；自行車、樂器、畫作等高價物品不可託運，應放在套房客艙（Q20）。
+- 食品與藥材：可攜帶，但須在下船前吃完；要帶入日本，須自行確認日本檢疫與通關規定（Q21）。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/faq（Q19、Q20、Q21、Q22）；https://www.panstarcruise.com/product/osaka/price ；https://www.panstar.jp/article/
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】高爾夫球袋、自行車與特殊行李
+- 高爾夫球袋（Miracle 號，公告 2026-10-26）：不可帶進客房，一定要當託運行李。出航日 3 天前事先申請：免費憑證；當天在售票處申請：單程 ₩20,000、來回 ₩40,000（來回只發 1 張憑證）。流程：售票處（3 樓）出示護照領憑證並簽免責同意書 → 託運行李櫃檯（1 樓）貼憑證託運 → 出境櫃檯辦理出境。沒貼憑證的球袋不能託運；名貴球具請自行投保；建議出航前 2 小時到達。
+- 自行車（FAQ Q32）：客房不能放，只能託運（含折疊式）：一般自行車單程 ₩40,000、折疊式單程 ₩20,000。高價自行車請妥善包裝。須簽託運免責同意書。
+- 特殊行李（Q23）：自行車、釣具等體積大或易損的行李。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/313 ；https://www.panstarcruise.com/support/faq（Q23、Q24、Q32）；https://www.panstarcruise.com/product/osaka/price
+<<<chunk>>>
+【釜山航線｜パンスターミラクル号】附加費、稅金與旺季
+- 燃油附加費（每人，2026-11-01 起，公告 2026-10-23）：釜山出發 ₩27,000（原 ₩25,000）；大阪出發 ¥2,700（原 ¥2,500）。6 歲以下免。
+- 從大阪出發：大阪港碼頭使用費 700 日圓。國際觀光旅客稅 3,000 日圓（2 歲以上，2026-07-01 起由 1,000 日圓調漲；2026-06-30 前完成預訂並付款者維持 1,000 日圓）。
+- 從釜山出發：碼頭使用費與觀光振興金 ₩7,000。
+- 旺季（2026-07-01～12-31 公告）：釜山–大阪航線的旺季日為 7/30、31；8/2、3、10–14、16；9/18、20–25、28（公告列的日期只到 9/28）。旺季日不能使用折扣與免費乘船券；公告沒有寫票價差額；日期可能因運航情況調整。
+- 2026-11-01 起，日本免稅店購物改為「事後退稅」：先付含稅價，購買後 90 日內出境、由海關確認商品後退稅。大阪港無法現金退稅，公告建議用信用卡付款。
+來源（確認日期 2026-11-21）：https://www.panstarcruise.com/support/notice/310 ；https://www.panstarcruise.com/support/notice/280 ；https://www.panstarcruise.com/support/notice/272 ；https://www.panstarcruise.com/support/notice/304",2832,0.001844,3.07,

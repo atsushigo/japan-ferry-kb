@@ -13,7 +13,7 @@ do not type the placeholder by hand.
 | v2 | 2026-11-21 | Replace rule 5 with a fixed notice; add rule 2-1 (no extrapolation). See [FKB-002](../docs/issues/FKB-002-unsupported-peak-season-surcharge.md), [FKB-003](../docs/issues/FKB-003-stale-date-rule-not-answerable.md) | **deployed**; FKB-002/003 verified on gemini-3.5-flash-lite (n=3 + A13); FKB-007 (random wrong price) still open |
 | v3 | 2026-11-22 | Add rule 10-1: fixed one-line-per-cabin price format, person count after the price. Experiment for [FKB-007](../docs/issues/FKB-007-nondeterministic-price-hallucination.md) | **deployed** (published 2026-11-22); chat-004 A1 x20: 0 wrong prices (FKB-007 mitigated, small sample) |
 | v4 | 2026-11-22 | Rewrite rule 3: any question about a suspended route must open with the status and say the fare does not mean tickets can be bought now. For [FKB-010](../docs/issues/FKB-010-suspension-not-stated-first.md) | **deployed** (published 2026-11-22); chat-005: A10 10/10 status first + not-buyable caveat, A2 10/10 (FKB-010 mitigated) |
-| v5 | 2026-11-22 | Add a top-priority language section (answer in the question's language, translate the Chinese retrieval result, Japanese for multi-language questions, translate fixed labels); rule 5 closing sentence in three fixed versions; old rule 8 replaced. For [FKB-009](../docs/issues/FKB-009-answer-language-mismatch.md) | **postponed** (2026-11-22, user decision: multilingual work is deferred). BUT the full v5 text was found in the Dify draft and chat-009 shows it was published together with another node edit; defect seen: Chinese questions sometimes end with the Japanese or English closing sentence (3 of 6). Needs a decision: revert to v4 or fix v5 |
+| v5 / v5.1 | 2026-11-22 | v5 (language section, three closing sentences, rule 8 pointer) plus **one line** in rule 5: the closing sentence must use the same language as the answer body (= v5.1). For [FKB-009](../docs/issues/FKB-009-answer-language-mismatch.md) | **deployed** (v5.1). chat-010: Chinese regression 12/12, closings all Chinese. chat-011/012: language only partly fixed (see section below) |
 
 ## 為什麼有這些規則（每條規則的依據）
 
@@ -133,3 +133,17 @@ English: Prices and schedules may change. Please check the latest official annou
 Decision still open (flagged): rule 3 of the language section picks Japanese for multi-language questions. Remove or change that line if you prefer another language; `score_chat.py` checks `language = multi` rows for Japanese, so change that check too.
 Why three fixed closing sentences: without them the model would improvise a translation each time, and the checker could not look for a fixed string.
 Single variable: language handling only; the other rules are unchanged except rule 5 (closing sentence versions) and rule 8 (pointer), which exist only to keep the rules consistent with the language section.
+
+## v5.1 results (deployed 2026-11-22; chat-010, chat-011, chat-012; retry off, published)
+
+The line added to rule 5: 「結尾句必須與你的回答正文使用同一種語言；回答是繁體中文時，一律只用中文那一句，不得改用日本語或 English 版本。」
+
+| Test | Requests | Result |
+|---|---|---|
+| Chinese regression A1, A2, A3, A10 (chat-010) | 12 | 12/12 pass: closing sentence is the Chinese one, amounts grounded, A2/A10 state the suspension first, A10 caveat 3/3 |
+| Single-language ja/en questions A7, A8, A15-A20, A22, A24 (chat-011) | 20 | closing sentence in the question's language 20/20; answer body judged to be in the right language 8/20 (ja 4/10, en 4/10); before (v4, chat-006) 0/15 |
+| Three-language button texts A25-A29 (chat-012) | 15 | answer judged Japanese 3/15; closing sentence Japanese 5/15 (zh 10/15); before 0/15 |
+| Other rule checks (numeric grounding, forbidden phrases, expectations) | 47 | 0 violations; the only flags are the language check |
+
+Reading: v5.1 fixes the closing-sentence defect and partly improves the language of the body, but about 60% of ja/en answers (and about 80% of button answers) are still mostly Chinese. The language check is a heuristic (share of kana or CJK characters), so borderline mixed answers are counted as failures. The model recognises the language (closing sentence 20/20 correct) but the body follows the Chinese retrieval result.
+Untried ideas for later: repeat the language rule after the retrieval result (end of the prompt), or pass the language in the user message. Not done: multilingual work is deferred.
