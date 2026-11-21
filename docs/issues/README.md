@@ -14,7 +14,7 @@
 | [FKB-005](FKB-005-answer-level-eval-runner.md) | Story | High | In Progress | 回答層自動評測腳本（run_chat.py、score_chat.py）；第一輪 chat-001 已跑 |
 | [FKB-006](FKB-006-llm-model-comparison-and-billing.md) | Story | Medium | Open | 比較 Gemini 3.5 Flash-Lite 與 3.8 Flash，並決定是否開啟計費 |
 | [FKB-007](FKB-007-nondeterministic-price-hallucination.md) | Bug | High | Open | 回答偶爾輸出知識庫沒有的價格數字；3 次都在「陽台套房」那一列（預覽 ₩2/人、API 兩次 ₩2,500,000） |
-| [FKB-008](FKB-008-glued-two-generations.md) | Bug | High | Open | 回答中出現兩段輸出拼接（A1、A3 共 26 次中 4 次；關閉重試後仍出現，成因未知） |
+| [FKB-008](FKB-008-glued-two-generations.md) | Bug | High | Open | 回答中出現兩段輸出拼接（A1、A3 共 26 次中 4 次；日誌確認為 Gemini「high demand」串流中斷後節點重試，殘缺前半段被保留） |
 | [FKB-009](FKB-009-answer-language-mismatch.md) | Bug | Medium | Open | 日文、英文提問得到中文內容（A7 3/3、A8 2/3） |
 | [FKB-010](FKB-010-suspension-not-stated-first.md) | Bug | High | Open | 問上海票價時，客運暫停狀態被放最後且沒說明不能購買（3 次中 2 次） |
 | [FKB-011](FKB-011-eval-harness-limitations.md) | Task | Medium | Open | 回答層測試的限制：A14 單輪無效、A11 沒測到提示詞、拒答帶假來源、評分誤判 |
