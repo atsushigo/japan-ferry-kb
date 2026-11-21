@@ -1,0 +1,29 @@
+{
+  "run": "chat-007",
+  "date": "2026-11-22",
+  "note": "Combined trilingual button texts (zh en ja joined by one space) as typed by the user's chosen button format. v4, retry OFF, published.",
+  "model_label": "gemini-3.5-flash-lite",
+  "prompt_version": "v4",
+  "git": {
+    "commit": "d794397",
+    "dirty": true
+  },
+  "repeat": 3,
+  "delay_s": 5.0,
+  "questions_file": "chatbot/test-conversations.csv",
+  "questions_sha256": "3e99fa0ba3c49b44",
+  "questions_run": [
+    "A25",
+    "A26",
+    "A27",
+    "A28",
+    "A29"
+  ],
+  "knowledge_files": {
+    "kansai-shanghai-shinganjin.md": "466da1784a151659",
+    "osaka-busan-panstar.md": "d517e2b310fe10b6"
+  },
+  "completed_requests": 15,
+  "planned_requests": 15,
+  "stopped_early": null
+}

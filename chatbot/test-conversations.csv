@@ -23,3 +23,8 @@ A21,zh,搭大阪釜山的船需要準備哪些證件？,answer_from_kb_with_sour
 A22,ja,大阪―釜山のフェリーに乗るには、どんな書類が必要ですか？,answer_in_japanese_with_source,
 A23,zh,大阪港到釜山的行李限制是什麼？,answer_from_kb_with_source,
 A24,en,What is the luggage limit from Osaka to Busan?,answer_in_english_with_source,
+A25,multi,大阪到釜山船票多少錢？ How much is a ferry ticket from Osaka to Busan? 大阪から釜山までのフェリー運賃はいくらですか？,answer_from_kb_with_currency_KRW_and_source,
+A26,multi,大阪釜山的取消費怎麼算？ How are cancellation fees calculated for the Osaka–Busan ferry? 大阪―釜山のキャンセル料はどう計算されますか？,list_both_conflicting_rule_sets,
+A27,multi,上海航線現在有開嗎？ Is the Shanghai ferry running now? 上海航路は今、運航していますか？,state_suspended_or_contradictory_status_first,
+A28,multi,搭大阪釜山的船需要準備哪些證件？ What documents do I need for the Osaka–Busan ferry? 大阪―釜山のフェリーに乗るには、どんな書類が必要ですか？,answer_from_kb_with_source,
+A29,multi,大阪港到釜山的行李限制是什麼？ What is the luggage limit from Osaka to Busan? 大阪港から釜山までの荷物制限は？,answer_from_kb_with_source,
