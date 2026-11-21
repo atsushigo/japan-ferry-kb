@@ -1,0 +1,28 @@
+{
+  "run": "run-004",
+  "date": "2026-11-21",
+  "note": "end-to-end check of the proposed threshold 0.71 passed as a request parameter (the knowledge base UI threshold switch was off)",
+  "git": {
+    "commit": "94e067d",
+    "dirty": false
+  },
+  "api": {
+    "base_url": "https://api.dify.ai/v1",
+    "search_method": "semantic_search",
+    "top_k": 5,
+    "score_threshold": 0.71,
+    "reranking_enable": false
+  },
+  "questions_file": "evaluation/questions.csv",
+  "questions_sha256": "2ff024a4bf19fa7b",
+  "questions_run": [
+    "Q6",
+    "Q7",
+    "Q8",
+    "Q20"
+  ],
+  "knowledge_files": {
+    "kansai-shanghai-shinganjin.md": "466da1784a151659",
+    "osaka-busan-panstar.md": "d517e2b310fe10b6"
+  }
+}

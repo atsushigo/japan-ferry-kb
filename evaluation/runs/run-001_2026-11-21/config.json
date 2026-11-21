@@ -1,0 +1,10 @@
+{
+  "run": "run-001",
+  "date": "2026-11-21",
+  "note": "First recall test, done by hand in the Dify UI (not via API). Labels in results.csv were assigned manually. Run on the v1 documents (see knowledge/history/*.v1-tested-in-run1.md), which still had header/title chunks.",
+  "method": "manual (Dify 'Retrieval Test' screen)",
+  "schema": "manual-v1: query_id, query, query_type, top_k, rank, score, doc, chunk, chunk_topic, label",
+  "settings": {"search_method": "semantic_search", "top_k": "3 for Q1-Q2, 5 for the rest", "score_threshold": 0, "reranking_enable": false,
+               "embedding_model": "gemini-embedding-2", "chunking": {"separator": "\\n\\n", "max_length": 1500, "overlap": 50}},
+  "knowledge_version": "v1 (kansai-shanghai: tagged headings + collapsed blank lines, still with front matter and title chunks)"
+}

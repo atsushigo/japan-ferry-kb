@@ -1,4 +1,4 @@
-"""Draw the retrieval-score chart from retrieval-test-run1.csv.
+"""Draw the retrieval-score chart from the run-001 results.csv.
 
 Usage:  python make_retrieval_chart.py [csv_path] [png_path]
 Needs:  matplotlib (pip install matplotlib) and any CJK font
@@ -14,7 +14,8 @@ import matplotlib.pyplot as plt
 from matplotlib import font_manager
 
 HERE = Path(__file__).parent
-CSV_PATH = Path(sys.argv[1]) if len(sys.argv) > 1 else HERE / "retrieval-test-run1.csv"
+ROOT = HERE.parent.parent
+CSV_PATH = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "evaluation/runs/run-001_2026-11-21/results.csv"
 PNG_PATH = Path(sys.argv[2]) if len(sys.argv) > 2 else HERE / "retrieval-scores.png"
 THRESHOLD = 0.72
 

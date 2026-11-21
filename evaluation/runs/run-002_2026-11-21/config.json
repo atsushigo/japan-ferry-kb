@@ -1,0 +1,40 @@
+{
+  "run": "run-002",
+  "date": "2026-11-21",
+  "note": "v3 docs (27 chunks), Top K 5, threshold disabled, semantic_search, no rerank",
+  "git": {
+    "commit": "94e067d",
+    "dirty": false
+  },
+  "api": {
+    "base_url": "https://api.dify.ai/v1",
+    "search_method": "semantic_search",
+    "top_k": 5,
+    "score_threshold": null,
+    "reranking_enable": false
+  },
+  "questions_file": "evaluation/questions.csv",
+  "questions_sha256": "bc8514f891a2cfb4",
+  "questions_run": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4",
+    "Q5",
+    "Q6",
+    "Q7",
+    "Q8",
+    "Q9",
+    "Q10",
+    "Q13",
+    "Q14",
+    "Q15",
+    "Q16",
+    "Q17",
+    "Q18"
+  ],
+  "knowledge_files": {
+    "kansai-shanghai-shinganjin.md": "466da1784a151659",
+    "osaka-busan-panstar.md": "d517e2b310fe10b6"
+  }
+}

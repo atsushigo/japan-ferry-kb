@@ -55,7 +55,7 @@
 | Embedding 模型 | gemini-embedding-2 |
 | 檢索方式 | 向量檢索（混合檢索需要 Rerank 模型，未設定） |
 | Top K | 5 |
-| Score 閾值 | **0.72**，依據見 [報告 4.3](phase1-rag-audit-report.md)。建庫初期未啟用（0），先取得完整分數分佈再校準；v2 文件重測後複核 |
+| Score 閾值 | **0.71（建議）**，依據見 [報告 4.5](phase1-rag-audit-report.md)。建庫初期未啟用（0），先取得完整分數分佈再校準；安全區間僅 0.6975–0.7147，每次改版都要重測 |
 
 建立前先用「預覽資料塊」檢查：票價表是否與警告在同一塊、每塊標題是否帶航線標籤。
 
@@ -65,9 +65,40 @@
 
 ## 5. 召回測試
 
-用 [`../evaluation/test-questions.csv`](../evaluation/test-questions.csv)，在知識庫的「檢索測試」逐題輸入，記錄每個回傳段落的分數與是否相關，格式比照 [`assets/retrieval-test-run1.csv`](assets/retrieval-test-run1.csv)。
+用 [`../evaluation/questions.csv`](../evaluation/questions.csv)，在知識庫的「檢索測試」逐題輸入，記錄每個回傳段落的分數與是否相關，格式比照 [`../evaluation/runs/run-001_2026-11-21/results.csv`](../evaluation/runs/run-001_2026-11-21/results.csv)。
 
-## 6. 尚未完成
+## 6. 自動化召回測試
+
+[`../evaluation/run_recall.py`](../evaluation/run_recall.py) 讀取測試題，呼叫 Dify 知識庫 API 的
+`POST /datasets/{dataset_id}/retrieve`（官方規格：[Retrieve Chunks from a Knowledge Base / Test Retrieval](https://docs.dify.ai/en/api-reference/knowledge-bases/retrieve-chunks-from-a-knowledge-base-test-retrieval)），
+寫出一個不可覆蓋的結果資料夾（`config.json` + `results.csv`）。只用 Python 標準函式庫。
+
+**準備**
+1. 複製 [`../.env.example`](../.env.example) 成 `.env`（已被 `.gitignore` 排除，**不要提交**）。
+2. `DIFY_KB_API_KEY`：知識庫的 API 金鑰（Dify 知識庫頁右上角「服務 API」），**不是**應用程式的金鑰。
+3. `DIFY_DATASET_ID`：知識庫頁面網址中的 UUID。
+
+**使用**
+```bash
+python evaluation/run_recall.py --name run-002 --dry-run               # 只印請求，不呼叫
+python evaluation/run_recall.py --name run-002 --ids Q1,Q8             # 先只跑兩題確認 API 正常
+python evaluation/run_recall.py --name run-002 --note "v3 docs"        # 全部題目，閾值關閉，取得完整分數分佈
+python evaluation/score_run.py evaluation/runs/run-002_<日期>           # 自動評分、閾值掃描
+python evaluation/run_recall.py --name run-004 --ids Q6,Q7,Q8,Q20 --threshold 0.71   # 驗證閾值效果
+```
+
+**原理**：`questions.csv` 的 `expected_sections` 欄位寫了每題「應該抓到哪個段落」（以段落標題的片段表示）；
+`score_run.py` 比對實際回傳段落的標題，自動判定相關或不相關，再算 Hit rate、MRR、Precision@k，
+以及「該為空的題目是否真的為空」。閾值關閉的那一輪還會做**閾值掃描**，列出每個候選閾值會損失或放行什麼。
+
+**已知限制**
+- `query` 最長 250 字（官方規格）。
+- 已對真實 API 執行（run-002～004）。檢索設定以請求參數傳入（`semantic_search`、不使用重排序、閾值）；run-004 證明請求參數的閾值會生效，但當時知識庫畫面上的閾值開關是關閉的，因此**畫面設定與請求參數衝突時以哪個為準，仍未驗證**。
+- **免費方案有每分鐘請求上限**：實測連續送出約 10 次後回 403（rate limit）。腳本預設每次間隔 6.5 秒，遇到限制自動等待 65 秒重試；中途失敗會把已完成的結果存成 `*.partial.csv`。
+- `query` 最長 250 字（官方規格）。
+- 相關性自動判定依 `questions.csv` 的 `expected_sections`；新增題目時要同時寫預期段落（庫外題則 `expect_empty = yes`）。
+
+## 7. 尚未完成
 
 - 聊天機器人（聊天助手 app）與系統提示。
 - 回答層面的評測（忠實度、幻覺、引用正確性）。

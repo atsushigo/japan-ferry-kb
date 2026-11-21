@@ -1,0 +1,75 @@
+{
+  "overall": {
+    "questions": 4,
+    "scored_questions": 2,
+    "hit_rate": 1.0,
+    "mrr": 1.0,
+    "mean_precision_at_k": 1.0,
+    "expect_empty_questions": 2,
+    "expect_empty_returned_nothing": 2,
+    "threshold_used": 0.71
+  },
+  "per_question": [
+    {
+      "id": "Q6",
+      "query": "行李可以帶多重？",
+      "expect_empty": false,
+      "n_expected": 2,
+      "n_returned": 2,
+      "n_relevant": 2,
+      "hit": true,
+      "first_relevant_rank": 1,
+      "precision": 1.0,
+      "top_score": 0.729,
+      "relevant_min": 0.7147,
+      "offtopic_max": null,
+      "missing_sections": []
+    },
+    {
+      "id": "Q7",
+      "query": "去韓國需要簽證嗎？",
+      "expect_empty": false,
+      "n_expected": 1,
+      "n_returned": 1,
+      "n_relevant": 1,
+      "hit": true,
+      "first_relevant_rank": 1,
+      "precision": 1.0,
+      "top_score": 0.7247,
+      "relevant_min": 0.7247,
+      "offtopic_max": null,
+      "missing_sections": []
+    },
+    {
+      "id": "Q8",
+      "query": "神戸から高松へのフェリーは？",
+      "expect_empty": true,
+      "n_expected": 0,
+      "n_returned": 0,
+      "n_relevant": 0,
+      "hit": null,
+      "first_relevant_rank": null,
+      "precision": null,
+      "top_score": null,
+      "relevant_min": null,
+      "offtopic_max": null,
+      "missing_sections": []
+    },
+    {
+      "id": "Q20",
+      "query": "福岡から釜山へのフェリーは？",
+      "expect_empty": true,
+      "n_expected": 0,
+      "n_returned": 0,
+      "n_relevant": 0,
+      "hit": null,
+      "first_relevant_rank": null,
+      "precision": null,
+      "top_score": null,
+      "relevant_min": null,
+      "offtopic_max": null,
+      "missing_sections": []
+    }
+  ],
+  "threshold_sweep": []
+}

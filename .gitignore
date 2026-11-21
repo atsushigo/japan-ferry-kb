@@ -15,3 +15,6 @@ __pycache__/
 Thumbs.db
 .idea/
 .vscode/
+
+# unfinished recall runs
+*.partial.csv

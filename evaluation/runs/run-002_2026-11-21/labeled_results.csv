@@ -1,0 +1,81 @@
+query_id,query,language,rank,score,document,segment_position,segment_id,section_title,top_k,score_threshold,label
+Q1,從大阪坐船去上海，現在可以？,zh-TW,1,0.8032,kansai-shanghai-shinganjin.md,1,507efc94-9eeb-4b4a-b3d1-075022f6087e,【上海航線｜鑑真号】目前狀態（最重要）,5,,relevant
+Q1,從大阪坐船去上海，現在可以？,zh-TW,2,0.7902,kansai-shanghai-shinganjin.md,2,9e26d2de-7649-4fd5-8a1c-0a0da7b6421d,【上海航線｜鑑真号】航線與時刻（僅供參考，旅客是否可搭乘見上方）,5,,off_topic
+Q1,從大阪坐船去上海，現在可以？,zh-TW,3,0.7566,kansai-shanghai-shinganjin.md,6,93a759e7-3970-4f7c-aa62-4319f3653152,【上海航線｜鑑真号】票價 Fare（日本出發，大阪・神戶 → 上海）,5,,off_topic
+Q1,從大阪坐船去上海，現在可以？,zh-TW,4,0.7521,kansai-shanghai-shinganjin.md,3,e6fe1ca2-d820-4bb6-a700-561b8d5dddf7,【上海航線｜鑑真号】港口與地址,5,,off_topic
+Q1,從大阪坐船去上海，現在可以？,zh-TW,5,0.7508,kansai-shanghai-shinganjin.md,5,070be655-23b7-422a-8cf3-b236b894b4e1,【上海航線｜鑑真号】乘船條件與船上服務,5,,off_topic
+Q2,大阪去釜山的船幾點開？,zh-TW,1,0.8009,osaka-busan-panstar.md,1,efc2c0e0-2541-426a-8c7a-a62bb78dd30a,【釜山航線｜パンスターミラクル号】船班 Timetable（官方網站記載）,5,,relevant
+Q2,大阪去釜山的船幾點開？,zh-TW,2,0.7656,osaka-busan-panstar.md,2,14629280-ae87-4dc1-82c0-ba19697c3539,【釜山航線｜パンスターミラクル号】報到與登船手續（最晚何時要到：官方寫法不一致）,5,,off_topic
+Q2,大阪去釜山的船幾點開？,zh-TW,3,0.7286,osaka-busan-panstar.md,4,b52da377-6e4c-4e01-b031-dac1069427f9,【釜山航線｜パンスターミラクル号】附加費、稅金與旺季,5,,off_topic
+Q2,大阪去釜山的船幾點開？,zh-TW,4,0.7231,osaka-busan-panstar.md,9,e6c3c2cc-825b-4d93-884d-d243530ee404,【釜山航線｜パンスターミラクル号】取消與退票 Cancellation（韓文官網與日文官網兩套說法）,5,,off_topic
+Q2,大阪去釜山的船幾點開？,zh-TW,5,0.7225,osaka-busan-panstar.md,14,d20de3fa-ca66-4351-9bc3-5ec4ac233999,【釜山航線｜パンスターミラクル号】天候與停航,5,,off_topic
+Q3,上海航線的房型和票價？,zh-TW,1,0.796,kansai-shanghai-shinganjin.md,6,93a759e7-3970-4f7c-aa62-4319f3653152,【上海航線｜鑑真号】票價 Fare（日本出發，大阪・神戶 → 上海）,5,,relevant
+Q3,上海航線的房型和票價？,zh-TW,2,0.7955,kansai-shanghai-shinganjin.md,7,ab969423-5988-46cc-a1e8-135e7600c8cd,【上海航線｜鑑真号】票價 Fare（上海出發，人民幣 RMB）,5,,relevant
+Q3,上海航線的房型和票價？,zh-TW,3,0.7354,osaka-busan-panstar.md,3,eb248e9e-8aec-4691-960e-69333bea4f6c,【釜山航線｜パンスターミラクル号】票價 Fare（只有韓元 KRW 公布；每人，單程／來回）,5,,off_topic
+Q3,上海航線的房型和票價？,zh-TW,4,0.7316,kansai-shanghai-shinganjin.md,10,b911df56-dd06-447a-ae60-c228534e6bdc,【上海航線｜鑑真号】學生票（学割）,5,,off_topic
+Q3,上海航線的房型和票價？,zh-TW,5,0.7223,kansai-shanghai-shinganjin.md,1,507efc94-9eeb-4b4a-b3d1-075022f6087e,【上海航線｜鑑真号】目前狀態（最重要）,5,,off_topic
+Q4,釜山船票的日圓價格是多少？,zh-TW,1,0.7702,osaka-busan-panstar.md,3,eb248e9e-8aec-4691-960e-69333bea4f6c,【釜山航線｜パンスターミラクル号】票價 Fare（只有韓元 KRW 公布；每人，單程／來回）,5,,relevant
+Q4,釜山船票的日圓價格是多少？,zh-TW,2,0.7383,osaka-busan-panstar.md,9,e6c3c2cc-825b-4d93-884d-d243530ee404,【釜山航線｜パンスターミラクル号】取消與退票 Cancellation（韓文官網與日文官網兩套說法）,5,,off_topic
+Q4,釜山船票的日圓價格是多少？,zh-TW,3,0.7356,osaka-busan-panstar.md,4,b52da377-6e4c-4e01-b031-dac1069427f9,【釜山航線｜パンスターミラクル号】附加費、稅金與旺季,5,,relevant
+Q4,釜山船票的日圓價格是多少？,zh-TW,4,0.7304,osaka-busan-panstar.md,5,56ced4f2-4b8b-4ae1-8efa-192d1bd90bef,【釜山航線｜パンスターミラクル号】兒童與折扣,5,,off_topic
+Q4,釜山船票的日圓價格是多少？,zh-TW,5,0.7282,kansai-shanghai-shinganjin.md,7,ab969423-5988-46cc-a1e8-135e7600c8cd,【上海航線｜鑑真号】票價 Fare（上海出發，人民幣 RMB）,5,,off_topic
+Q5,取消船票要多少手續費？,zh-TW,1,0.7661,kansai-shanghai-shinganjin.md,8,f81a8563-1d28-4366-b3c0-40b0a1704298,【上海航線｜鑑真号】取消與退票（日本出發）,5,,relevant
+Q5,取消船票要多少手續費？,zh-TW,2,0.7599,osaka-busan-panstar.md,9,e6c3c2cc-825b-4d93-884d-d243530ee404,【釜山航線｜パンスターミラクル号】取消與退票 Cancellation（韓文官網與日文官網兩套說法）,5,,relevant
+Q5,取消船票要多少手續費？,zh-TW,3,0.7133,osaka-busan-panstar.md,10,e56667ee-f2bf-4e10-95f1-1ebe31dca2f2,【釜山航線｜パンスターミラクル号】日期變更與其他服務,5,,off_topic
+Q5,取消船票要多少手續費？,zh-TW,4,0.6848,osaka-busan-panstar.md,4,b52da377-6e4c-4e01-b031-dac1069427f9,【釜山航線｜パンスターミラクル号】附加費、稅金與旺季,5,,off_topic
+Q5,取消船票要多少手續費？,zh-TW,5,0.6824,osaka-busan-panstar.md,5,56ced4f2-4b8b-4ae1-8efa-192d1bd90bef,【釜山航線｜パンスターミラクル号】兒童與折扣,5,,off_topic
+Q6,行李可以帶多重？,zh-TW,1,0.729,osaka-busan-panstar.md,6,33ab4967-e984-4bb0-bbd1-67a3def0a816,【釜山航線｜パンスターミラクル号】行李規定（一般行李）,5,,relevant
+Q6,行李可以帶多重？,zh-TW,2,0.7147,kansai-shanghai-shinganjin.md,9,8e2475f4-6ef6-4453-acdb-fa30c52407a0,【上海航線｜鑑真号】行李規定,5,,relevant
+Q6,行李可以帶多重？,zh-TW,3,0.6711,osaka-busan-panstar.md,7,cb98e6e2-f986-4e78-beab-588cc49935a3,【釜山航線｜パンスターミラクル号】高爾夫球袋、自行車與特殊行李,5,,off_topic
+Q6,行李可以帶多重？,zh-TW,4,0.6617,osaka-busan-panstar.md,8,82bb94a9-768e-4282-9529-d7b13ceff7fc,【釜山航線｜パンスターミラクル号】電池與危險物品限制,5,,off_topic
+Q6,行李可以帶多重？,zh-TW,5,0.6305,kansai-shanghai-shinganjin.md,5,070be655-23b7-422a-8cf3-b236b894b4e1,【上海航線｜鑑真号】乘船條件與船上服務,5,,off_topic
+Q7,去韓國需要簽證嗎？,zh-TW,1,0.7247,osaka-busan-panstar.md,11,1227a161-977d-4634-8025-ae9f8b7167ef,【釜山航線｜パンスターミラクル号】護照、簽證與入境,5,,relevant
+Q7,去韓國需要簽證嗎？,zh-TW,2,0.6381,osaka-busan-panstar.md,12,bec9702c-fbc3-44b4-88d3-632f4f74373f,【釜山航線｜パンスターミラクル号】乘船限制：孕婦、未成年與寵物,5,,off_topic
+Q7,去韓國需要簽證嗎？,zh-TW,3,0.6356,osaka-busan-panstar.md,2,14629280-ae87-4dc1-82c0-ba19697c3539,【釜山航線｜パンスターミラクル号】報到與登船手續（最晚何時要到：官方寫法不一致）,5,,off_topic
+Q7,去韓國需要簽證嗎？,zh-TW,4,0.632,osaka-busan-panstar.md,15,116634be-aef4-4d56-824a-ae32039950cb,【釜山航線｜パンスターミラクル号】車輛暫時進出口（摘要）,5,,off_topic
+Q7,去韓國需要簽證嗎？,zh-TW,5,0.6255,osaka-busan-panstar.md,4,b52da377-6e4c-4e01-b031-dac1069427f9,【釜山航線｜パンスターミラクル号】附加費、稅金與旺季,5,,off_topic
+Q8,神戸から高松へのフェリーは？,ja,1,0.6777,kansai-shanghai-shinganjin.md,2,9e26d2de-7649-4fd5-8a1c-0a0da7b6421d,【上海航線｜鑑真号】航線與時刻（僅供參考，旅客是否可搭乘見上方）,5,,off_topic
+Q8,神戸から高松へのフェリーは？,ja,2,0.671,kansai-shanghai-shinganjin.md,1,507efc94-9eeb-4b4a-b3d1-075022f6087e,【上海航線｜鑑真号】目前狀態（最重要）,5,,off_topic
+Q8,神戸から高松へのフェリーは？,ja,3,0.6704,kansai-shanghai-shinganjin.md,3,e6fe1ca2-d820-4bb6-a700-561b8d5dddf7,【上海航線｜鑑真号】港口與地址,5,,off_topic
+Q8,神戸から高松へのフェリーは？,ja,4,0.6376,kansai-shanghai-shinganjin.md,6,93a759e7-3970-4f7c-aa62-4319f3653152,【上海航線｜鑑真号】票價 Fare（日本出發，大阪・神戶 → 上海）,5,,off_topic
+Q8,神戸から高松へのフェリーは？,ja,5,0.6279,kansai-shanghai-shinganjin.md,11,5cf8f9e9-d8d3-4bd0-a77c-ed404b023847,【上海航線｜鑑真号】已知缺口（不要補編）,5,,off_topic
+Q9,大阪から釜山のフェリーの時刻表を教えてください,ja,1,0.7665,osaka-busan-panstar.md,1,efc2c0e0-2541-426a-8c7a-a62bb78dd30a,【釜山航線｜パンスターミラクル号】船班 Timetable（官方網站記載）,5,,relevant
+Q9,大阪から釜山のフェリーの時刻表を教えてください,ja,2,0.7262,osaka-busan-panstar.md,2,14629280-ae87-4dc1-82c0-ba19697c3539,【釜山航線｜パンスターミラクル号】報到與登船手續（最晚何時要到：官方寫法不一致）,5,,off_topic
+Q9,大阪から釜山のフェリーの時刻表を教えてください,ja,3,0.6897,osaka-busan-panstar.md,9,e6c3c2cc-825b-4d93-884d-d243530ee404,【釜山航線｜パンスターミラクル号】取消與退票 Cancellation（韓文官網與日文官網兩套說法）,5,,off_topic
+Q9,大阪から釜山のフェリーの時刻表を教えてください,ja,4,0.6843,osaka-busan-panstar.md,4,b52da377-6e4c-4e01-b031-dac1069427f9,【釜山航線｜パンスターミラクル号】附加費、稅金與旺季,5,,off_topic
+Q9,大阪から釜山のフェリーの時刻表を教えてください,ja,5,0.6814,osaka-busan-panstar.md,10,e56667ee-f2bf-4e10-95f1-1ebe31dca2f2,【釜山航線｜パンスターミラクル号】日期變更與其他服務,5,,off_topic
+Q10,Is the ferry from Osaka to Shanghai running now?,en,1,0.8001,kansai-shanghai-shinganjin.md,1,507efc94-9eeb-4b4a-b3d1-075022f6087e,【上海航線｜鑑真号】目前狀態（最重要）,5,,relevant
+Q10,Is the ferry from Osaka to Shanghai running now?,en,2,0.762,kansai-shanghai-shinganjin.md,2,9e26d2de-7649-4fd5-8a1c-0a0da7b6421d,【上海航線｜鑑真号】航線與時刻（僅供參考，旅客是否可搭乘見上方）,5,,off_topic
+Q10,Is the ferry from Osaka to Shanghai running now?,en,3,0.752,kansai-shanghai-shinganjin.md,3,e6fe1ca2-d820-4bb6-a700-561b8d5dddf7,【上海航線｜鑑真号】港口與地址,5,,off_topic
+Q10,Is the ferry from Osaka to Shanghai running now?,en,4,0.7467,kansai-shanghai-shinganjin.md,11,5cf8f9e9-d8d3-4bd0-a77c-ed404b023847,【上海航線｜鑑真号】已知缺口（不要補編）,5,,off_topic
+Q10,Is the ferry from Osaka to Shanghai running now?,en,5,0.7338,kansai-shanghai-shinganjin.md,8,f81a8563-1d28-4366-b3c0-40b0a1704298,【上海航線｜鑑真号】取消與退票（日本出發）,5,,off_topic
+Q13,釜山的船可以帶寵物嗎？,zh-TW,1,0.7829,osaka-busan-panstar.md,12,bec9702c-fbc3-44b4-88d3-632f4f74373f,【釜山航線｜パンスターミラクル号】乘船限制：孕婦、未成年與寵物,5,,relevant
+Q13,釜山的船可以帶寵物嗎？,zh-TW,2,0.7337,kansai-shanghai-shinganjin.md,5,070be655-23b7-422a-8cf3-b236b894b4e1,【上海航線｜鑑真号】乘船條件與船上服務,5,,relevant
+Q13,釜山的船可以帶寵物嗎？,zh-TW,3,0.7325,osaka-busan-panstar.md,6,33ab4967-e984-4bb0-bbd1-67a3def0a816,【釜山航線｜パンスターミラクル号】行李規定（一般行李）,5,,off_topic
+Q13,釜山的船可以帶寵物嗎？,zh-TW,4,0.7315,osaka-busan-panstar.md,7,cb98e6e2-f986-4e78-beab-588cc49935a3,【釜山航線｜パンスターミラクル号】高爾夫球袋、自行車與特殊行李,5,,off_topic
+Q13,釜山的船可以帶寵物嗎？,zh-TW,5,0.7309,osaka-busan-panstar.md,8,82bb94a9-768e-4282-9529-d7b13ceff7fc,【釜山航線｜パンスターミラクル号】電池與危險物品限制,5,,off_topic
+Q14,大阪去釜山最晚幾點要到碼頭？,zh-TW,1,0.8108,osaka-busan-panstar.md,2,14629280-ae87-4dc1-82c0-ba19697c3539,【釜山航線｜パンスターミラクル号】報到與登船手續（最晚何時要到：官方寫法不一致）,5,,relevant
+Q14,大阪去釜山最晚幾點要到碼頭？,zh-TW,2,0.77,osaka-busan-panstar.md,1,efc2c0e0-2541-426a-8c7a-a62bb78dd30a,【釜山航線｜パンスターミラクル号】船班 Timetable（官方網站記載）,5,,off_topic
+Q14,大阪去釜山最晚幾點要到碼頭？,zh-TW,3,0.7294,osaka-busan-panstar.md,4,b52da377-6e4c-4e01-b031-dac1069427f9,【釜山航線｜パンスターミラクル号】附加費、稅金與旺季,5,,off_topic
+Q14,大阪去釜山最晚幾點要到碼頭？,zh-TW,4,0.7177,osaka-busan-panstar.md,11,1227a161-977d-4634-8025-ae9f8b7167ef,【釜山航線｜パンスターミラクル号】護照、簽證與入境,5,,off_topic
+Q14,大阪去釜山最晚幾點要到碼頭？,zh-TW,5,0.7161,osaka-busan-panstar.md,12,bec9702c-fbc3-44b4-88d3-632f4f74373f,【釜山航線｜パンスターミラクル号】乘船限制：孕婦、未成年與寵物,5,,off_topic
+Q15,懷孕了可以搭船去釜山嗎？,zh-TW,1,0.8035,osaka-busan-panstar.md,12,bec9702c-fbc3-44b4-88d3-632f4f74373f,【釜山航線｜パンスターミラクル号】乘船限制：孕婦、未成年與寵物,5,,relevant
+Q15,懷孕了可以搭船去釜山嗎？,zh-TW,2,0.7303,osaka-busan-panstar.md,8,82bb94a9-768e-4282-9529-d7b13ceff7fc,【釜山航線｜パンスターミラクル号】電池與危險物品限制,5,,off_topic
+Q15,懷孕了可以搭船去釜山嗎？,zh-TW,3,0.7189,osaka-busan-panstar.md,1,efc2c0e0-2541-426a-8c7a-a62bb78dd30a,【釜山航線｜パンスターミラクル号】船班 Timetable（官方網站記載）,5,,off_topic
+Q15,懷孕了可以搭船去釜山嗎？,zh-TW,4,0.7126,kansai-shanghai-shinganjin.md,5,070be655-23b7-422a-8cf3-b236b894b4e1,【上海航線｜鑑真号】乘船條件與船上服務,5,,off_topic
+Q15,懷孕了可以搭船去釜山嗎？,zh-TW,5,0.7124,osaka-busan-panstar.md,14,d20de3fa-ca66-4351-9bc3-5ec4ac233999,【釜山航線｜パンスターミラクル号】天候與停航,5,,off_topic
+Q16,可以帶高爾夫球袋上釜山的船嗎？,zh-TW,1,0.8045,osaka-busan-panstar.md,7,cb98e6e2-f986-4e78-beab-588cc49935a3,【釜山航線｜パンスターミラクル号】高爾夫球袋、自行車與特殊行李,5,,relevant
+Q16,可以帶高爾夫球袋上釜山的船嗎？,zh-TW,2,0.7426,osaka-busan-panstar.md,6,33ab4967-e984-4bb0-bbd1-67a3def0a816,【釜山航線｜パンスターミラクル号】行李規定（一般行李）,5,,off_topic
+Q16,可以帶高爾夫球袋上釜山的船嗎？,zh-TW,3,0.7211,osaka-busan-panstar.md,8,82bb94a9-768e-4282-9529-d7b13ceff7fc,【釜山航線｜パンスターミラクル号】電池與危險物品限制,5,,off_topic
+Q16,可以帶高爾夫球袋上釜山的船嗎？,zh-TW,4,0.7141,osaka-busan-panstar.md,2,14629280-ae87-4dc1-82c0-ba19697c3539,【釜山航線｜パンスターミラクル号】報到與登船手續（最晚何時要到：官方寫法不一致）,5,,off_topic
+Q16,可以帶高爾夫球袋上釜山的船嗎？,zh-TW,5,0.7109,osaka-busan-panstar.md,15,116634be-aef4-4d56-824a-ae32039950cb,【釜山航線｜パンスターミラクル号】車輛暫時進出口（摘要）,5,,off_topic
+Q17,釜山航線的燃油附加費是多少？,zh-TW,1,0.7566,osaka-busan-panstar.md,4,b52da377-6e4c-4e01-b031-dac1069427f9,【釜山航線｜パンスターミラクル号】附加費、稅金與旺季,5,,relevant
+Q17,釜山航線的燃油附加費是多少？,zh-TW,2,0.7257,osaka-busan-panstar.md,3,eb248e9e-8aec-4691-960e-69333bea4f6c,【釜山航線｜パンスターミラクル号】票價 Fare（只有韓元 KRW 公布；每人，單程／來回）,5,,off_topic
+Q17,釜山航線的燃油附加費是多少？,zh-TW,3,0.7024,osaka-busan-panstar.md,7,cb98e6e2-f986-4e78-beab-588cc49935a3,【釜山航線｜パンスターミラクル号】高爾夫球袋、自行車與特殊行李,5,,off_topic
+Q17,釜山航線的燃油附加費是多少？,zh-TW,4,0.6992,osaka-busan-panstar.md,5,56ced4f2-4b8b-4ae1-8efa-192d1bd90bef,【釜山航線｜パンスターミラクル号】兒童與折扣,5,,off_topic
+Q17,釜山航線的燃油附加費是多少？,zh-TW,5,0.6923,osaka-busan-panstar.md,10,e56667ee-f2bf-4e10-95f1-1ebe31dca2f2,【釜山航線｜パンスターミラクル号】日期變更與其他服務,5,,off_topic
+Q18,上海的船票可以退嗎？暫停期間呢？,zh-TW,1,0.7947,kansai-shanghai-shinganjin.md,8,f81a8563-1d28-4366-b3c0-40b0a1704298,【上海航線｜鑑真号】取消與退票（日本出發）,5,,relevant
+Q18,上海的船票可以退嗎？暫停期間呢？,zh-TW,2,0.7644,kansai-shanghai-shinganjin.md,1,507efc94-9eeb-4b4a-b3d1-075022f6087e,【上海航線｜鑑真号】目前狀態（最重要）,5,,relevant
+Q18,上海的船票可以退嗎？暫停期間呢？,zh-TW,3,0.7223,kansai-shanghai-shinganjin.md,10,b911df56-dd06-447a-ae60-c228534e6bdc,【上海航線｜鑑真号】學生票（学割）,5,,off_topic
+Q18,上海的船票可以退嗎？暫停期間呢？,zh-TW,4,0.7157,kansai-shanghai-shinganjin.md,2,9e26d2de-7649-4fd5-8a1c-0a0da7b6421d,【上海航線｜鑑真号】航線與時刻（僅供參考，旅客是否可搭乘見上方）,5,,off_topic
+Q18,上海的船票可以退嗎？暫停期間呢？,zh-TW,5,0.7129,kansai-shanghai-shinganjin.md,6,93a759e7-3970-4f7c-aa62-4319f3653152,【上海航線｜鑑真号】票價 Fare（日本出發，大阪・神戶 → 上海）,5,,off_topic

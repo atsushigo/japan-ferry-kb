@@ -11,9 +11,12 @@
    上海航線：官方 2025-12-08 公告旅客運送暫停、再開未定，但官網船班表仍列出到 2027 年 6 月的班次，且不區分載客或貨運。釜山航線：日文與韓文兩個官方網站的退票規定數字不一致。
 2. **有價值的資訊藏在 PDF、圖片，甚至頁面原始碼裡。** 票價表的文字層是亂碼，必須轉成圖片目視核對；釜山官網 FAQ 的答案被抓取工具判定為「只有標題」，直接解析原始 HTML 才拿到 62 題完整答案。
 3. **向量檢索的分數無法分辨「檔頭／標題」這類沒有答案的段落**（它們最高可達 0.80，和答案段落一樣高），只能靠改文件結構解決；但閾值可以擋住「知識庫沒有的題目」。
-4. **檢索閾值要靠實測校準**：這個嵌入模型的分數集中在 0.61–0.83，未啟用閾值時所有結果都會通過，常見的中間值（例如 0.5）也擋不住任何東西。先用未啟用閾值的狀態取得完整分數分佈，再校準為 0.72。
+4. **檢索閾值要靠實測校準，而且安全區間很窄。** 這個嵌入模型的分數集中在 0.61–0.83，未啟用閾值時所有結果都會通過，常見的中間值（例如 0.5）也擋不住任何東西。用 24 題（含 9 題庫外題）校準後，能同時「不漏掉答案」與「擋住庫外題」的區間只有 0.6975–0.7147（寬 0.017），建議閾值 0.71；語意相近但不在範圍內的問題（例如福岡到釜山）也能拿到 0.70，所以閾值不能是唯一的防線。
+5. **改文件結構比調參數有效。** 把文件改成「一段一個主題、標題帶航線標籤、來源寫在段落內」後，15 題有預期答案的題目，相關段落全數排第 1、預期段落 21/21 全部找回，結構性段落從 7/26 降到 0。
 
-![檢索分數分佈](docs/assets/retrieval-scores.png)
+![閾值校準圖](docs/assets/threshold-calibration.png)
+
+*第一輪（手動、舊版文件）的分數分佈見 [報告 4.3](docs/phase1-rag-audit-report.md)。*
 
 ## 架構
 
@@ -22,7 +25,7 @@ flowchart LR
   A["官方網站與 PDF<br/>panstar.jp · panstarcruise.com · shinganjin.com"] --> B["查證與整理<br/>平行 agent 讀取 + 人工核對"]
   B --> C["knowledge/*.md<br/>一段一個主題，附來源與確認日期"]
   C --> D["Dify Cloud 知識庫<br/>gemini-embedding-2 · 分段 1500 字"]
-  D --> E["向量檢索<br/>Top K 5 · 閾值 0.72"]
+  D --> E["向量檢索<br/>Top K 5 · 閾值 0.71"]
   E --> F["聊天機器人<br/>Gemini Flash（設計中）"]
   F --> G["使用者"]
   F -.-> H["Phase 2：FastAPI + PostgreSQL"]
@@ -64,23 +67,28 @@ japan-ferry-kb/
 │   ├── kansai-shanghai-shinganjin.md
 │   └── history/                    曾上傳並測試過的舊版本（對應測試紀錄）
 ├── evaluation/
-│   └── test-questions.csv          測試題與預期行為
+│   ├── questions.csv          測試題、預期行為與預期段落
+│   ├── run_recall.py          呼叫 Dify 知識庫 API 跑召回測試
+│   ├── score_run.py           自動評分與閾值掃描
+│   └── runs/                  每次測試一個資料夾（run-001 手動；run-002～004 自動）
+│       └── run-00X_日期/      config.json、results.csv、labeled_results.csv、summary.md
 └── docs/
     ├── phase1-rag-audit-report.md  稽核與調校報告
     ├── dify-setup.md               Dify 設定與重現步驟
     ├── sources.md                  資料來源與查證紀錄
     ├── coverage-matrix.md          航線 × 主題的資料覆蓋盤點
     └── assets/
-        ├── retrieval-test-run1.csv 第一輪召回測試原始數據
-        ├── make_retrieval_chart.py 由 CSV 產生上圖
-        └── retrieval-scores.png
+        ├── threshold-calibration.png  閾值校準圖（本頁上方）
+        ├── retrieval-scores.png       第一輪（舊版文件）分數分佈
+        ├── make_calibration_chart.py  由 run-002／003 產生校準圖
+        └── make_retrieval_chart.py    由 run-001 產生第一輪圖
 ```
 
 ## 重現
 
 1. 依 [`docs/dify-setup.md`](docs/dify-setup.md) 設定模型供應商與知識庫（需自備 Gemini API key，**不要提交 key**）。
 2. 上傳 `knowledge/` 底下的兩份文件。
-3. 用 [`evaluation/test-questions.csv`](evaluation/test-questions.csv) 在 Dify「召回測試」逐題檢查。
+3. 用 [`evaluation/questions.csv`](evaluation/questions.csv) 在 Dify「召回測試」逐題檢查。
 4. 重畫圖表：`pip install matplotlib && python docs/assets/make_retrieval_chart.py`
 
 ## Roadmap

@@ -1,0 +1,208 @@
+{
+  "overall": {
+    "questions": 8,
+    "scored_questions": 0,
+    "hit_rate": null,
+    "mrr": 0,
+    "mean_precision_at_k": null,
+    "expect_empty_questions": 8,
+    "expect_empty_returned_nothing": 0,
+    "threshold_used": null
+  },
+  "per_question": [
+    {
+      "id": "Q19",
+      "query": "和歌山から徳島のフェリーの時刻表を教えてください",
+      "expect_empty": true,
+      "n_expected": 0,
+      "n_returned": 5,
+      "n_relevant": 0,
+      "hit": null,
+      "first_relevant_rank": null,
+      "precision": null,
+      "top_score": 0.633,
+      "relevant_min": null,
+      "offtopic_max": 0.633,
+      "missing_sections": []
+    },
+    {
+      "id": "Q20",
+      "query": "福岡から釜山へのフェリーは？",
+      "expect_empty": true,
+      "n_expected": 0,
+      "n_returned": 5,
+      "n_relevant": 0,
+      "hit": null,
+      "first_relevant_rank": null,
+      "precision": null,
+      "top_score": 0.6975,
+      "relevant_min": null,
+      "offtopic_max": 0.6975,
+      "missing_sections": []
+    },
+    {
+      "id": "Q21",
+      "query": "東京から北海道へフェリーで行く料金は？",
+      "expect_empty": true,
+      "n_expected": 0,
+      "n_returned": 5,
+      "n_relevant": 0,
+      "hit": null,
+      "first_relevant_rank": null,
+      "precision": null,
+      "top_score": 0.6477,
+      "relevant_min": null,
+      "offtopic_max": 0.6477,
+      "missing_sections": []
+    },
+    {
+      "id": "Q22",
+      "query": "大阪明天的天氣怎麼樣？",
+      "expect_empty": true,
+      "n_expected": 0,
+      "n_returned": 5,
+      "n_relevant": 0,
+      "hit": null,
+      "first_relevant_rank": null,
+      "precision": null,
+      "top_score": 0.6526,
+      "relevant_min": null,
+      "offtopic_max": 0.6526,
+      "missing_sections": []
+    },
+    {
+      "id": "Q23",
+      "query": "大阪有哪些好吃的拉麵店？",
+      "expect_empty": true,
+      "n_expected": 0,
+      "n_returned": 5,
+      "n_relevant": 0,
+      "hit": null,
+      "first_relevant_rank": null,
+      "precision": null,
+      "top_score": 0.5946,
+      "relevant_min": null,
+      "offtopic_max": 0.5946,
+      "missing_sections": []
+    },
+    {
+      "id": "Q24",
+      "query": "How do I book a flight from Osaka to Seoul?",
+      "expect_empty": true,
+      "n_expected": 0,
+      "n_returned": 5,
+      "n_relevant": 0,
+      "hit": null,
+      "first_relevant_rank": null,
+      "precision": null,
+      "top_score": 0.6515,
+      "relevant_min": null,
+      "offtopic_max": 0.6515,
+      "missing_sections": []
+    },
+    {
+      "id": "Q25",
+      "query": "What is the best time of year to visit Shanghai?",
+      "expect_empty": true,
+      "n_expected": 0,
+      "n_returned": 5,
+      "n_relevant": 0,
+      "hit": null,
+      "first_relevant_rank": null,
+      "precision": null,
+      "top_score": 0.6204,
+      "relevant_min": null,
+      "offtopic_max": 0.6204,
+      "missing_sections": []
+    },
+    {
+      "id": "Q26",
+      "query": "首爾的住宿推薦哪一區？",
+      "expect_empty": true,
+      "n_expected": 0,
+      "n_returned": 5,
+      "n_relevant": 0,
+      "hit": null,
+      "first_relevant_rank": null,
+      "precision": null,
+      "top_score": 0.5666,
+      "relevant_min": null,
+      "offtopic_max": 0.5666,
+      "missing_sections": []
+    }
+  ],
+  "threshold_sweep": [
+    {
+      "threshold": 0.5,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 40,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 8
+    },
+    {
+      "threshold": 0.6,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 22,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 6
+    },
+    {
+      "threshold": 0.65,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 7,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 3
+    },
+    {
+      "threshold": 0.7,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 0,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.71,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 0,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.72,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 0,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.73,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 0,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.74,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 0,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.75,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 0,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    }
+  ]
+}
