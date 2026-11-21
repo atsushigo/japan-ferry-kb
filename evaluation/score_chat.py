@@ -7,7 +7,12 @@ What is checked automatically (no model involved):
   has_source         the answer contains a URL
   has_conf_date      the answer contains a confirmation date (YYYY-MM-DD)
   has_closing_notice the fixed v2 closing sentence is present (only when chunks were retrieved)
-  must_not_hits      forbidden phrases from the `must_not` column (only labels listed in MUST_NOT_PHRASES)
+  must_not_hits      forbidden phrases from the `must_not` column (only labels listed in MUST_NOT_PHRASES);
+                     a phrase right after a negation ("沒有寫旺季票價會比較貴") is not counted
+  language           the answer must be in the question's language (ja: a clear share of kana;
+                     en: mostly Latin letters); zh is not checked
+  glued_output       heuristic for two generations glued together (the opening words reappear stuck
+                     to the middle of a line); see FKB-008
   expectation        a cheap check for some `expected_behavior` labels (refusals, cannot-book)
 
 What is NOT checked: whether the wording is faithful to the source. Rows are flagged
@@ -45,7 +50,9 @@ MUST_NOT_PHRASES = {
 HUMAN_ONLY = {"do_not_describe_other_routes", "do_not_describe_domestic_routes", "do_not_guess",
               "do_not_present_as_bookable"}
 
-REFUSAL_MARKS = ["知識庫目前沒有", "知識庫沒有", "知識庫只涵蓋", "ナレッジベース", "knowledge base", "Knowledge base"]
+REFUSAL_MARKS = ["知識庫目前沒有", "知識庫沒有", "知識庫只涵蓋", "知識庫僅涵蓋", "未提供", "沒有記載", "ナレッジベース",
+                 "knowledge base", "Knowledge base"]
+NEGATIONS = ["沒有寫", "沒有", "未", "並未", "不會", "不能", "無", "不是", "no ", "not "]
 CANNOT_MARKS = ["無法", "不能", "沒辦法", "できません", "cannot", "can't", "unable"]
 
 
@@ -77,8 +84,11 @@ def check_row(r: dict, q: dict) -> dict:
     for tok in (q.get("must_not") or "").split(";"):
         lab = label_of(tok)
         for ph in MUST_NOT_PHRASES.get(lab, []):
-            if ph in ans:
-                hits.append(ph)
+            for m in re.finditer(re.escape(ph), ans):
+                before = ans[max(0, m.start() - 8):m.start()]
+                if not any(n in before for n in NEGATIONS):
+                    hits.append(ph)
+                    break
         if lab in HUMAN_ONLY:
             human.append(lab)
     out["must_not_hits"] = ";".join(hits)
@@ -94,6 +104,29 @@ def check_row(r: dict, q: dict) -> dict:
         exp_ok = bool(URL_RE.search(ans))
     out["expectation_check"] = "" if exp_ok == "" else ("ok" if exp_ok else "FAIL")
 
+    lang = r.get("language", "")
+    cjk = len(re.findall(r"[\u4e00-\u9fff]", ans)); kana = len(re.findall(r"[\u3040-\u30ff]", ans))
+    latin = len(re.findall(r"[A-Za-z]", ans))
+    mismatch = False
+    if lang == "ja":
+        mismatch = kana < 0.15 * max(1, cjk + kana)
+    elif lang == "en":
+        mismatch = cjk > 0.1 * max(1, cjk + latin)
+    out["language_ok"] = "n/a" if lang not in ("ja", "en") else ("FAIL" if mismatch else "ok")
+    # glued: the opening words reappear in the middle of a line, stuck right after another word
+    # (a truncated generation followed by a complete one). Heuristic only; it can also fire on a
+    # natural repeat such as "從大阪到釜山", so flagged rows must be read.
+    head = ans[:4]
+    glued = False
+    pos = ans.find(head, 4) if len(ans) > 60 and len(head) == 4 else -1
+    while pos > 0:
+        prev = ans[pos - 1]
+        if prev not in "\n 。：:）)*-、，,（(「" and not prev.isspace():
+            glued = True
+            break
+        pos = ans.find(head, pos + 1)
+    out["glued_output"] = glued
+
     problems = []
     if r["error"]:
         problems.append("request_error")
@@ -103,6 +136,10 @@ def check_row(r: dict, q: dict) -> dict:
         problems.append("must_not")
     if out["expectation_check"] == "FAIL":
         problems.append("expectation")
+    if out["language_ok"] == "FAIL":
+        problems.append("language")
+    if out["glued_output"]:
+        problems.append("glued_output")
     if out["has_closing_notice"] is False:
         problems.append("no_closing_notice")
     if got_chunks and not out["has_source"] and not any(m in ans[:60] for m in REFUSAL_MARKS):
@@ -124,6 +161,7 @@ def main() -> None:
 
     checks = []
     for r in rows:
+        r.setdefault("language", qs.get(r["query_id"], {}).get("language", ""))
         c = check_row(r, qs.get(r["query_id"], {}))
         checks.append({"query_id": r["query_id"], "repeat": r["repeat"], "query": r["query"], **c,
                        "answer": r["answer"], "error": r["error"]})
@@ -136,7 +174,8 @@ def main() -> None:
     for c in checks:
         by_q.setdefault(c["query_id"], []).append(c)
     fails = {k: sum(1 for c in checks if k in c["problems"].split(";")) for k in
-             ("request_error", "numeric_grounding", "must_not", "expectation", "no_closing_notice", "no_source")}
+             ("request_error", "numeric_grounding", "must_not", "expectation", "language", "glued_output",
+              "no_closing_notice", "no_source")}
     L = [f"# 回答層規則檢查：{run.name}", "",
          f"- 模型標籤：{cfg.get('model_label')}　提示詞版本：{cfg.get('prompt_version')}　每題重複：{cfg.get('repeat')}",
          f"- 請求完成：{cfg.get('completed_requests')} / {cfg.get('planned_requests')}"
@@ -144,7 +183,8 @@ def main() -> None:
          f"- git：{json.dumps(cfg.get('git', {}))}", "",
          "## 規則違規次數（全部回答）", "", "| 規則 | 違規次數 |", "|---|---|"]
     names = {"request_error": "請求失敗", "numeric_grounding": "數字溯源（金額不在檢索段落中）", "must_not": "出現禁止用語",
-             "expectation": "預期行為（拒答／做不到）", "no_closing_notice": "缺固定結尾句", "no_source": "缺來源網址"}
+             "expectation": "預期行為（拒答／做不到）", "language": "回答語言與提問不一致",
+             "glued_output": "疑似兩段輸出拼接（啟發式）", "no_closing_notice": "缺固定結尾句", "no_source": "缺來源網址"}
     for k, v in fails.items():
         L.append(f"| {names[k]} | {v} / {len(checks)} |")
     L += ["", "## 逐題", "", "| 題 | 問題 | 次數 | 需人工複核 | 違規 | 憑空金額 |", "|---|---|---|---|---|---|"]

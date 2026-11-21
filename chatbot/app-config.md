@@ -34,6 +34,8 @@ Note that Q20-type questions that do pass the threshold still reach the LLM, so 
 
 - After prompt v2: FKB-002 and FKB-003 did not recur in 3 reruns + A13; one rerun produced a wrong price (FKB-007).
 
+- chat-001 (API, 14 questions x 3): see report §4.7 and FKB-007 to FKB-011.
+
 ## Still to do
 
 Export the app DSL (YAML) into `chatbot/` after the prompt is stable. Check it for dataset IDs and API keys before committing.

@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Type / Priority / Status | Story / High / In Progress（腳本已寫並以合成資料自測，尚未跑真實回答） |
+| Type / Priority / Status | Story / High / In Progress（第一輪已跑，待多輪與模型對照） |
 | Component | evaluation |
 | Related | FKB-002、FKB-003、FKB-006 |
 
@@ -21,7 +21,8 @@
 ## Progress（2026-11-21 JST）
 - `evaluation/run_chat.py`（呼叫應用 API、重複、限速、遇額度錯誤即停並保留已完成的結果）與 `evaluation/score_chat.py`（規則檢查）已完成。
 - `score_chat.py` 已用合成回答自測：能抓出不在檢索段落中的金額（「₩2/人」）、A13 的「旺季加價」、A14 的「超過 3 個月」，且不誤判正確回答與拒答。
-- 尚未做：用真實應用跑一輪（需 `.env` 的 `DIFY_APP_API_KEY`）；金額偵測只認 ₩／¥ 符號或貨幣單位旁的數字。
+- 已用真實應用跑第一輪：`evaluation/chat_runs/chat-001_2026-11-21/`（14 題 × 3 次 = 42 次請求，無失敗；共 84,845 token、約 0.047 美元；含 LLM 的請求延遲中位數約 6 秒）。發現 FKB-007～011。
+- 尚未做：多輪對話、更多重複次數、第二個模型的對照（FKB-006）；金額偵測只認 ₩／¥ 符號或貨幣單位旁的數字。
 
 ## Acceptance criteria
 - 一個指令跑完全部測試題，產生 `results.csv`、`config.json`、`summary.md`。

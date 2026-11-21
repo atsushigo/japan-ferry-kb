@@ -11,9 +11,13 @@
 | [FKB-002](FKB-002-unsupported-peak-season-surcharge.md) | Bug | High | Done | 回答把「旺季不可折扣」延伸成知識庫沒有的「旺季加價」 |
 | [FKB-003](FKB-003-stale-date-rule-not-answerable.md) | Bug | Medium | Done | 「超過 3 個月提醒過期」規則無法執行，模型自相矛盾 |
 | [FKB-004](FKB-004-unused-files-variable.md) | Task | Low | Done | LLM 節點的使用者訊息帶了用不到的 `files` 變數 |
-| [FKB-005](FKB-005-answer-level-eval-runner.md) | Story | High | In Progress | 建立回答層自動評測腳本（run_chat.py、score_chat.py） |
+| [FKB-005](FKB-005-answer-level-eval-runner.md) | Story | High | In Progress | 回答層自動評測腳本（run_chat.py、score_chat.py）；第一輪 chat-001 已跑 |
 | [FKB-006](FKB-006-llm-model-comparison-and-billing.md) | Story | Medium | Open | 比較 Gemini 3.5 Flash-Lite 與 3.8 Flash，並決定是否開啟計費 |
-| [FKB-007](FKB-007-nondeterministic-price-hallucination.md) | Bug | High | Open | 回答偶爾輸出知識庫沒有的價格數字（3 次中 1 次出現「₩2/人」） |
+| [FKB-007](FKB-007-nondeterministic-price-hallucination.md) | Bug | High | Open | 回答偶爾輸出知識庫沒有的價格數字（預覽「₩2/人」、API「₩2,500,000」，各 3 次中 1 次） |
+| [FKB-008](FKB-008-glued-two-generations.md) | Bug | High | Open | 回答中出現兩段輸出拼接（42 次中 3 次；疑與失敗重試有關，未驗證） |
+| [FKB-009](FKB-009-answer-language-mismatch.md) | Bug | Medium | Open | 日文、英文提問得到中文內容（A7 3/3、A8 2/3） |
+| [FKB-010](FKB-010-suspension-not-stated-first.md) | Bug | High | Open | 問上海票價時，客運暫停狀態被放最後且沒說明不能購買（3 次中 2 次） |
+| [FKB-011](FKB-011-eval-harness-limitations.md) | Task | Medium | Open | 回答層測試的限制：A14 單輪無效、A11 沒測到提示詞、拒答帶假來源、評分誤判 |
 
 ## 欄位與規範
 
