@@ -87,7 +87,8 @@ LLM 這一步由系統提示詞的規則決定怎麼回答（完整規則與每�
 
 ```text
 japan-ferry-kb/
-├── README.md
+├── README.md / README.ja.md
+├── LICENSE（程式碼：MIT）、LICENSE-DOCS.md（文件與資料：CC BY 4.0）
 ├── knowledge/                      知識庫來源文件（持續更新）
 │   ├── osaka-busan-panstar.md
 │   ├── kansai-shanghai-shinganjin.md
@@ -139,4 +140,4 @@ japan-ferry-kb/
 
 `knowledge/` 的內容是本專案從營運公司官方網站與公告**整理的摘要**，確認日期見各段落結尾。票價、班次與規定會變動，**可能已過期，不構成訂票或搭乘建議**，請以營運公司官方資訊為準。沒有官方依據的項目一律標示「未取得」，不補編。
 
-授權：尚未決定。
+授權：程式碼為 [MIT](LICENSE)；文件、知識文件與測試資料為 [CC BY 4.0](LICENSE-DOCS.md)（`knowledge/` 是官方資訊的整理摘要，原始內容的權利屬於各營運公司，見授權說明）。

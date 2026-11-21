@@ -87,6 +87,8 @@ LLM の段階では、システムプロンプトのルールが回答の仕方�
 ```text
 japan-ferry-kb/
 ├── README.md / README.ja.md
+├── LICENSE（コード：MIT）/ LICENSE-DOCS.md（文書・データ：CC BY 4.0）
+
 ├── knowledge/                      ナレッジベースの元文書（随時更新）
 │   ├── osaka-busan-panstar.md
 │   ├── kansai-shanghai-shinganjin.md
@@ -132,4 +134,4 @@ japan-ferry-kb/
 
 `knowledge/` の内容は、運航会社の公式サイトと告知から本プロジェクトが**まとめた要約**で、確認日は各チャンクの末尾に記載しています。運賃・時刻表・規定は変更されるため、**古くなっている可能性があり、予約や乗船の助言ではありません**。運航会社の公式情報を確認してください。公式の根拠がない項目は一律「未取得」と明記し、推測で補っていません。
 
-ライセンス：未定。
+ライセンス：コードは [MIT](LICENSE)、文書・ナレッジ文書・テストデータは [CC BY 4.0](LICENSE-DOCS.md)。`knowledge/` は公式情報をまとめた要約であり、元の内容の権利は各運航会社に帰属します（ライセンス説明を参照）。

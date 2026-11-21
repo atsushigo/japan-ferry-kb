@@ -34,7 +34,8 @@ The ELSE reply also lists three example questions (tested to hit the knowledge b
 
 - The retrieval node's `multiple_retrieval_config` has `top_k: 4`, rerank off, weights = vector only (`vector_weight: 1`, `gemini-embedding-2`). It has **no `score_threshold` field**.
 - Evidence that a 0.71 threshold still applies at run time: API runs return 4 chunks for most questions but 3 for some (e.g. A24 in chat-006), and "大阪からどこまでいけますか" (top score 0.6983) goes to the ELSE branch (A35). A node without a threshold would always return 4 chunks.
-- So the threshold most likely comes from the knowledge base's own retrieval setting, not from the node. This is **not verified**: open the retrieval node in the editor and check both Top K and the score-threshold switch, and note the result here.
+- **Partly verified (screenshot, 2026-11-22)**: the knowledge-base settings dialog opened from the retrieval node shows vector search, rerank off, **Top K 5 and Score threshold 0.71 switched on**. So the threshold lives in the knowledge base's own setting, and the node's `top_k: 4` caps what the flow actually receives (observed maximum 4 chunks). Effective setting for the chatbot: threshold 0.71 from the knowledge base, Top K 4 from the node.
+- Still open: whether the node itself should also carry a threshold, so the flow does not depend on the knowledge-base setting. Optional.
 - Consequence: the earlier text of this file ("Top K 5") was wrong for the flow; Top K 5 is what the recall-test scripts sent. Re-importing the DSL elsewhere will not carry the threshold unless the knowledge base has it.
 
 ## Publishing (important)
