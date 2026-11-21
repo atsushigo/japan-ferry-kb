@@ -19,6 +19,7 @@
 | [FKB-010](FKB-010-suspension-not-stated-first.md) | Bug | High | Mitigated | 問上海票價時，客運暫停狀態被放最後且沒說明不能購買（3 次中 2 次；v4 後 A10 ×10 全部先說明） |
 | [FKB-011](FKB-011-eval-harness-limitations.md) | Task | Medium | Open | 回答層測試的限制：A14 單輪無效、A11 沒測到提示詞、拒答帶假來源、評分誤判 |
 | [FKB-012](FKB-012-overview-questions-miss-threshold.md) | Story | Medium | Done | 概括性問題（「大阪からどこまでいけますか」）被閾值擋掉；需要開場問題按鈕與總覽段落 ；總覽段落已上傳，最模糊的日文問法由固定訊息引導 |
+| [FKB-013](FKB-013-output-amount-guardrail.md) | Story | High | In Progress | 輸出後驗證：回答中的金額不在檢索結果就不顯示；程式與離線驗證完成（230 則重播 0 誤擋、524 個注入全擋），Dify 接線待做 |
 
 ## 欄位與規範
 

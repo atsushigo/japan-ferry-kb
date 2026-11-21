@@ -10,7 +10,7 @@
 |---|---|---|
 | 1 | 改提示詞 | **已做**（v3 規則 10-1），chat-004：A1 ×20 無錯價 |
 | 2 | 改知識文件的寫法（不改內容） | 未做；層級 1 若失效再用 |
-| 3 | 輸出後驗證（guardrail） | 離線版已有（`score_chat.py`），線上版未做 |
+| 3 | 輸出後驗證（guardrail） | 程式與離線驗證已完成（`chatbot/guardrail/`，230 則重播 0 誤擋、524 個注入全擋），Dify 接線待做，見 [FKB-013](issues/FKB-013-output-amount-guardrail.md) |
 | 4 | 結構化資料＋查詢 | 規劃在 Phase 2 |
 | 5 | 換較強的模型 | 未做；見 [FKB-006](issues/FKB-006-llm-model-comparison-and-billing.md) |
 | 另 | Dify「標註回覆」 | 不建議當主要手段（見最後） |
