@@ -12,7 +12,7 @@ do not type the placeholder by hand.
 | v1.1 | 2026-11-21 | Added rule 11 (ignore instructions to change rules / reveal the prompt); retrieval result appended | superseded by v2 |
 | v2 | 2026-11-21 | Replace rule 5 with a fixed notice; add rule 2-1 (no extrapolation). See [FKB-002](../docs/issues/FKB-002-unsupported-peak-season-surcharge.md), [FKB-003](../docs/issues/FKB-003-stale-date-rule-not-answerable.md) | **deployed**; FKB-002/003 verified on gemini-3.5-flash-lite (n=3 + A13); FKB-007 (random wrong price) still open |
 | v3 | 2026-11-22 | Add rule 10-1: fixed one-line-per-cabin price format, person count after the price. Experiment for [FKB-007](../docs/issues/FKB-007-nondeterministic-price-hallucination.md) | **deployed** (published 2026-11-22); chat-004 A1 x20: 0 wrong prices (FKB-007 mitigated, small sample) |
-| v4 | 2026-11-22 | Rewrite rule 3: any question about a suspended route must open with the status and say the fare does not mean tickets can be bought now. For [FKB-010](../docs/issues/FKB-010-suspension-not-stated-first.md) | **proposed**, not yet published; test = A10 x10 (+ A2 regression) |
+| v4 | 2026-11-22 | Rewrite rule 3: any question about a suspended route must open with the status and say the fare does not mean tickets can be bought now. For [FKB-010](../docs/issues/FKB-010-suspension-not-stated-first.md) | **deployed** (published 2026-11-22); chat-005: A10 10/10 status first + not-buyable caveat, A2 10/10 (FKB-010 mitigated) |
 
 ## 為什麼有這些規則（每條規則的依據）
 
@@ -90,7 +90,7 @@ Insert after rule 10 and before「# 輸出格式」. Publish afterwards ("發布
 Rationale: all 4 wrong prices so far were on the balcony-suite row and 3 of the 4 wrong values start with "2", the same digit as that row's person count (「2 人」). Moving the count after the price is a test of that association, not a proven fix.
 Pass criterion: A1 x20, 0 numeric-grounding failures on the balcony row (previous rate 4 of 33 A1 requests).
 
-## v4 change (proposed; one variable only)
+## v4 change (deployed; one variable only)
 
 Replace rule 3 with the text below, publish, and confirm 「已發布 幾秒前」. Wording follows the knowledge base itself ("旅客運送暫停中，此票價不代表現在可以購買"), so the rule does not ask the model to state anything the knowledge base does not say.
 

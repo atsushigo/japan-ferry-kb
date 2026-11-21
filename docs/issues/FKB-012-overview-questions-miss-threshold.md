@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Type / Priority / Status | Story / Medium / Open |
+| Type / Priority / Status | Story / Medium / In Progress（開場問題文案已備，見 `chatbot/opening-questions.md`；總覽段落未做） |
 | Component | retrieval、knowledge-base、chatbot-flow |
 | Found in | 使用者手動測試（Dify 網頁應用），提示詞 v3 |
 | Reported | 2026-11-22 JST |

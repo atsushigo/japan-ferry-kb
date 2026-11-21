@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Type / Priority / Status | Bug / High / Open |
+| Type / Priority / Status | Bug / High / Mitigated |
 | Component | chatbot-prompt |
 | Found in | chat-001 A10、提示詞 v2、gemini-3.5-flash-lite |
 | Reported | 2026-11-21 JST |
@@ -27,6 +27,10 @@
 2. 評估在知識庫的上海票價段落標題直接加註「（客運暫停期間不可購買）」，讓檢索到的段落自己帶著這個狀態。
 
 ## Verification
+**chat-005（2026-11-22 JST，提示詞 v4，A2 ×10、A10 ×10，retry 關閉並已發布）**：A10 10/10 把暫停狀態放在第一句，且 10/10 說明「此票價不代表現在可以購買或搭乘」（對照 v2：1/3、0/3）；A2 10/10 維持先說明暫停；金額溯源 0/20。`score_chat.py` 新增 `status_first`（前 120 字含暫停字眼）與 `not_buyable_caveat`（前 300 字含「不代表現在可以購買」等）兩項檢查，用 chat-001 重新評分可重現舊問題（A10 #1、#2 位置失敗，三次都沒說明不能購買）。
+副作用（輕微）：A2 只問「有沒有開」也會多一句「這項資料不代表現在可以購買或搭乘」，語氣略生硬；A10 偶爾出現簡體字「豪华」；價格行格式不完全一致（有的有「客房人數」括號，有的沒有）。
+樣本小（n=10），其他上海題（班次、行李）尚未測。
+原計畫：
 A10 重跑 10 次，暫停狀態必須都出現在前兩句內；`score_chat.py` 尚無此檢查，需新增「位置檢查」。
 
 ## Lessons learned

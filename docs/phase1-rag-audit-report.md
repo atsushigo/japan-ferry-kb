@@ -206,7 +206,9 @@
 
 **追加實驗（chat-003，重試關閉且已發布，A1、A3 各 10 次）**：20/20 成功、**0 次拼接**，耗時 2.6–4.5 秒；錯價仍出現 1 次（A1 #7 陽台套房 ₩2,000，第 4 次、仍在同一列）。所以拼接與重試有關、錯價無關。
 
-**提示詞 v3 實驗（chat-004，A1 ×20，規則 10-1：每艙等一行、人數放價格後面）**：20/20 無錯價，六個艙等的價格與人數全部正確（對照：改前 A1 約 4/33 次出錯）；樣本小，需再跑一輪。其他層級的處理方式見 [數字幻覺的處理選項](hallucination-mitigation-options.md)。見 [FKB-007](issues/FKB-007-nondeterministic-price-hallucination.md)、[FKB-008](issues/FKB-008-glued-two-generations.md)。
+**提示詞 v3 實驗（chat-004，A1 ×20，規則 10-1：每艙等一行、人數放價格後面）**：20/20 無錯價，六個艙等的價格與人數全部正確（對照：改前 A1 約 4/33 次出錯）；樣本小，需再跑一輪。其他層級的處理方式見 [數字幻覺的處理選項](hallucination-mitigation-options.md)。
+
+**提示詞 v4 實驗（chat-005，規則 3 改寫，A2、A10 各 10 次）**：A10 10/10 第一句先說明客運暫停並說明「此票價不代表現在可以購買或搭乘」（v2：1/3 與 0/3）；A2 10/10 維持先說明暫停。為此新增 `status_first`／`not_buyable_caveat` 兩項自動檢查，並用 chat-001 重新評分確認能重現舊問題。樣本小；副作用是 A2 語氣略生硬。見 [FKB-010](issues/FKB-010-suspension-not-stated-first.md)。見 [FKB-007](issues/FKB-007-nondeterministic-price-hallucination.md)、[FKB-008](issues/FKB-008-glued-two-generations.md)。
 
 ## 5. 設計決策
 

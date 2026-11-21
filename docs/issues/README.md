@@ -16,9 +16,9 @@
 | [FKB-007](FKB-007-nondeterministic-price-hallucination.md) | Bug | High | Mitigated | 回答偶爾輸出知識庫沒有的價格數字；4 次都在「陽台套房」那一列（預覽 ₩2/人、API ₩2,500,000 ×2、₩2,000；提示詞 v3 後 A1 ×20 無錯價） |
 | [FKB-008](FKB-008-glued-two-generations.md) | Bug | High | Mitigated | 回答中出現兩段輸出拼接（A1、A3 共 26 次中 4 次；日誌確認為 Gemini「high demand」串流中斷後節點重試，殘缺前半段被保留；重試關閉並發布後 chat-003 20 次無拼接） |
 | [FKB-009](FKB-009-answer-language-mismatch.md) | Bug | Medium | Open | 日文、英文提問得到中文內容（A7 3/3、A8 2/3） |
-| [FKB-010](FKB-010-suspension-not-stated-first.md) | Bug | High | Open | 問上海票價時，客運暫停狀態被放最後且沒說明不能購買（3 次中 2 次） |
+| [FKB-010](FKB-010-suspension-not-stated-first.md) | Bug | High | Mitigated | 問上海票價時，客運暫停狀態被放最後且沒說明不能購買（3 次中 2 次；v4 後 A10 ×10 全部先說明） |
 | [FKB-011](FKB-011-eval-harness-limitations.md) | Task | Medium | Open | 回答層測試的限制：A14 單輪無效、A11 沒測到提示詞、拒答帶假來源、評分誤判 |
-| [FKB-012](FKB-012-overview-questions-miss-threshold.md) | Story | Medium | Open | 概括性問題（「大阪からどこまでいけますか」）被閾值擋掉；需要開場問題按鈕與總覽段落 |
+| [FKB-012](FKB-012-overview-questions-miss-threshold.md) | Story | Medium | In Progress | 概括性問題（「大阪からどこまでいけますか」）被閾值擋掉；需要開場問題按鈕與總覽段落 |
 
 ## 欄位與規範
 

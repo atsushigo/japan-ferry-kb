@@ -56,6 +56,11 @@ NEGATIONS = ["沒有寫", "沒有", "未", "並未", "不會", "不能", "無", 
 CANNOT_MARKS = ["無法", "不能", "沒辦法", "できません", "cannot", "can't", "unable"]
 
 
+STATUS_MARKS = ("暫停", "停航", "运休", "運休", "suspend", "Suspend", "一時停止")
+NOT_BUYABLE_MARKS = ("不代表現在可以購買", "不代表現在可以搭乘", "無法購買", "不能購買", "不可購買", "目前不能", "目前無法",
+                     "not mean", "cannot be purchased", "can't be purchased", "not available for purchase")
+
+
 def amounts(text: str) -> set:
     found = set()
     for rx in AMOUNT_RES:
@@ -127,7 +132,21 @@ def check_row(r: dict, q: dict) -> dict:
         pos = ans.find(head, pos + 1)
     out["glued_output"] = glued
 
+    # suspended-route questions (FKB-010): the status must be in the opening, and fare answers must say
+    # the fare does not mean tickets can be bought now. Position = within the first 120 characters.
+    sus_exp = "suspended" in exp or "not_buyable" in exp
+    out["status_first"] = ""
+    out["not_buyable_caveat"] = ""
+    if sus_exp:
+        out["status_first"] = "ok" if any(m in ans[:120] for m in STATUS_MARKS) else "FAIL"
+    if "not_buyable" in exp:
+        out["not_buyable_caveat"] = "ok" if any(m in ans[:300] for m in NOT_BUYABLE_MARKS) else "FAIL"
+
     problems = []
+    if out["status_first"] == "FAIL":
+        problems.append("status_not_first")
+    if out["not_buyable_caveat"] == "FAIL":
+        problems.append("no_not_buyable_caveat")
     if r["error"]:
         problems.append("request_error")
     if out["numeric_grounding"] == "FAIL":
@@ -175,7 +194,7 @@ def main() -> None:
         by_q.setdefault(c["query_id"], []).append(c)
     fails = {k: sum(1 for c in checks if k in c["problems"].split(";")) for k in
              ("request_error", "numeric_grounding", "must_not", "expectation", "language", "glued_output",
-              "no_closing_notice", "no_source")}
+              "no_closing_notice", "no_source", "status_not_first", "no_not_buyable_caveat")}
     L = [f"# 回答層規則檢查：{run.name}", "",
          f"- 模型標籤：{cfg.get('model_label')}　提示詞版本：{cfg.get('prompt_version')}　每題重複：{cfg.get('repeat')}",
          f"- 請求完成：{cfg.get('completed_requests')} / {cfg.get('planned_requests')}"
@@ -184,7 +203,8 @@ def main() -> None:
          "## 規則違規次數（全部回答）", "", "| 規則 | 違規次數 |", "|---|---|"]
     names = {"request_error": "請求失敗", "numeric_grounding": "數字溯源（金額不在檢索段落中）", "must_not": "出現禁止用語",
              "expectation": "預期行為（拒答／做不到）", "language": "回答語言與提問不一致",
-             "glued_output": "疑似兩段輸出拼接（啟發式）", "no_closing_notice": "缺固定結尾句", "no_source": "缺來源網址"}
+             "glued_output": "疑似兩段輸出拼接（啟發式）", "no_closing_notice": "缺固定結尾句", "no_source": "缺來源網址",
+             "status_not_first": "暫停狀態沒有出現在前 120 字", "no_not_buyable_caveat": "沒說明這不代表現在可以購買"}
     for k, v in fails.items():
         L.append(f"| {names[k]} | {v} / {len(checks)} |")
     L += ["", "## 逐題", "", "| 題 | 問題 | 次數 | 需人工複核 | 違規 | 憑空金額 |", "|---|---|---|---|---|---|"]
