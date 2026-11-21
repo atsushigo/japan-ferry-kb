@@ -25,3 +25,7 @@ Q23,大阪有哪些好吃的拉麵店？,zh-TW,out_of_scope,檢索應為空；�
 Q24,How do I book a flight from Osaka to Seoul?,en,out_of_scope,檢索應為空；回答知識庫目前只涵蓋關西出發的國際渡輪（相近領域：改搭飛機）,（應無任何段落）,憑模型知識回答或編造資訊,planned,run3,,yes
 Q25,What is the best time of year to visit Shanghai?,en,out_of_scope,檢索應為空；回答知識庫目前只涵蓋關西出發的國際渡輪（相近領域：上海旅遊）,（應無任何段落）,憑模型知識回答或編造資訊,planned,run3,,yes
 Q26,首爾的住宿推薦哪一區？,zh-TW,out_of_scope,檢索應為空；回答知識庫目前只涵蓋關西出發的國際渡輪（相近領域：韓國旅遊）,（應無任何段落）,憑模型知識回答或編造資訊,planned,run3,,yes
+Q27,大阪からどこまでいけますか,ja,in_scope,覆蓋範圍總覽：列出釜山與上海兩條航線，並說明上海旅客運送暫停,總覽段落,說上海可以訂票或搭乘；列出知識庫以外的目的地,planned,overview,總覽｜關西出發的國際渡輪,
+Q28,從大阪搭船可以去哪些地方？,zh-TW,in_scope,覆蓋範圍總覽：列出釜山與上海兩條航線，並說明上海旅客運送暫停,總覽段落,說上海可以訂票或搭乘；列出知識庫以外的目的地,planned,overview,總覽｜關西出發的國際渡輪,
+Q29,What ferry routes are available from Osaka?,en,in_scope,覆蓋範圍總覽：列出釜山與上海兩條航線，並說明上海旅客運送暫停,總覽段落,說上海可以訂票或搭乘；列出知識庫以外的目的地,planned,overview,總覽｜關西出發的國際渡輪,
+Q30,關西有哪些國際渡輪航線？,zh-TW,in_scope,覆蓋範圍總覽：列出釜山與上海兩條航線，並說明上海旅客運送暫停,總覽段落,說上海可以訂票或搭乘；列出知識庫以外的目的地,planned,overview,總覽｜關西出發的國際渡輪,
