@@ -70,7 +70,7 @@ LLM 這一步由系統提示詞的規則決定怎麼回答（完整規則與每�
 | Done | 4 | FKB-002、003、004、012 |
 | Mitigated（已有處置，樣本小） | 4 | FKB-001、007、008、010 |
 | Open | 3 | FKB-006（模型比較）、009（多語言，延後）、011（測試工具限制） |
-| In Progress | 1 | FKB-005（回答層測試） |
+| In Progress | 2 | FKB-005（回答層測試）、013（金額輸出驗證：程式與離線驗證完成，待接進 Dify） |
 
 詳見 [`docs/issues/README.md`](docs/issues/README.md)；數字幻覺的處理層級與實例見 [`docs/hallucination-mitigation-options.md`](docs/hallucination-mitigation-options.md)。
 

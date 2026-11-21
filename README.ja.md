@@ -22,7 +22,7 @@
 
 ![閾値の較正図](docs/assets/threshold-calibration.png)
 
-*第 1 回（手動・旧版文書）のスコア分布は [レポート 4.3](docs/phase1-rag-audit-report.md) を参照。*
+*図のラベルは中国語です。第 1 回（手動・旧版文書）のスコア分布は [レポート 4.3](docs/phase1-rag-audit-report.md) を参照。*
 
 ## アーキテクチャ
 
@@ -69,7 +69,7 @@ LLM の段階では、システムプロンプトのルールが回答の仕方�
 | Done | 4 | FKB-002、003、004、012 |
 | Mitigated（暫定対処済み・サンプル小） | 4 | FKB-001、007、008、010 |
 | Open | 3 | FKB-006（モデル比較）、009（多言語・延期）、011（テストツールの制限） |
-| In Progress | 1 | FKB-005（回答レベルのテスト） |
+| In Progress | 2 | FKB-005（回答レベルのテスト）、013（金額の出力検証。コードとオフライン検証は完了、Dify への接続待ち） |
 
 詳細は [`docs/issues/README.md`](docs/issues/README.md)。数値の誤り（ハルシネーション）への対処レベルと実例は [`docs/hallucination-mitigation-options.md`](docs/hallucination-mitigation-options.md) にあります。
 
@@ -119,7 +119,7 @@ japan-ferry-kb/
 1. [`docs/dify-setup.md`](docs/dify-setup.md) に従い、モデルプロバイダとナレッジベースを設定します（Gemini API キーは各自で用意。**キーをコミットしないこと**）。
 2. `knowledge/` の文書をアップロードします。
 3. [`evaluation/questions.csv`](evaluation/questions.csv) を使い、Dify の「検索テスト」で 1 問ずつ確認するか、`evaluation/run_recall.py` で自動実行します。
-4. [`chatbot/app-config.md`](chatbot/app-config.md) に従ってチャットフローを作成します（システムプロンプトは [`chatbot/system-prompt.md`](chatbot/system-prompt.md)）。変更後は**必ず「更新を公開」**してください。API が動かすのは公開済みのバージョンです。
+4. [`chatbot/app-config.md`](chatbot/app-config.md) に従ってチャットフローを作成します（システムプロンプトは [`chatbot/system-prompt.md`](chatbot/system-prompt.md)）。変更後は**必ず**「更新を公開」してください。API が動かすのは公開済みのバージョンです。
 5. `.env` に `DIFY_APP_API_KEY` を設定し（`.env.example` を参照）、`python evaluation/run_chat.py` と `score_chat.py` で回答テストを実行します。
 
 ## ロードマップ
