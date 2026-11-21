@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Type / Priority / Status | Bug / Medium / Open |
+| Type / Priority / Status | Bug / Medium / Open（延後處理，2026-11-22 使用者決定；v5 草稿保留在 `chatbot/system-prompt.md`） |
 | Component | chatbot-prompt |
 | Found in | chat-001、提示詞 v2、gemini-3.5-flash-lite |
 | Reported | 2026-11-21 JST |

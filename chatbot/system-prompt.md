@@ -13,7 +13,7 @@ do not type the placeholder by hand.
 | v2 | 2026-11-21 | Replace rule 5 with a fixed notice; add rule 2-1 (no extrapolation). See [FKB-002](../docs/issues/FKB-002-unsupported-peak-season-surcharge.md), [FKB-003](../docs/issues/FKB-003-stale-date-rule-not-answerable.md) | **deployed**; FKB-002/003 verified on gemini-3.5-flash-lite (n=3 + A13); FKB-007 (random wrong price) still open |
 | v3 | 2026-11-22 | Add rule 10-1: fixed one-line-per-cabin price format, person count after the price. Experiment for [FKB-007](../docs/issues/FKB-007-nondeterministic-price-hallucination.md) | **deployed** (published 2026-11-22); chat-004 A1 x20: 0 wrong prices (FKB-007 mitigated, small sample) |
 | v4 | 2026-11-22 | Rewrite rule 3: any question about a suspended route must open with the status and say the fare does not mean tickets can be bought now. For [FKB-010](../docs/issues/FKB-010-suspension-not-stated-first.md) | **deployed** (published 2026-11-22); chat-005: A10 10/10 status first + not-buyable caveat, A2 10/10 (FKB-010 mitigated) |
-| v5 | 2026-11-22 | Add a top-priority language section (answer in the question's language, translate the Chinese retrieval result, Japanese for multi-language questions, translate fixed labels); rule 5 closing sentence in three fixed versions; old rule 8 replaced. For [FKB-009](../docs/issues/FKB-009-answer-language-mismatch.md) | **proposed**, not yet published; test = A7, A8, A15-A20, A22, A24 (single language) and A25-A29 (multi) |
+| v5 | 2026-11-22 | Add a top-priority language section (answer in the question's language, translate the Chinese retrieval result, Japanese for multi-language questions, translate fixed labels); rule 5 closing sentence in three fixed versions; old rule 8 replaced. For [FKB-009](../docs/issues/FKB-009-answer-language-mismatch.md) | **postponed** (2026-11-22, user decision: multilingual work is deferred); not published in Dify; deployed prompt stays v4 |
 
 ## 為什麼有這些規則（每條規則的依據）
 
@@ -101,7 +101,7 @@ Replace rule 3 with the text below, publish, and confirm 「已發布 幾秒前�
 
 Pass criterion: A10 x10, the status in the first two sentences every time and no sentence that implies tickets can be bought now; A2 still 3/3. `score_chat.py` needs a position check first (see FKB-010 Verification).
 
-## v5 change (proposed)
+## v5 change (postponed; draft kept for later)
 
 Three edits in the LLM node SYSTEM field. Publish afterwards and confirm 「已發布 幾秒前」.
 
