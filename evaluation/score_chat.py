@@ -56,7 +56,7 @@ NEGATIONS = ["沒有寫", "沒有", "未", "並未", "不會", "不能", "無", 
 CANNOT_MARKS = ["無法", "不能", "沒辦法", "できません", "cannot", "can't", "unable"]
 
 
-STATUS_MARKS = ("暫停", "停航", "运休", "運休", "suspend", "Suspend", "一時停止")
+STATUS_MARKS = ("暫停", "停航", "运休", "運休", "suspend", "Suspend", "一時停止", "停止")
 NOT_BUYABLE_MARKS = ("不代表現在可以購買", "不代表現在可以搭乘", "無法購買", "不能購買", "不可購買", "目前不能", "目前無法",
                      "not mean", "cannot be purchased", "can't be purchased", "not available for purchase")
 

@@ -1,0 +1,260 @@
+query_id,repeat,query,has_source,has_conf_date,numeric_grounding,invented_amounts,has_closing_notice,must_not_hits,human_only_labels,expectation_check,language_ok,glued_output,status_first,not_buyable_caveat,problems,needs_review,answer,error
+A15,1,How much is a ferry ticket from Osaka to Busan?,True,True,ok,,True,,,,FAIL,False,,,language,True,"總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。官方沒有公布日圓票價。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+價格與班次可能變動，請以官方最新公告為準。",
+A15,2,How much is a ferry ticket from Osaka to Busan?,True,True,ok,,True,,,,FAIL,False,,,language,True,"總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+價格與班次可能變動，請以官方最新公告為準。",
+A16,1,大阪から釜山までのフェリー運賃はいくらですか？,True,True,ok,,True,,,,FAIL,False,,,language,True,"大阪から釜山までのパンスターミラクル号の運賃は、以下の通りです。
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000 / 來回 ₩2,400,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000 / 來回 ₩1,400,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000 / 來回 ₩1,000,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000 / 來回 ₩500,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000 / 來回 ₩400,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000 / 來回 ₩360,000（客房人數：8 人）
+
+要點：
+- 單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。
+- 官方沒有公布日圓票價。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q42、Q43、Q44）（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A16,2,大阪から釜山までのフェリー運賃はいくらですか？,True,True,ok,,True,,,,FAIL,False,,,language,True,"パンスターミラクル号的大阪至釜山單程票價如下（成人每人）：
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+注意事項：
+- 單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。
+- 官方沒有公布日圓票價。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A17,1,How are cancellation fees calculated for the Osaka–Busan ferry?,True,True,ok,,True,,,,FAIL,False,,,language,True,"對於大阪—釜山航線（パンスターミラクル号），官網提供了兩套不同的取消規定（韓文官網與日文官網），官方並未說明哪一套適用於日本購票，建議向購票處確認。兩套規定如下：
+
+*   **韓文官網規定**：
+    *   一般票：付款後～出航 3 天前全額退款；2 天前扣 10%；1 天前扣 30%；出航當天～2 小時前扣 50%；出航 2 小時前以後不可退款。首次預訂後 24 小時內變更或取消免手續費。
+    *   折扣票：付款 24 小時後～出航 7 天前扣 30%；6～1 天前扣 50%；當天不退。
+    *   來回票：購買後不可只取消去程；回程可部分取消，須依約款收手續費。
+    *   附加服務（如船上餐）：出航前 1 天可全額退，當天不退。
+*   **日文官網規定（旅客運送約款）**：
+    *   取消料為票價的百分比：出航 10 日前以前 10%；9～7 日前 15%；6～1 日前 20%；當日～2 小時前 30%；2 小時前以後不可退款。
+    *   船公司停航或取消：全額退款。
+    *   取消須在出航前電話 06-6614-2516；退款只能在購票處辦理，需帶身分證與船票。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q48）；https://www.panstar.jp/article/ ；https://www.panstar.jp/ticketpurchase/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A17,2,How are cancellation fees calculated for the Osaka–Busan ferry?,True,True,ok,,True,,,,FAIL,False,,,language,True,"對於大阪—釜山航線（パンスターミラクル号），取消手續費的規定在韓文官網與日文官網有兩套不同的說法。官方沒有說明哪一套適用於日本購票，建議向購票處確認。
+
+兩套規定如下：
+
+* **韓文官網**：
+  * 一般票：付款後～出航 3 天前全額退款；2 天前扣 10%；1 天前扣 30%；出航當天～2 小時前扣 50%；出航 2 小時前以後不可退款。首次預訂後 24 小時內變更或取消免手續費。
+  * 折扣票：付款 24 小時後～出航 7 天前扣 30%；6～1 天前扣 50%；當天不退。
+  * 來回票：購買後不可只取消去程；回程可部分取消，須依約款收手續費。附加服務（如船上餐）：出航前 1 天可全額退，當天不退。
+* **日文官網**（旅客運送約款）：
+  * 取消料為票價的百分比：出航 10 日前以前 10%；9～7 日前 15%；6～1 日前 20%；當日～2 小時前 30%；2 小時前以後不可退款。船公司停航或取消則全額退款。取消須在出航前電話聯絡，退款只能在購票處辦理。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q48）；https://www.panstar.jp/article/ ；https://www.panstar.jp/ticketpurchase/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A18,1,大阪―釜山のキャンセル料はどう計算されますか？,True,True,ok,,True,,,,FAIL,False,,,language,True,"大阪—釜山航線（パンスターミラクル号）的取消規定在韓文官網與日文官網有兩套不同的說法。
+
+**取消規定詳情：**
+- **韓文官網**（一般票）：
+  - 付款後～出航 3 天前：全額退款
+  - 2 天前：扣 10%
+  - 1 天前：扣 30%
+  - 出航當天～2 小時前：扣 50%
+  - 出航 2 小時前以後：不可退款
+  - 註：折扣票規定不同；首次預訂後 24 小時內變更或取消免手續費。
+- **日文官網**（旅客運送約款）：
+  - 取消料為票價的百分比：出航 10 日前以前 10%；9～7 日前 15%；6～1 日前 20%；當日～2 小時前 30%；2 小時前以後不可退款。
+  - 船公司停航或取消則全額退款。取消須在出航前透過電話 06-6614-2516 辦理，退款只能在購票處辦理，需帶身分證與船票。
+
+官方沒有說明哪一套適用於日本購票，建議向購票處確認。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q48）；https://www.panstar.jp/article/ ；https://www.panstar.jp/ticketpurchase/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A18,2,大阪―釜山のキャンセル料はどう計算されますか？,True,True,ok,,True,,,,FAIL,False,,,language,True,"パンスターミラクル号（大阪—釜山）のキャンセル料については、韓文官網と日文官網で異なる2つの規定が存在します。官方沒有說明哪一套適用於日本購票，建議向購票處確認。
+
+**1. 韓文官網規定（價格頁與 FAQ Q48）**
+- **一般票**：
+  - 付款後～出航 3 天前：全額退款
+  - 2 天前：扣 10%
+  - 1 天前：扣 30%
+  - 出航當天～2 小時前：扣 50%
+  - 出航 2 小時前以後：不可退款
+- **折扣票**：
+  - 付款 24 小時後～出航 7 天前：扣 30%
+  - 6～1 天前：扣 50%
+  - 當天：不退
+  - 首次預訂後 24 小時內變更或取消免手續費。
+- **來回票**：購買後不可只取消去程；回程可部分取消，須依約款收手續費。
+- **附加服務（如船上餐）**：出航前 1 天可全額退，當天不退。
+
+**2. 日文官網規定（旅客運送約款，2020-02-15 修訂）**
+- **取消料**（為票價的百分比）：
+  - 出航 10 日前以前：10%
+  - 9～7 日前：15%
+  - 6～1 日前：20%
+  - 當日～2 小時前：30%
+  - 2 小時前以後：不可退款
+- **船公司停航或取消**：全額退款。
+- **注意事項**：取消須在出航前透過電話 06-6614-2516 辦理；退款只能在購票處辦理，需帶身分證與船票。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q48）；https://www.panstar.jp/article/ ；https://www.panstar.jp/ticketpurchase/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A19,1,Is the Shanghai ferry running now?,True,True,ok,,True,,,,FAIL,True,ok,,language;glued_output,True,"上海航線目前的狀態為：旅客運送暫停、官方未公告再開時間，這項資料不代表現在可以購買或搭乘；上海航線官方 2025-12-08 公告旅客運送暫停、再開未定；官網仍有船班表，但未說明是否恢復載客，請直接向日中国際フェリー確認。
+
+鑑真号的上海航線目前旅客服務暫停，官方 2025-12-08 公告因中國側申し入れ致渡航安全無法確保而暫停旅客服務，重啟時間未定，而已預訂的船票以無取消手續費（キャンセル料なし）處理。官網雖然仍有列出航次與運航表，但不區分旅客與貨物。我無法幫您查詢即時座位、價格或開航狀況，請直接向船公司確認。
+
+來源：https://www.shinganjin.com/news/ ；https://www.shinganjin.com/status/?pram=jianzhenhao ；https://www.shinganjin.com/wp/wp-content/uploads/2025/06/Notice-of-the-passenger-transportation-resumption.pdf（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A19,2,Is the Shanghai ferry running now?,True,True,ok,,True,,,,FAIL,False,ok,,language,True,"上海航線目前的狀態為：旅客運送暫停、官方未公告再開時間；此項資料不代表現在可以購買或搭乘。官方 2025-12-08 公告旅客運送暫停、再開未定；官網仍有船班表，但未說明是否恢復載客，請直接向日中国際フェリー確認。
+
+結論與要點：
+- 官方於 2025-12-08 公告，自 12 月 6 日上海發車班次起暫停旅客服務，再開時間未定。
+- 官網的「鑑真号」運航狀況頁與運航表仍列出班次，但未區分旅客或貨物，亦未說明是否恢復載客。
+
+來源：https://www.shinganjin.com/news/ ；https://www.shinganjin.com/status/?pram=jianzhenhao （確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A20,1,上海航路は今、運航していますか？,False,False,ok,,n/a,,,,FAIL,False,FAIL,,status_not_first;request_error;language,True,,"HTTP 400: {""code"":""invalid_param"",""message"":""Run failed: [gemini] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."",""status"":400}
+"
+A20,2,上海航路は今、運航していますか？,True,True,ok,,True,,,,FAIL,False,ok,,language,True,"大阪／神戶—上海航線（鑑真号）官方於 2025-12-08 公告旅客運送暫停、再開未定；這項資料不代表現在可以購買或搭乘。官網仍有船班表，但未說明是否恢復載客，請直接向日中国際フェリー確認。
+
+- 官方公告指出，因中國側提出日中之間渡航安全無法確保，自 12 月 6 日上海發車航班起暫時中斷旅客服務。
+- 再開時間未定，情勢改變時將另行公告。
+- 已預訂的船票採無取消手續費（キャンセル料なし）處理。
+- 官網目前的運航狀況與時刻表仍列出「鑑真号」航次，但未區分旅客或貨物，亦未說明是否載客。
+
+來源：https://www.shinganjin.com/news/ ；https://www.shinganjin.com/status/?pram=jianzhenhao （確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A21,1,搭大阪釜山的船需要準備哪些證件？,True,True,ok,,True,,,ok,n/a,False,,,,False,"搭乘大阪—釜山（パンスターミラクル号）航線，領票與登船手續需要準備護照；沒有護照不能領票。
+
+要點：
+- 護照：領票與出境都需要護照，且官網規定海外旅行護照效期至少要剩 6 個月以上（依登船當天剩餘效期，可能無法出境，實際規定以各國政府為準）。
+- 學生優惠證明：使用學生折扣時，需出示學生證及相關折扣證明文件。
+
+來源：https://www.panstarcruise.com/support/notice/265 ；https://www.panstarcruise.com/support/faq（Q9、Q10、Q51）；https://www.panstar.jp/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A21,2,搭大阪釜山的船需要準備哪些證件？,True,True,ok,,True,,,ok,n/a,False,,,,False,"搭乘大阪—釜山（パンスターミラクル号）航線，領票與出境都需要護照；沒有護照不能領票。
+
+要點：
+- 護照：官網寫海外旅行護照效期至少要剩 6 個月以上，依登船當天剩餘效期可能無法出境（實際規定以各國政府為準）。
+- 學生優惠證明：學生需出示學生證；若有折扣證明文件，須於出航當天領票時交出。
+- 日本簽證：觀光與訪問目的可免簽證停留 90 天；其他目的須事先向日本領事館洽詢（FAQ 沒有註明適用的國籍，其他國籍請向各國外交部或日本入國管理局確認）。
+- 韓國入境：搭乘本船入境韓國時，紙本入境卡與電子入境（e-Arrival card）併用期限延長，另行通知。
+
+來源：https://www.panstarcruise.com/support/faq（Q9、Q10、Q51）；https://www.panstar.jp/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A22,1,大阪―釜山のフェリーに乗るには、どんな書類が必要ですか？,True,True,ok,,True,,,ok,FAIL,False,,,language,True,"搭乘大阪—釜山航線（パンスターミラクル号）時，領票與出境都需要護照，沒有護照不能領票。此外，根據官方規定，還需準備以下資料與文件：
+
+* 預訂需要：姓名、英文姓名、生日、護照號碼、聯絡方式、居住地址。
+* 護照效期：官網寫「海外旅行護照效期至少要剩 6 個月以上」，依登船當天剩餘效期，可能無法出境。實際規定以各國政府為準。
+* 日本簽證：觀光與訪問目的可免簽證停留 90 天；其他目的須事先向日本領事館洽詢。FAQ 沒有註明適用的國籍（網站為韓文，推測面向韓國旅客），其他國籍不可直接套用，請向各國外交部或日本入國管理局確認。
+* 折扣證明：享有折扣者，需在出航當天領票時交出折扣證明文件，沒帶可能追加費用。
+* 學生票：學生需出示學生證。
+
+來源：https://www.panstarcruise.com/support/notice/265 ；https://www.panstarcruise.com/support/faq（Q7、Q8、Q10、Q51、Q53）；https://www.panstarcruise.com/product/osaka/info ；https://www.panstar.jp/article/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A22,2,大阪―釜山のフェリーに乗るには、どんな書類が必要ですか？,True,True,ok,,True,,,ok,FAIL,False,,,language,True,"大阪—釜山航線（パンスターミラクル号）の乗船には、護照（護照／Passport）が必須であり、お持ちでない場合はチケットの受け取りができません。また、割引適用を受ける場合は折扣證明文件（割引証明書類、学生の場合は学生証）が必要です。
+
+* **必要書類の要点：**
+  * 護照：領票與出境都需要護照；沒有護照不能領票。護照效期（FAQ Q10）官網寫「海外旅行護照效期至少要剩 6 個月以上」，依登船當天剩餘效期，可能無法出境。實際規定以各國政府為準。
+  * 日本簽證（FAQ Q9）：官網寫「觀光與訪問目的可免簽證停留 90 天；其他目的須事先向日本領事館洽詢」。FAQ 沒有註明適用的國籍（網站為韓文，推測面向韓國旅客），其他國籍不可直接套用，請向各國外交部或日本入國管理局確認。
+  * 韓國入境：2026-01-06 公告，搭乘本船入境韓國時，紙本入境卡與電子入境（e-Arrival card）併用期限延長，另行通知。
+  * 學生證：學生需出示學生證。
+  * 折扣證明文件：折扣證明文件要在出航當天領票時交出，沒帶可能追加費用。
+
+來源：https://www.panstarcruise.com/support/notice/265 ；https://www.panstarcruise.com/support/faq（Q7、Q8、Q10、Q18、Q47、Q51、Q53）；https://www.panstarcruise.com/product/osaka/info ；https://www.panstar.jp/article/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A23,1,大阪港到釜山的行李限制是什麼？,True,True,ok,,True,,,ok,n/a,False,,,,False,"大阪港到釜山的パンスターミラクル号行李限制包含隨身行李、託運行李、特殊行李（如高爾夫球袋與自行車）以及電池與危險物品限制。
+
+要點：
+- 隨身行李（大阪航線）：三邊合計 200cm 以內、30kg 以內，符合條件則數量不限、免費（依韓文官網 FAQ Q22）。釜山國際客運站出入境審查區內不能使用行李推車。
+- 託運行李：沒有免費額度，在 1 樓行李區依重量計費：1～20kg ₩10,000，每多 5kg 加 ₩5,000。託運需簽「託運行李免責同意書」。只有本人搭乘時才能託運行李。
+- 日文約款對照（2020）：託運三邊合計 200cm、30kg；隨身 150cm、15kg；託運行李賠償上限每人 30,000 日圓。（兩者數字不同，以官網現行說明為準）。
+- 貴重品、易碎品託運前要事先告知櫃檯；自行車、樂器、畫作等高價物品不可託運，應放在套房客艙。
+- 食品與藥材：可攜帶，但須在下船前吃完；要帶入日本須自行確認檢疫與通關規定。
+- 高爾夫球袋：不可帶進客房，一定要當託運行李。出航日 3 天前事先申請：免費憑證；當天在售票處申請：單程 ₩20,000、來回 ₩40,000。需憑證及簽免責同意書。
+- 自行車：客房不能放，只能託運（含折疊式）：一般自行車單程 ₩40,000、折疊式單程 ₩20,000。須簽託運免責同意書。
+- 電池與危險物品限制：禁止攜帶內建鋰電池的電動自行車、電動滑板車等行動工具。行動電源與攜帶式電子設備之鋰電池須在 100Wh 以下、一般電池 160Wh 以下（超過 160Wh 一律禁止）；每人最多 5 個。船上禁止充電與使用電池，須從設備取下隨身攜帶或放在座位前口袋，不可放進行李箱。
+
+來源：https://www.panstarcruise.com/support/faq（Q19、Q20、Q21、Q22、Q23、Q24、Q32）；https://www.panstarcruise.com/product/osaka/price ；https://www.panstar.jp/article/ ；https://www.panstarcruise.com/support/notice/313 ；https://www.panstarcruise.com/support/notice/256（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A23,2,大阪港到釜山的行李限制是什麼？,True,True,ok,,True,,,ok,n/a,False,,,,False,"大阪港到釜山航線（パンスターミラクル号）的行李限制分為隨身行李、託運行李、特殊行李以及電池與危險物品限制，其中日文約款與韓文官網 FAQ 出現數字不同時，以韓文官網現行說明為準。
+
+*   **隨身行李（大阪航線）**：三邊合計 200cm 以內、30kg 以內，符合條件則數量不限、免費。釜山國際客運站出入境審查區內不能使用行李推車。
+*   **託運行李**：沒有免費額度，在 1 樓行李區依重量計費：1～20kg ₩10,000，每多 5kg 加 ₩5,000。託運需簽「託運行李免責同意書」。只有本人搭乘時才能託運行李，不能只寄行李不搭船。貴重品、易碎品託運前要事先告知櫃檯；自行車、樂器、畫作等高價物品不可託運，應放在套房客艙。
+*   **日文約款對照（2020）**：託運三邊合計 200cm、30kg；隨身 150cm、15kg；託運行李賠償上限每人 30,000 日圓。
+*   **高爾夫球袋**：不可帶進客房，一定要當託運行李。出航日 3 天前事先申請：免費憑證；當天在售票處申請：單程 ₩20,000、來回 ₩40,000。流程為售票處領憑證並簽免責同意書 → 1 樓託運行李櫃檯貼憑證託運 → 出境櫃檯辦理出境。沒貼憑證的球袋不能託運。
+*   **自行車**：客房不能放，只能託運（含折疊式）：一般自行車單程 ₩40,000、折疊式單程 ₩20,000。高價自行車請妥善包裝，須簽託運免責同意書。
+*   **電池與危險物品限制**：
+    *   禁止攜帶：內建鋰電池的電動自行車、電動滑板車等行動工具。
+    *   限制攜帶：內建鋰電池的攜帶式電子設備、行動電源。鋰電池 100Wh 以下；一般電池 160Wh 以下；超過 160Wh 一律不可攜帶；每人最多 5 個。
+    *   船上禁止充電與使用電池；須把電池從設備取下保管；不可放進行李箱，要隨身攜帶或放在座位前口袋。
+    *   例外：行動不便者用的電動輪椅等步行輔助器具，須事先取得船公司批准。
+
+來源：https://www.panstarcruise.com/support/faq（Q19、Q20、Q21、Q22、Q23、Q24、Q32）；https://www.panstarcruise.com/product/osaka/price ；https://www.panstar.jp/article/ ；https://www.panstarcruise.com/support/notice/313 ；https://www.panstarcruise.com/support/notice/256（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A24,1,What is the luggage limit from Osaka to Busan?,True,True,ok,,True,,,ok,FAIL,False,,,language,True,"針對大阪至釜山航線（パンスターミラクル号），行李規定分為隨身行李與託運行李：
+
+* 隨身行李（大阪航線）：三邊合計 200cm 以內、30kg 以內，符合條件則數量不限、免費。釜山國際客運站出入境審查區內不能使用行李推車。
+* 託運行李：沒有免費額度，在 1 樓行李區依重量計費：1～20kg ₩10,000，每多 5kg 加 ₩5,000。託運需簽「託運行李免責同意書」，且須本人搭乘才能託運。
+* 日文約款對照（2020）：託運三邊合計 200cm、30kg；隨身 150cm、15kg；託運行李賠償上限每人 30,000 日圓。兩者數字不同，以官網現行說明為準。
+* 特殊行李（如高爾夫球袋、自行車等）不可帶進客房，須依規定事先申請並支付對應費用後進行託運。
+
+來源：https://www.panstarcruise.com/support/faq（Q19、Q20、Q21、Q22、Q23、Q24、Q32）；https://www.panstarcruise.com/product/osaka/price；https://www.panstar.jp/article/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A24,2,What is the luggage limit from Osaka to Busan?,True,True,ok,,True,,,ok,FAIL,False,,,language,True,"關於大阪至釜山航線（パンスターミラクル号）的行李規定，由於知識庫中包含兩套規定（韓文官網 FAQ 與日文約款），兩套規定皆列出如下：
+
+- 韓文官網 FAQ 規定（大阪航線）：
+  - 隨身行李：三邊合計 200cm 以內、30kg 以內，符合條件則數量不限、免費。釜山國際客運站出入境審查區內不能使用行李推車。
+  - 託運行李：沒有免費額度，在 1 樓行李區依重量計費：1～20kg ₩10,000，每多 5kg 加 ₩5,000。託運需簽「託運行李免責同意書」。
+- 日文約款對照（2020 年修訂，可能過時）：
+  - 託運行李：三邊合計 200cm、30kg。
+  - 隨身行李：150cm、15kg。
+  - 託運行李賠償上限每人 30,000 日圓。
+
+請以購票時船公司的最新說明為準。
+
+來源：https://www.panstarcruise.com/support/faq（Q19、Q20、Q21、Q22）；https://www.panstarcruise.com/product/osaka/price ；https://www.panstar.jp/article/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
