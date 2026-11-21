@@ -1,0 +1,28 @@
+{
+  "run": "run-009",
+  "date": "2026-11-22",
+  "note": "FKB-012 held-out Japanese overview questions on the CURRENT overview chunk (before adding Japanese keywords); threshold off",
+  "git": {
+    "commit": "8851dba",
+    "dirty": false
+  },
+  "api": {
+    "base_url": "https://api.dify.ai/v1",
+    "search_method": "semantic_search",
+    "top_k": 5,
+    "score_threshold": null,
+    "reranking_enable": false,
+    "use_dataset_settings": false
+  },
+  "questions_file": "evaluation/questions.csv",
+  "questions_sha256": "1019747e4af87e42",
+  "questions_run": [
+    "Q31",
+    "Q32"
+  ],
+  "knowledge_files": {
+    "kansai-shanghai-shinganjin.md": "466da1784a151659",
+    "osaka-busan-panstar.md": "d517e2b310fe10b6",
+    "overview-routes.md": "f0d8a8643a027742"
+  }
+}

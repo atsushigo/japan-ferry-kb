@@ -1,0 +1,52 @@
+{
+  "run": "run-008",
+  "date": "2026-11-22",
+  "note": "FKB-012 regression: calibration set after uploading overview-routes.md; threshold off",
+  "git": {
+    "commit": "8851dba",
+    "dirty": false
+  },
+  "api": {
+    "base_url": "https://api.dify.ai/v1",
+    "search_method": "semantic_search",
+    "top_k": 5,
+    "score_threshold": null,
+    "reranking_enable": false,
+    "use_dataset_settings": false
+  },
+  "questions_file": "evaluation/questions.csv",
+  "questions_sha256": "4315e26e05b4b8db",
+  "questions_run": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4",
+    "Q5",
+    "Q6",
+    "Q7",
+    "Q8",
+    "Q9",
+    "Q10",
+    "Q11",
+    "Q12",
+    "Q13",
+    "Q14",
+    "Q15",
+    "Q16",
+    "Q17",
+    "Q18",
+    "Q19",
+    "Q20",
+    "Q21",
+    "Q22",
+    "Q23",
+    "Q24",
+    "Q25",
+    "Q26"
+  ],
+  "knowledge_files": {
+    "kansai-shanghai-shinganjin.md": "466da1784a151659",
+    "osaka-busan-panstar.md": "d517e2b310fe10b6",
+    "overview-routes.md": "f0d8a8643a027742"
+  }
+}

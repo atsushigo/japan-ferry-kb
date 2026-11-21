@@ -1,0 +1,122 @@
+{
+  "overall": {
+    "questions": 2,
+    "scored_questions": 2,
+    "hit_rate": 0.0,
+    "mrr": 0.0,
+    "mean_precision_at_k": 0.0,
+    "expect_empty_questions": 0,
+    "expect_empty_returned_nothing": 0,
+    "threshold_used": null
+  },
+  "per_question": [
+    {
+      "id": "Q31",
+      "query": "関西発の国際フェリーはどこへ行きますか",
+      "expect_empty": false,
+      "n_expected": 1,
+      "n_returned": 5,
+      "n_relevant": 0,
+      "hit": false,
+      "first_relevant_rank": null,
+      "precision": 0.0,
+      "top_score": 0.7853,
+      "relevant_min": null,
+      "offtopic_max": 0.7853,
+      "missing_sections": [
+        "總覽｜關西出發の国際渡輪"
+      ]
+    },
+    {
+      "id": "Q32",
+      "query": "大阪から海外へ船で行けますか",
+      "expect_empty": false,
+      "n_expected": 1,
+      "n_returned": 5,
+      "n_relevant": 0,
+      "hit": false,
+      "first_relevant_rank": null,
+      "precision": 0.0,
+      "top_score": 0.777,
+      "relevant_min": null,
+      "offtopic_max": 0.777,
+      "missing_sections": [
+        "總覽｜關西出發の国際渡輪"
+      ]
+    }
+  ],
+  "threshold_sweep": [
+    {
+      "threshold": 0.5,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 10,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.6,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 10,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.65,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 10,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.7,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 3,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.71,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 2,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.72,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 2,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.73,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 2,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.74,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 2,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.75,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 2,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    }
+  ]
+}

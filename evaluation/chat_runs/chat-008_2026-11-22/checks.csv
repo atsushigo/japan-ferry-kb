@@ -1,0 +1,158 @@
+query_id,repeat,query,has_source,has_conf_date,numeric_grounding,invented_amounts,has_closing_notice,must_not_hits,human_only_labels,expectation_check,routes_check,language_ok,glued_output,status_first,not_buyable_caveat,problems,needs_review,answer,error
+A30,1,從大阪搭船可以去哪些地方？,True,True,ok,,True,,,,ok,n/a,False,ok,,,False,"從大阪出發可以搭國際渡輪前往釜山與上海。
+
+- 釜山：搭乘 PANSTAR Cruise Ferry（パンスターミラクル号），航線為大阪 ⇄ 釜山。
+- 上海：搭乘日中国際フェリー（鑑真号），航線為大阪／神戶 ⇄ 上海（目前旅客運送暫停，官方未公告再開時間，這項資料不代表現在可以搭乘）。
+- 知識庫僅涵蓋上述兩條國際航線。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A30,2,從大阪搭船可以去哪些地方？,True,True,ok,,True,,,,ok,n/a,False,ok,,,False,"從大阪搭船可以前往釜山與上海，但上海航線目前旅客運送暫停。
+
+- **釜山（韓國）**：搭乘 PANSTAR Cruise Ferry（パンスターミラクル号），航線為大阪 ⇄ 釜山。
+- **上海（中國）**：搭乘日中国際フェリー（鑑真号），航線為大阪／神戶 ⇄ 上海。不過，官方已於 2025-12-08 公告旅客運送暫停，再開未定；官網雖然仍有船班表，但未說明是否恢復載客，這項資料不代表現在可以購買或搭乘。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A30,3,從大阪搭船可以去哪些地方？,True,True,ok,,True,,,,ok,n/a,False,ok,,,False,"從大阪出發可以搭乘國際渡輪前往釜山；至於上海航線目前旅客運送暫停，官網船班表不區分旅客與貨物，不代表現在可以搭乘。
+
+- 釜山（韓國）：由 PANSTAR Cruise Ferry（パンスターミラクル号）營運，週一、三、五 17:00 出港，航行時間約 17 小時，翌日 10:00 抵達。
+- 上海（中國）：由日中国際フェリー株式会社（鑑真号）營運。官方已於 2025-12-08 公告旅客運送暫停，再開未定，此資料不代表現在可以購買或搭乘。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A31,1,關西有哪些國際渡輪航線？,True,True,ok,,True,,,,ok,n/a,False,ok,,,False,"知識庫涵蓋從關西（大阪及神戶）出發的兩條國際渡輪航線：
+
+- 大阪 ⇄ 釜山（韓國）：由 PANSTAR Cruise Ferry 營運（船名：パンスターミラクル号），官網未見 2026 年大阪航線停航公告，仍須向營運公司確認最新班表。
+- 大阪／神戶 ⇄ 上海（中國）：由日中国際フェリー株式会社營運（船名：鑑真号），**旅客運送暫停**（2025-12-08 公告，再開未定）；這項資料不代表現在可以購買或搭乘。
+
+其他航線與國內渡輪不在這個知識庫的範圍內。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A31,2,關西有哪些國際渡輪航線？,True,True,ok,,True,,,,ok,n/a,False,FAIL,,status_not_first,True,"從關西出發的國際渡輪航線共有兩條，分別為大阪 ⇄ 釜山（韓國），以及大阪／神戶 ⇄ 上海（中國）。
+
+* **大阪 ⇄ 釜山（韓國）**：由 PANSTAR Cruise Ferry（パンスターミラクル号）營運，官網未見 2026 年大阪航線停航公告，仍須向營運公司確認最新班表。大阪出發時間為週一、三、五 17:00，航程約 17 小時，翌日 10:00 抵達釜山。
+* **大阪／神戶 ⇄ 上海（中國）**：由日中国際フェリー株式会社（鑑真号）營運。目前**旅客運送暫停**（2025-12-08 公告，再開未定），這項資料不代表現在可以購買或搭乘；官網雖仍有船班表，但未區分旅客與貨物。
+
+知識庫僅涵蓋上述兩條國際渡輪航線。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/（確認日期：2026-11-21）
+價格與班次可能變動，請以官方最新公告為準。",
+A31,3,關西有哪些國際渡輪航線？,True,True,ok,,True,,,,ok,n/a,False,ok,,,False,"知識庫涵蓋從大阪（及神戶）出發的兩條國際渡輪航線：
+
+- 大阪 ⇄ 釜山（韓國）：由 PANSTAR Cruise Ferry（パンスターミラクル号）營運，官網未見 2026 年大阪航線停航公告，仍須向營運公司確認最新班表。
+- 大阪／神戶 ⇄ 上海（中國）：由日中国際フェリー株式会社（鑑真号）營運，**旅客運送暫停**（2025-12-08 公告，再開未定）；請勿認為目前可以訂票或搭乘。
+
+知識庫只涵蓋上述兩條國際渡輪航線，其他航線與國內渡輪不在範圍內。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A32,1,What ferry routes are available from Osaka?,True,True,ok,,True,,,,ok,FAIL,False,ok,,language,True,"從大阪出發的國際渡輪航線包含大阪至釜山，以及大阪／神戶至上海（上海航線目前旅客運送暫停）。
+
+- 大阪 ⇄ 釜山（韓國）：PANSTAR Cruise Ferry（パンスターミラクル号），官網未見 2026 年大阪航線停航公告；仍須向營運公司確認最新班表。
+- 大阪／神戶 ⇄ 上海（中國）：日中国際フェリー株式会社（鑑真号），**旅客運送暫停**（2025-12-08 公告，再開未定）；這項資料不代表現在可以購買或搭乘。
+- 其他航線與國內渡輪不在這個知識庫的範圍內。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A32,2,What ferry routes are available from Osaka?,True,True,ok,,True,,,,ok,FAIL,False,ok,,language,True,"從大阪出發的國際渡輪航線包含大阪往返釜山（韓國），而大阪／神戶往返上海（中國）目前旅客運送暫停。
+
+- **大阪 ⇄ 釜山（韓國）**：由 PANSTAR Cruise Ferry（パンスターミラクル号）營運，官網未見 2026 年大阪航線停航公告，仍須向營運公司確認最新班表。
+- **大阪／神戶 ⇄ 上海（中國）**：由日中国際フェリー株式会社（鑑真号）營運，**旅客運送暫停**（2025-12-08 公告，再開未定）；這項資料不代表現在可以購買或搭乘。
+
+其他航線與國內渡輪不在這個知識庫的範圍內。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A32,3,What ferry routes are available from Osaka?,True,True,ok,,True,,,,ok,FAIL,False,ok,,language,True,"從大阪出發可以搭乘國際渡輪前往釜山；至於大阪／神戶至上海的航線目前旅客運送暫停，官網未公告再開時間。
+
+- **大阪 ⇄ 釜山**：由 PANSTAR Cruise Ferry（パンスターミラクル号）營運。大阪出發時間為週一、三、五 17:00 出港，約 17 小時，翌日 10:00 抵達。官網未見 2026 年大阪航線停航公告，仍須向營運公司確認最新班表。
+- **大阪／神戶 ⇄ 上海**：日中国際フェリー株式会社／鑑真号（旅客運送暫停，2025-12-08 公告，再開未定；這項資料不代表現在可以購買或搭乘）。
+- 其他航線與國內渡輪不在這個知識庫的範圍內。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A33,1,関西発の国際フェリーはどこへ行きますか,True,True,ok,,True,,,,ok,FAIL,False,FAIL,,status_not_first;language,True,"關西出發的國際渡輪有兩條航線：大阪 ⇄ 釜山（韓國），以及大阪／神戶 ⇄ 上海（中國）。其他航線與國內渡輪不在這個知識庫的範圍內。
+
+* 大阪 ⇄ 釜山（韓國）：PANSTAR Cruise Ferry（パンスターミラクル号）
+* 大阪／神戶 ⇄ 上海（中國）：日中国際フェリー株式会社（鑑真号）。**旅客運送暫停**（2025-12-08 公告，再開未定）；此狀態不代表現在可以購買或搭乘。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A33,2,関西発の国際フェリーはどこへ行きますか,True,True,ok,,True,,,,ok,FAIL,False,ok,,language,True,"關西出發的國際渡輪航線包含大阪至釜山及大阪／神戶至上海兩條航線。
+
+- 大阪 ⇄ 釜山（韓國）：PANSTAR Cruise Ferry（パンスターミラクル号），官網未見 2026 年大阪航線停航公告，仍須向營運公司確認最新班表。
+- 大阪／神戶 ⇄ 上海（中國）：日中国際フェリー株式会社（鑑真号），**旅客運送暫停**（2025-12-08 公告，再開未定）；此狀態不代表現在可以購買或搭乘。
+- 其他航線與國內渡輪不在這個知識庫的範圍內。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A33,3,関西発の国際フェリーはどこへ行きますか,True,True,ok,,True,,,,ok,FAIL,False,ok,,language,True,"關西出發的國際渡輪航線涵蓋大阪至釜山，以及大阪／神戶至上海（目前旅客運送暫停）。
+
+* **大阪 ⇄ 釜山（韓國）**
+  * 營運公司與船名：PANSTAR Cruise Ferry（日本代理 株式会社サンスターライン）／パンスターミラクル号
+  * 目前狀態：官網未見 2026 年大阪航線停航公告；仍須向營運公司確認最新班表
+  * 航班資訊：週一・三・五 17:00 出港，約 17 小時，翌日 10:00 抵達
+* **大阪／神戶 ⇄ 上海（中國）**
+  * 營運公司與船名：日中国際フェリー株式会社／鑑真号
+  * 目前狀態：**旅客運送暫停**（2025-12-08 公告，再開未定）；請勿告訴使用者可以訂票或搭乘
+  * 說明：目前旅客運送暫停，官網船班表不區分旅客與貨物，不代表現在可以搭乘。
+
+其他航線與國內渡輪不在這個知識庫的範圍內。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/（確認日期：2026-11-21）
+價格與班次可能變動，請以官方最新公告為準。",
+A34,1,大阪から海外へ船で行けますか,True,True,ok,,True,,,,ok,FAIL,False,ok,,language,True,"大阪から海外へ行ける国際渡輪航線包括大阪 ⇄ 釜山（韓國），以及大阪／神戶 ⇄ 上海（中國）（大阪／神戶 ⇄ 上海航線目前旅客運送暫停，官方未公告再開時間，這項資料不代表現在可以購買或搭乘）。
+
+重點：
+- 大阪 ⇄ 釜山（韓國）：由 PANSTAR Cruise Ferry（パンスターミラクル号）營運，官網未見 2026 年大阪航線停航公告，仍須向營運公司確認最新班表。
+- 大阪／神戶 ⇄ 上海（中國）：由日中国際フェリー株式会社（鑑真号）營運，目前**旅客運送暫停**（2025-12-08 公告，再開未定）。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A34,2,大阪から海外へ船で行けますか,True,True,ok,,True,,,,ok,FAIL,False,ok,,language,True,"大阪から海外へ行ける国際渡輪航線包括大阪 ⇄ 釜山（韓國）以及大阪／神戶 ⇄ 上海（中國）（其中上海航線目前旅客運送暫停）。
+
+- 從大阪出發可以搭船前往：
+  - **釜山（韓國）**：PANSTAR Cruise Ferry（パンスターミラクル号），官網未見 2026 年大阪航線停航公告，仍須向營運公司確認最新班表。
+  - **上海（中國）**：鑑真号（日中国際フェリー株式会社），**旅客運送暫停**（2025-12-08 公告，再開未定）；此項資料不代表現在可以購買或搭乘。
+- 本知識庫僅涵蓋上述兩條國際航線，其他航線與國內渡輪不在範圍內。
+- 我無法協助訂票、查詢即時座位或價格、或查詢今日是否開航，請透過官方網站或洽詢船公司確認。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A34,3,大阪から海外へ船で行けますか,True,True,ok,,True,,,,ok,FAIL,False,FAIL,,status_not_first;language,True,"大阪から海外へ行ける国際渡輪航線包含大阪 ⇄ 釜山（韓國）以及大阪／神戶 ⇄ 上海（中國）兩條航線。
+
+* **大阪 ⇄ 釜山（韓國）**：由 PANSTAR Cruise Ferry營運（パンスターミラクル号），官網未見 2026 年大阪航線停航公告；仍須向營運公司確認最新班表。
+* **大阪／神戶 ⇄ 上海（中國）**：由日中国際フェリー株式会社營運（鑑真号），目前為**旅客運送暫停**（2025-12-08 公告，再開未定），這項資料不代表現在可以購買或搭乘。
+* 本知識庫僅涵蓋上述兩條國際航線，其他航線與國內渡輪不在範圍內。我無法幫您訂票、查詢即時座位、價格或今日是否開航，請洽詢官方管道。
+
+價格與班次可能變動，請以官方最新公告為準。
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.shinganjin.com/news/（確認日期：2026-11-21）",
+A35,1,大阪からどこまでいけますか,False,False,ok,,n/a,,,,FAIL,ok,False,FAIL,,routes_incomplete;status_not_first,True,"知識庫目前沒有這項資料。本助手只涵蓋大阪—釜山（Pan Star）與大阪／神戶—上海（鑑真号）兩條國際航線，請查詢官方網站或洽詢船公司。
+
+This information is currently not available in our knowledge base. This assistant only covers the two international routes: Osaka–Busan (Pan Star) and Osaka/Kobe–Shanghai (Jianzhen). Please refer to the official website or contact the shipping company for further information.
+
+現在、ナレッジベースには該当する情報がありません。本アシスタントは、大阪－釜山（Pan Star）および大阪／神戸－上海（鑑真号）の2つの国際航路のみを対象としています。公式ウェブサイトをご確認いただくか、船会社までお問い合わせください。",
+A35,2,大阪からどこまでいけますか,False,False,ok,,n/a,,,,FAIL,ok,False,FAIL,,routes_incomplete;status_not_first,True,"知識庫目前沒有這項資料。本助手只涵蓋大阪—釜山（Pan Star）與大阪／神戶—上海（鑑真号）兩條國際航線，請查詢官方網站或洽詢船公司。
+
+This information is currently not available in our knowledge base. This assistant only covers the two international routes: Osaka–Busan (Pan Star) and Osaka/Kobe–Shanghai (Jianzhen). Please refer to the official website or contact the shipping company for further information.
+
+現在、ナレッジベースには該当する情報がありません。本アシスタントは、大阪－釜山（Pan Star）および大阪／神戸－上海（鑑真号）の2つの国際航路のみを対象としています。公式ウェブサイトをご確認いただくか、船会社までお問い合わせください。",
+A35,3,大阪からどこまでいけますか,False,False,ok,,n/a,,,,FAIL,ok,False,FAIL,,routes_incomplete;status_not_first,True,"知識庫目前沒有這項資料。本助手只涵蓋大阪—釜山（Pan Star）與大阪／神戶—上海（鑑真号）兩條國際航線，請查詢官方網站或洽詢船公司。
+
+This information is currently not available in our knowledge base. This assistant only covers the two international routes: Osaka–Busan (Pan Star) and Osaka/Kobe–Shanghai (Jianzhen). Please refer to the official website or contact the shipping company for further information.
+
+現在、ナレッジベースには該当する情報がありません。本アシスタントは、大阪－釜山（Pan Star）および大阪／神戸－上海（鑑真号）の2つの国際航路のみを対象としています。公式ウェブサイトをご確認いただくか、船会社までお問い合わせください。",

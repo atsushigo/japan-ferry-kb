@@ -65,6 +65,7 @@ japan-ferry-kb/
 ├── knowledge/                      知識庫來源文件（持續更新）
 │   ├── osaka-busan-panstar.md
 │   ├── kansai-shanghai-shinganjin.md
+│   ├── overview-routes.md          航線總覽（讓「有哪些航線」這類問題能命中）
 │   └── history/                    曾上傳並測試過的舊版本（對應測試紀錄）
 ├── chatbot/                        Dify 聊天流設定、系統提示詞（含版本）、回答層測試題
 ├── evaluation/

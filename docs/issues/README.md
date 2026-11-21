@@ -18,7 +18,7 @@
 | [FKB-009](FKB-009-answer-language-mismatch.md) | Bug | Medium | Open（延後） | 日文、英文提問得到中文內容（A7 3/3、A8 2/3；chat-006 日英 8 題 15/15 次不一致，幾乎全面） |
 | [FKB-010](FKB-010-suspension-not-stated-first.md) | Bug | High | Mitigated | 問上海票價時，客運暫停狀態被放最後且沒說明不能購買（3 次中 2 次；v4 後 A10 ×10 全部先說明） |
 | [FKB-011](FKB-011-eval-harness-limitations.md) | Task | Medium | Open | 回答層測試的限制：A14 單輪無效、A11 沒測到提示詞、拒答帶假來源、評分誤判 |
-| [FKB-012](FKB-012-overview-questions-miss-threshold.md) | Story | Medium | In Progress | 概括性問題（「大阪からどこまでいけますか」）被閾值擋掉；需要開場問題按鈕與總覽段落 |
+| [FKB-012](FKB-012-overview-questions-miss-threshold.md) | Story | Medium | Mitigated | 概括性問題（「大阪からどこまでいけますか」）被閾值擋掉；需要開場問題按鈕與總覽段落 ；總覽段落已上傳，最模糊的日文問法仍被擋 |
 
 ## 欄位與規範
 

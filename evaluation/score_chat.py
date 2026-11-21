@@ -110,6 +110,12 @@ def check_row(r: dict, q: dict) -> dict:
         exp_ok = bool(URL_RE.search(ans))
     out["expectation_check"] = "" if exp_ok == "" else ("ok" if exp_ok else "FAIL")
 
+    out["routes_check"] = ""
+    if exp == "list_both_routes_note_shanghai_suspended":
+        ok = (("釜山" in ans or "Busan" in ans) and ("上海" in ans or "Shanghai" in ans)
+              and any(m in ans for m in STATUS_MARKS))
+        out["routes_check"] = "ok" if ok else "FAIL"
+
     lang = r.get("language", "")
     cjk = len(re.findall(r"[\u4e00-\u9fff]", ans)); kana = len(re.findall(r"[\u3040-\u30ff]", ans))
     latin = len(re.findall(r"[A-Za-z]", ans))
@@ -146,6 +152,8 @@ def check_row(r: dict, q: dict) -> dict:
         out["not_buyable_caveat"] = "ok" if any(m in ans[:300] for m in NOT_BUYABLE_MARKS) else "FAIL"
 
     problems = []
+    if out["routes_check"] == "FAIL":
+        problems.append("routes_incomplete")
     if out["status_first"] == "FAIL":
         problems.append("status_not_first")
     if out["not_buyable_caveat"] == "FAIL":
@@ -197,7 +205,7 @@ def main() -> None:
         by_q.setdefault(c["query_id"], []).append(c)
     fails = {k: sum(1 for c in checks if k in c["problems"].split(";")) for k in
              ("request_error", "numeric_grounding", "must_not", "expectation", "language", "glued_output",
-              "no_closing_notice", "no_source", "status_not_first", "no_not_buyable_caveat")}
+              "no_closing_notice", "no_source", "status_not_first", "no_not_buyable_caveat", "routes_incomplete")}
     L = [f"# 回答層規則檢查：{run.name}", "",
          f"- 模型標籤：{cfg.get('model_label')}　提示詞版本：{cfg.get('prompt_version')}　每題重複：{cfg.get('repeat')}",
          f"- 請求完成：{cfg.get('completed_requests')} / {cfg.get('planned_requests')}"
@@ -207,7 +215,8 @@ def main() -> None:
     names = {"request_error": "請求失敗", "numeric_grounding": "數字溯源（金額不在檢索段落中）", "must_not": "出現禁止用語",
              "expectation": "預期行為（拒答／做不到）", "language": "回答語言與提問不一致",
              "glued_output": "疑似兩段輸出拼接（啟發式）", "no_closing_notice": "缺固定結尾句", "no_source": "缺來源網址",
-             "status_not_first": "暫停狀態沒有出現在前 120 字", "no_not_buyable_caveat": "沒說明這不代表現在可以購買"}
+             "status_not_first": "暫停狀態沒有出現在前 120 字", "no_not_buyable_caveat": "沒說明這不代表現在可以購買",
+             "routes_incomplete": "總覽題沒有同時列出釜山、上海與暫停狀態"}
     for k, v in fails.items():
         L.append(f"| {names[k]} | {v} / {len(checks)} |")
     L += ["", "## 逐題", "", "| 題 | 問題 | 次數 | 需人工複核 | 違規 | 憑空金額 |", "|---|---|---|---|---|---|"]

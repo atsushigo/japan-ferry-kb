@@ -1,0 +1,148 @@
+{
+  "overall": {
+    "questions": 4,
+    "scored_questions": 4,
+    "hit_rate": 1.0,
+    "mrr": 1.0,
+    "mean_precision_at_k": 0.2,
+    "expect_empty_questions": 0,
+    "expect_empty_returned_nothing": 0,
+    "threshold_used": null
+  },
+  "per_question": [
+    {
+      "id": "Q27",
+      "query": "大阪からどこまでいけますか",
+      "expect_empty": false,
+      "n_expected": 1,
+      "n_returned": 5,
+      "n_relevant": 1,
+      "hit": true,
+      "first_relevant_rank": 1,
+      "precision": 0.2,
+      "top_score": 0.6983,
+      "relevant_min": 0.6983,
+      "offtopic_max": 0.6394,
+      "missing_sections": []
+    },
+    {
+      "id": "Q28",
+      "query": "從大阪搭船可以去哪些地方？",
+      "expect_empty": false,
+      "n_expected": 1,
+      "n_returned": 5,
+      "n_relevant": 1,
+      "hit": true,
+      "first_relevant_rank": 1,
+      "precision": 0.2,
+      "top_score": 0.8067,
+      "relevant_min": 0.8067,
+      "offtopic_max": 0.7503,
+      "missing_sections": []
+    },
+    {
+      "id": "Q29",
+      "query": "What ferry routes are available from Osaka?",
+      "expect_empty": false,
+      "n_expected": 1,
+      "n_returned": 5,
+      "n_relevant": 1,
+      "hit": true,
+      "first_relevant_rank": 1,
+      "precision": 0.2,
+      "top_score": 0.7962,
+      "relevant_min": 0.7962,
+      "offtopic_max": 0.743,
+      "missing_sections": []
+    },
+    {
+      "id": "Q30",
+      "query": "關西有哪些國際渡輪航線？",
+      "expect_empty": false,
+      "n_expected": 1,
+      "n_returned": 5,
+      "n_relevant": 1,
+      "hit": true,
+      "first_relevant_rank": 1,
+      "precision": 0.2,
+      "top_score": 0.8138,
+      "relevant_min": 0.8138,
+      "offtopic_max": 0.7307,
+      "missing_sections": []
+    }
+  ],
+  "threshold_sweep": [
+    {
+      "threshold": 0.5,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 16,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.6,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 16,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.65,
+      "relevant_chunks_lost": 0,
+      "questions_losing_all_relevant": 0,
+      "off_topic_passing": 12,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.7,
+      "relevant_chunks_lost": 1,
+      "questions_losing_all_relevant": 1,
+      "off_topic_passing": 12,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.71,
+      "relevant_chunks_lost": 1,
+      "questions_losing_all_relevant": 1,
+      "off_topic_passing": 8,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.72,
+      "relevant_chunks_lost": 1,
+      "questions_losing_all_relevant": 1,
+      "off_topic_passing": 5,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.73,
+      "relevant_chunks_lost": 1,
+      "questions_losing_all_relevant": 1,
+      "off_topic_passing": 3,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.74,
+      "relevant_chunks_lost": 1,
+      "questions_losing_all_relevant": 1,
+      "off_topic_passing": 2,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    },
+    {
+      "threshold": 0.75,
+      "relevant_chunks_lost": 1,
+      "questions_losing_all_relevant": 1,
+      "off_topic_passing": 1,
+      "meta_passing": 0,
+      "expect_empty_not_blocked": 0
+    }
+  ]
+}

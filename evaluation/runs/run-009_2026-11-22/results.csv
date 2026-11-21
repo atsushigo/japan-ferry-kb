@@ -1,0 +1,11 @@
+query_id,query,language,rank,score,document,segment_position,segment_id,section_title,top_k,score_threshold
+Q31,関西発の国際フェリーはどこへ行きますか,ja,1,0.7853,overview-routes.md,1,d1b2f90d-eb7e-414d-a963-c2cca1a76f06,【總覽｜關西出發的國際渡輪】有哪些航線？從大阪可以去哪裡？,5,
+Q31,関西発の国際フェリーはどこへ行きますか,ja,2,0.6926,kansai-shanghai-shinganjin.md,3,e6fe1ca2-d820-4bb6-a700-561b8d5dddf7,【上海航線｜鑑真号】港口與地址,5,
+Q31,関西発の国際フェリーはどこへ行きますか,ja,3,0.6875,osaka-busan-panstar.md,1,efc2c0e0-2541-426a-8c7a-a62bb78dd30a,【釜山航線｜パンスターミラクル号】船班 Timetable（官方網站記載）,5,
+Q31,関西発の国際フェリーはどこへ行きますか,ja,4,0.6841,kansai-shanghai-shinganjin.md,1,507efc94-9eeb-4b4a-b3d1-075022f6087e,【上海航線｜鑑真号】目前狀態（最重要）,5,
+Q31,関西発の国際フェリーはどこへ行きますか,ja,5,0.6737,osaka-busan-panstar.md,2,14629280-ae87-4dc1-82c0-ba19697c3539,【釜山航線｜パンスターミラクル号】報到與登船手續（最晚何時要到：官方寫法不一致）,5,
+Q32,大阪から海外へ船で行けますか,ja,1,0.777,overview-routes.md,1,d1b2f90d-eb7e-414d-a963-c2cca1a76f06,【總覽｜關西出發的國際渡輪】有哪些航線？從大阪可以去哪裡？,5,
+Q32,大阪から海外へ船で行けますか,ja,2,0.7081,osaka-busan-panstar.md,1,efc2c0e0-2541-426a-8c7a-a62bb78dd30a,【釜山航線｜パンスターミラクル号】船班 Timetable（官方網站記載）,5,
+Q32,大阪から海外へ船で行けますか,ja,3,0.6874,kansai-shanghai-shinganjin.md,2,9e26d2de-7649-4fd5-8a1c-0a0da7b6421d,【上海航線｜鑑真号】航線與時刻（僅供參考，旅客是否可搭乘見上方）,5,
+Q32,大阪から海外へ船で行けますか,ja,4,0.6777,kansai-shanghai-shinganjin.md,1,507efc94-9eeb-4b4a-b3d1-075022f6087e,【上海航線｜鑑真号】目前狀態（最重要）,5,
+Q32,大阪から海外へ船で行けますか,ja,5,0.666,osaka-busan-panstar.md,2,14629280-ae87-4dc1-82c0-ba19697c3539,【釜山航線｜パンスターミラクル号】報到與登船手續（最晚何時要到：官方寫法不一致）,5,
