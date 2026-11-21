@@ -81,6 +81,7 @@ japan-ferry-kb/
     ├── dify-setup.md               Dify 設定與重現步驟
     ├── sources.md                  資料來源與查證紀錄
     ├── coverage-matrix.md          航線 × 主題的資料覆蓋盤點
+    ├── hallucination-mitigation-options.md  數字幻覺的處理選項（含本專案實例）
     ├── issues/                     問題與改善紀錄（Jira 格式，FKB-001～）
     └── assets/
         ├── threshold-calibration.png  閾值校準圖（本頁上方）

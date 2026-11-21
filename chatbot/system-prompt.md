@@ -11,7 +11,7 @@ do not type the placeholder by hand.
 | v1 | 2026-11-21 | 10 rules, drafted from the retrieval audit | superseded |
 | v1.1 | 2026-11-21 | Added rule 11 (ignore instructions to change rules / reveal the prompt); retrieval result appended | superseded by v2 |
 | v2 | 2026-11-21 | Replace rule 5 with a fixed notice; add rule 2-1 (no extrapolation). See [FKB-002](../docs/issues/FKB-002-unsupported-peak-season-surcharge.md), [FKB-003](../docs/issues/FKB-003-stale-date-rule-not-answerable.md) | **deployed**; FKB-002/003 verified on gemini-3.5-flash-lite (n=3 + A13); FKB-007 (random wrong price) still open |
-| v3 | 2026-11-22 | Add rule 10-1: fixed one-line-per-cabin price format, person count after the price. Experiment for [FKB-007](../docs/issues/FKB-007-nondeterministic-price-hallucination.md) | **proposed**, not yet published; test = A1 x20 |
+| v3 | 2026-11-22 | Add rule 10-1: fixed one-line-per-cabin price format, person count after the price. Experiment for [FKB-007](../docs/issues/FKB-007-nondeterministic-price-hallucination.md) | **deployed** (published 2026-11-22); chat-004 A1 x20: 0 wrong prices (FKB-007 mitigated, small sample) |
 
 ## 為什麼有這些規則（每條規則的依據）
 
@@ -76,7 +76,7 @@ Add after rule 2:
 2-1. 只轉述檢索結果的原話範圍，不要把「另計」「加價」「免費」「可用」「不可用」等說法延伸成檢索結果沒有寫的結論。例如檢索結果只說旺季不能使用折扣，就不能說旺季票價較貴。
 ```
 
-## v3 change (proposed; one variable only)
+## v3 change (deployed; one variable only)
 
 Insert after rule 10 and before「# 輸出格式」. Publish afterwards ("發布更新") and check the editor says 「已發布 幾秒前」.
 

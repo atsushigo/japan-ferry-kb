@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Type / Priority / Status | Bug / High / Open |
+| Type / Priority / Status | Bug / High / Mitigated |
 | Component | chatbot-prompt、model |
 | Found in | 提示詞 v2、gemini-3.5-flash-lite、知識文件 v3；預覽 1 次、chat-001 1 次、chat-002 1 次 |
 | Reported | 2026-11-21 JST |
@@ -33,6 +33,9 @@ Suspected：輸出「（2人）：₩」時，前面的「2」帶偏下一個數
 
 ## Recurrence 3（chat-003，2026-11-22 JST，A1 ×10，提示詞 v2、gemini-3.5-flash-lite）
 A1 #7：「陽台套房 BALCONY SUITE（2人）：₩2,000（註：檢索結果寫來回，單程為 ₩500,000）」，知識庫沒有 ₩2,000。第 4 次出現，**仍在陽台套房那一列**；4 次的錯誤值是 ₩2、₩2,500,000（兩次）、₩2,000，其中三個都以「2」開頭，而該列的人數欄就是「2 人」。這個觀察只是關聯，沒有驗證因果。chat-003 的結果（發布後重試真的關閉）顯示錯價與拼接、重試無關：拼接已消失，錯價仍在。
+
+## Verification of prompt v3（chat-004，2026-11-22 JST，A1 ×20，retry 關閉並已發布）
+規則 10-1（固定一行一艙等、人數放價格後面）：20/20 沒有金額不在檢索結果裡；六個艙等的價格與人數 20 次全部正確（逐行統計，每行 20/20）。陽台套房全部是「單程 ₩500,000（客房人數：2 人）」。改前 A1 約 4/33 次出錯，若錯誤率不變，20 次全對的機率約 8%，是支持證據，不是證明；建議再跑一輪（且要在其他艙等題與來回票問法上測）。其他處理選項見 [數字幻覺的處理選項](../hallucination-mitigation-options.md)。
 
 ## Steps to reproduce
 在聊天流預覽反覆輸入「大阪到釜山船票多少錢？」；約每 3 次可能出現 1 次（樣本太小，真實頻率未知）。
