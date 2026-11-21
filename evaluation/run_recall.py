@@ -64,7 +64,9 @@ def git_info() -> dict:
         return {"commit": None, "dirty": None}
 
 
-def build_body(query: str, top_k: int, threshold, method: str) -> dict:
+def build_body(query: str, top_k: int, threshold, method: str, use_dataset_settings: bool = False) -> dict:
+    if use_dataset_settings:  # omit retrieval_model: Dify falls back to the knowledge base's own saved settings
+        return {"query": query}
     return {
         "query": query,
         "retrieval_model": {
@@ -123,6 +125,9 @@ def main() -> None:
                     help="score threshold; omit to disable filtering (full score distribution)")
     ap.add_argument("--search-method", default="semantic_search",
                     choices=["semantic_search", "full_text_search", "hybrid_search", "keyword_search"])
+    ap.add_argument("--use-dataset-settings", action="store_true",
+                    help="send only the query; Dify applies the knowledge base's own saved retrieval settings "
+                         "(tests the UI configuration, ignores --top-k/--threshold/--search-method)")
     ap.add_argument("--out-root", default=str(ROOT / "evaluation" / "runs"))
     ap.add_argument("--note", default="", help="free text stored in config.json")
     ap.add_argument("--delay", type=float, default=6.5,
@@ -150,7 +155,7 @@ def main() -> None:
 
     if a.dry_run:
         for q in questions:
-            print(json.dumps({"id": q["id"], **build_body(q["query"], a.top_k, a.threshold, a.search_method)},
+            print(json.dumps({"id": q["id"], **build_body(q["query"], a.top_k, a.threshold, a.search_method, a.use_dataset_settings)},
                              ensure_ascii=False))
         print(f"\n{len(questions)} requests would be sent to {base}/datasets/<id>/retrieve")
         return
@@ -175,7 +180,7 @@ def main() -> None:
 
     for i, q in enumerate(questions, 1):
         try:
-            resp = call_api(url, key, build_body(q["query"], a.top_k, a.threshold, a.search_method))
+            resp = call_api(url, key, build_body(q["query"], a.top_k, a.threshold, a.search_method, a.use_dataset_settings))
         except SystemExit:
             save_partial()
             raise
@@ -206,7 +211,8 @@ def main() -> None:
         "run": a.name, "date": date.today().isoformat(), "note": a.note,
         "git": git_info(),
         "api": {"base_url": base, "search_method": a.search_method, "top_k": a.top_k,
-                "score_threshold": a.threshold, "reranking_enable": False},
+                "score_threshold": a.threshold, "reranking_enable": False,
+                "use_dataset_settings": a.use_dataset_settings},
         "questions_file": os.path.relpath(a.questions, ROOT),
         "questions_sha256": sha256(Path(a.questions)),
         "questions_run": [q["id"] for q in questions],

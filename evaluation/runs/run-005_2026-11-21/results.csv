@@ -1,0 +1,6 @@
+query_id,query,language,rank,score,document,segment_position,segment_id,section_title,top_k,score_threshold
+Q6,行李可以帶多重？,zh-TW,1,0.729,osaka-busan-panstar.md,6,33ab4967-e984-4bb0-bbd1-67a3def0a816,【釜山航線｜パンスターミラクル号】行李規定（一般行李）,5,
+Q6,行李可以帶多重？,zh-TW,2,0.7147,kansai-shanghai-shinganjin.md,9,8e2475f4-6ef6-4453-acdb-fa30c52407a0,【上海航線｜鑑真号】行李規定,5,
+Q7,去韓國需要簽證嗎？,zh-TW,1,0.7247,osaka-busan-panstar.md,11,1227a161-977d-4634-8025-ae9f8b7167ef,【釜山航線｜パンスターミラクル号】護照、簽證與入境,5,
+Q8,神戸から高松へのフェリーは？,ja,,,,,,(no results),5,
+Q20,福岡から釜山へのフェリーは？,ja,,,,,,(no results),5,
