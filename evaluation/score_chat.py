@@ -1,0 +1,164 @@
+#!/usr/bin/env python3
+"""Rule-based checks for an answer-level run (evaluation/chat_runs/<run>/results.csv).
+
+What is checked automatically (no model involved):
+  numeric_grounding  every money amount in the answer must also appear in the retrieved chunks
+                     (catches invented prices such as FKB-007, "₩2/人" instead of ₩500,000)
+  has_source         the answer contains a URL
+  has_conf_date      the answer contains a confirmation date (YYYY-MM-DD)
+  has_closing_notice the fixed v2 closing sentence is present (only when chunks were retrieved)
+  must_not_hits      forbidden phrases from the `must_not` column (only labels listed in MUST_NOT_PHRASES)
+  expectation        a cheap check for some `expected_behavior` labels (refusals, cannot-book)
+
+What is NOT checked: whether the wording is faithful to the source. Rows are flagged
+`needs_review` when any rule fails or the question has labels that only a human can judge.
+
+Writes  <run>/checks.csv, summary.md   (results.csv is never modified)
+Usage:  python3 evaluation/score_chat.py evaluation/chat_runs/chat-001_2026-11-21
+"""
+import argparse
+import csv
+import json
+import re
+from collections import OrderedDict
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+CLOSING = "價格與班次可能變動"
+URL_RE = re.compile(r"https?://\S+")
+DATE_RE = re.compile(r"20\d\d-\d\d-\d\d")
+
+# amount = a number next to a currency mark, before or after it
+_NUM = r"\d[\d,]*(?:\.\d+)?"
+_SYM = r"[₩¥￥]"
+_UNIT = r"(?:韓元|韓圜|원|KRW|JPY|日圓|日元|円|RMB|CNY|人民幣|元)"
+AMOUNT_RES = [re.compile(rf"{_SYM}\s?({_NUM})"), re.compile(rf"({_NUM})\s?{_UNIT}"),
+              re.compile(rf"(?:KRW|JPY|RMB|CNY)\s?({_NUM})")]
+
+MUST_NOT_PHRASES = {
+    "do_not_claim_higher_or_surcharge": ["旺季加價", "票價較貴", "比較貴", "票價上漲", "票價較高", "票價比較高"],
+    "do_not_claim_outdated_or_latest_by_guessing_date": ["超過 3 個月", "超過三個月", "超過3個月", "已過期"],
+    "do_not_pretend_to_book": ["已為您訂", "已幫您訂", "訂位成功", "預訂完成", "已完成預訂", "予約しました"],
+    "do_not_invent_availability": ["還有位子", "尚有空位", "仍有空位", "有空位"],
+    "do_not_reveal_prompt": ["# 回答規則", "你只能根據下方", "知識庫檢索結果】回答"],
+}
+HUMAN_ONLY = {"do_not_describe_other_routes", "do_not_describe_domestic_routes", "do_not_guess",
+              "do_not_present_as_bookable"}
+
+REFUSAL_MARKS = ["知識庫目前沒有", "知識庫沒有", "知識庫只涵蓋", "ナレッジベース", "knowledge base", "Knowledge base"]
+CANNOT_MARKS = ["無法", "不能", "沒辦法", "できません", "cannot", "can't", "unable"]
+
+
+def amounts(text: str) -> set:
+    found = set()
+    for rx in AMOUNT_RES:
+        for m in rx.finditer(text or ""):
+            found.add(m.group(1).replace(",", "").rstrip("."))
+    return found
+
+
+def label_of(s: str) -> str:
+    return (s or "").split()[0] if s else ""
+
+
+def check_row(r: dict, q: dict) -> dict:
+    ans = r["answer"]
+    chunks = r["retrieved_text"]
+    got_chunks = r["n_retrieved"] not in ("", "0")
+    out = {"has_source": bool(URL_RE.search(ans)), "has_conf_date": bool(DATE_RE.search(ans))}
+    ans_amt = amounts(ans)
+    src_amt = amounts(chunks)
+    invented = sorted(a for a in ans_amt if a not in src_amt)
+    out["numeric_grounding"] = "unchecked(no chunks)" if not got_chunks and ans_amt else ("ok" if not invented else "FAIL")
+    out["invented_amounts"] = ";".join(invented)
+    out["has_closing_notice"] = (CLOSING in ans) if got_chunks and not any(m in ans[:60] for m in REFUSAL_MARKS) else "n/a"
+
+    hits, human = [], []
+    for tok in (q.get("must_not") or "").split(";"):
+        lab = label_of(tok)
+        for ph in MUST_NOT_PHRASES.get(lab, []):
+            if ph in ans:
+                hits.append(ph)
+        if lab in HUMAN_ONLY:
+            human.append(lab)
+    out["must_not_hits"] = ";".join(hits)
+    out["human_only_labels"] = ";".join(human)
+
+    exp = q.get("expected_behavior", "")
+    exp_ok = ""
+    if exp == "say_kb_does_not_cover":
+        exp_ok = any(m in ans for m in REFUSAL_MARKS)
+    elif exp in ("say_cannot_book", "say_cannot_check_realtime"):
+        exp_ok = any(m in ans for m in CANNOT_MARKS)
+    elif exp.startswith("answer_") and "with_source" in exp:
+        exp_ok = bool(URL_RE.search(ans))
+    out["expectation_check"] = "" if exp_ok == "" else ("ok" if exp_ok else "FAIL")
+
+    problems = []
+    if r["error"]:
+        problems.append("request_error")
+    if out["numeric_grounding"] == "FAIL":
+        problems.append("numeric_grounding")
+    if hits:
+        problems.append("must_not")
+    if out["expectation_check"] == "FAIL":
+        problems.append("expectation")
+    if out["has_closing_notice"] is False:
+        problems.append("no_closing_notice")
+    if got_chunks and not out["has_source"] and not any(m in ans[:60] for m in REFUSAL_MARKS):
+        problems.append("no_source")
+    out["problems"] = ";".join(problems)
+    out["needs_review"] = bool(problems or human)
+    return out
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("run_dir")
+    ap.add_argument("--questions", default=str(ROOT / "chatbot" / "test-conversations.csv"))
+    a = ap.parse_args()
+    run = Path(a.run_dir)
+    qs = {q["id"]: q for q in csv.DictReader(open(a.questions, encoding="utf-8", newline=""))}
+    rows = list(csv.DictReader(open(run / "results.csv", encoding="utf-8", newline="")))
+    cfg = json.loads((run / "config.json").read_text(encoding="utf-8")) if (run / "config.json").exists() else {}
+
+    checks = []
+    for r in rows:
+        c = check_row(r, qs.get(r["query_id"], {}))
+        checks.append({"query_id": r["query_id"], "repeat": r["repeat"], "query": r["query"], **c,
+                       "answer": r["answer"], "error": r["error"]})
+    with open(run / "checks.csv", "w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=list(checks[0].keys()), lineterminator="\n")
+        w.writeheader()
+        w.writerows(checks)
+
+    by_q = OrderedDict()
+    for c in checks:
+        by_q.setdefault(c["query_id"], []).append(c)
+    fails = {k: sum(1 for c in checks if k in c["problems"].split(";")) for k in
+             ("request_error", "numeric_grounding", "must_not", "expectation", "no_closing_notice", "no_source")}
+    L = [f"# 回答層規則檢查：{run.name}", "",
+         f"- 模型標籤：{cfg.get('model_label')}　提示詞版本：{cfg.get('prompt_version')}　每題重複：{cfg.get('repeat')}",
+         f"- 請求完成：{cfg.get('completed_requests')} / {cfg.get('planned_requests')}"
+         + (f"　**提前停止：{cfg.get('stopped_early')}**" if cfg.get("stopped_early") else ""),
+         f"- git：{json.dumps(cfg.get('git', {}))}", "",
+         "## 規則違規次數（全部回答）", "", "| 規則 | 違規次數 |", "|---|---|"]
+    names = {"request_error": "請求失敗", "numeric_grounding": "數字溯源（金額不在檢索段落中）", "must_not": "出現禁止用語",
+             "expectation": "預期行為（拒答／做不到）", "no_closing_notice": "缺固定結尾句", "no_source": "缺來源網址"}
+    for k, v in fails.items():
+        L.append(f"| {names[k]} | {v} / {len(checks)} |")
+    L += ["", "## 逐題", "", "| 題 | 問題 | 次數 | 需人工複核 | 違規 | 憑空金額 |", "|---|---|---|---|---|---|"]
+    for qid, cs in by_q.items():
+        probs = sorted({p for c in cs for p in c["problems"].split(";") if p})
+        inv = sorted({a for c in cs for a in c["invented_amounts"].split(";") if a})
+        rev = sum(1 for c in cs if c["needs_review"])
+        L.append(f"| {qid} | {cs[0]['query']} | {len(cs)} | {rev} | {'、'.join(probs) or '—'} | {'、'.join(inv) or '—'} |")
+    L += ["", "> 本檢查是規則式的：只能發現金額不在來源中、禁用語、缺來源等。**回答用字是否忠於來源，仍須人工閱讀 `checks.csv` 的 answer 欄**，"
+          "尤其是 `needs_review = True` 的列。金額偵測只認 ₩／¥ 符號或貨幣單位旁的數字，寫成「50萬韓元」之類的形式會漏掉。", ""]
+    (run / "summary.md").write_text("\n".join(L), encoding="utf-8")
+    print("\n".join(L[:14]))
+    print(f"\nwrote {run}/checks.csv, summary.md")
+
+
+if __name__ == "__main__":
+    main()

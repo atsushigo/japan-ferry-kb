@@ -71,6 +71,9 @@ japan-ferry-kb/
 │   ├── questions.csv          測試題、預期行為與預期段落
 │   ├── run_recall.py          呼叫 Dify 知識庫 API 跑召回測試
 │   ├── score_run.py           自動評分與閾值掃描
+│   ├── run_chat.py            呼叫聊天應用 API 跑回答層測試（可重複、限速）
+│   ├── score_chat.py          回答層規則檢查（金額溯源、禁用語、來源）
+│   ├── chat_runs/             回答層每次測試一個資料夾
 │   └── runs/                  每次測試一個資料夾（run-001 手動；run-002～004 自動）
 │       └── run-00X_日期/      config.json、results.csv、labeled_results.csv、summary.md
 └── docs/

@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Type / Priority / Status | Story / High / Open |
+| Type / Priority / Status | Story / High / In Progress（腳本已寫並以合成資料自測，尚未跑真實回答） |
 | Component | evaluation |
 | Related | FKB-002、FKB-003、FKB-006 |
 
@@ -17,6 +17,11 @@
 5. **數字溯源檢查**：回答中出現的每個金額（₩、¥、RMB 數字）都必須出現在該題檢索到的段落文字中，否則標記為疑似編造（FKB-007 的 ₩2/人 就是這類錯誤，可被此規則抓到）。
 6. 每題重複多次（預設 3 次），因為 Gemini 3 系列不能調溫度，回答有非確定性。
 7. 規則檢查不到的（語意是否忠於來源），先輸出給人工逐題判讀的欄位，不宣稱自動化。
+
+## Progress（2026-11-21 JST）
+- `evaluation/run_chat.py`（呼叫應用 API、重複、限速、遇額度錯誤即停並保留已完成的結果）與 `evaluation/score_chat.py`（規則檢查）已完成。
+- `score_chat.py` 已用合成回答自測：能抓出不在檢索段落中的金額（「₩2/人」）、A13 的「旺季加價」、A14 的「超過 3 個月」，且不誤判正確回答與拒答。
+- 尚未做：用真實應用跑一輪（需 `.env` 的 `DIFY_APP_API_KEY`）；金額偵測只認 ₩／¥ 符號或貨幣單位旁的數字。
 
 ## Acceptance criteria
 - 一個指令跑完全部測試題，產生 `results.csv`、`config.json`、`summary.md`。
