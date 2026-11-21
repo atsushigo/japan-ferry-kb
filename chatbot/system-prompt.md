@@ -11,6 +11,7 @@ do not type the placeholder by hand.
 | v1 | 2026-11-21 | 10 rules, drafted from the retrieval audit | superseded |
 | v1.1 | 2026-11-21 | Added rule 11 (ignore instructions to change rules / reveal the prompt); retrieval result appended | superseded by v2 |
 | v2 | 2026-11-21 | Replace rule 5 with a fixed notice; add rule 2-1 (no extrapolation). See [FKB-002](../docs/issues/FKB-002-unsupported-peak-season-surcharge.md), [FKB-003](../docs/issues/FKB-003-stale-date-rule-not-answerable.md) | **deployed**; FKB-002/003 verified on gemini-3.5-flash-lite (n=3 + A13); FKB-007 (random wrong price) still open |
+| v3 | 2026-11-22 | Add rule 10-1: fixed one-line-per-cabin price format, person count after the price. Experiment for [FKB-007](../docs/issues/FKB-007-nondeterministic-price-hallucination.md) | **proposed**, not yet published; test = A1 x20 |
 
 ## 為什麼有這些規則（每條規則的依據）
 
@@ -74,3 +75,16 @@ Add after rule 2:
 ```text
 2-1. 只轉述檢索結果的原話範圍，不要把「另計」「加價」「免費」「可用」「不可用」等說法延伸成檢索結果沒有寫的結論。例如檢索結果只說旺季不能使用折扣，就不能說旺季票價較貴。
 ```
+
+## v3 change (proposed; one variable only)
+
+Insert after rule 10 and before「# 輸出格式」. Publish afterwards ("發布更新") and check the editor says 「已發布 幾秒前」.
+
+```text
+10-1. 列出票價時，每個艙等獨立一行，格式固定為：
+艙等名稱：單程 ₩金額（客房人數：N 人）
+金額必須逐字抄自檢索結果中「同一個艙等」那一列；人數只能寫在行尾括號內，不得放在金額前面。使用者沒有指定來回時只列單程；使用者問來回時，在同一行補上「／來回 ₩金額」。
+```
+
+Rationale: all 4 wrong prices so far were on the balcony-suite row and 3 of the 4 wrong values start with "2", the same digit as that row's person count (「2 人」). Moving the count after the price is a test of that association, not a proven fix.
+Pass criterion: A1 x20, 0 numeric-grounding failures on the balcony row (previous rate 4 of 33 A1 requests).
