@@ -1,0 +1,19 @@
+id,query,language,category,expected_behavior,must_retrieve,must_not,run1_status,recall_runs
+Q1,從大阪坐船去上海，現在可以？,zh-TW,in_scope,先說明官方公告旅客運送暫停且再開未定；請向營運公司確認,上海「目前狀態」,說可以訂票或搭乘,done,run1+run2
+Q2,大阪去釜山的船幾點開？,zh-TW,in_scope,列出大阪出發班次（週一三五 17:00，翌日 10:00 抵達）並提醒確認最新班表,釜山「船班」,混入上海資料,done,run1+run2
+Q3,上海航線的房型和票價？,zh-TW,in_scope,列出票價並註明適用期間未標示、旅客運送暫停中,上海「票價（日本出發）」與「票價（上海出發）」,把票價說成現在可以購買,done,run1+run2
+Q4,釜山船票的日圓價格是多少？,zh-TW,no_answer_in_kb,說明官方只公布韓元票價，沒有日圓票價（燃油附加費與稅金有日圓）,釜山「票價」,編造日圓票價或自行匯率換算成確定價,not run,run2
+Q5,取消船票要多少手續費？,zh-TW,ambiguous_route,列出兩條航線並標明航線；釜山要說明日文與韓文官網規定不一致,上海與釜山「取消與退票」,只回答一條航線、把釜山兩套規定合併,done,run1+run2
+Q6,行李可以帶多重？,zh-TW,ambiguous_route,分航線說明；釜山註明 FAQ 與 2020 年約款數字不同,上海與釜山「行李規定」,編造沒有的規定,not run,run2
+Q7,去韓國需要簽證嗎？,zh-TW,no_answer_in_kb,說明知識庫沒有韓國簽證資料（只有韓國 e-Arrival card 公告與日本簽證 FAQ，且 FAQ 未註明適用國籍），請查證外交部或移民署規定,釜山「護照、簽證與入境」,憑模型知識回答簽證規定或把日本免簽說明套用到所有國籍,done (v1 docs),run1+run2
+Q8,神戸から高松へのフェリーは？,ja,out_of_scope,檢索為空；回答知識庫目前只涵蓋關西出發的國際航線,（應無任何段落）,憑模型知識介紹神戶–高松航線,done,run1+run2
+Q9,大阪から釜山のフェリーの時刻表を教えてください,ja,in_scope,以日文回答釜山班次,釜山「船班」,回答上海資料,planned,run2
+Q10,Is the ferry from Osaka to Shanghai running now?,en,in_scope,以英文說明旅客運送暫停,上海「目前狀態」,說營運中,planned,run2
+Q11,釜山的船有開到嗎？明天會不會停航？,zh-TW,realtime,說明知識庫無即時運航資料，請查營運公司公告,（無）,編造當日運航狀況,planned,chatbot-stage
+Q12,幫我訂一張大阪到釜山的船票,zh-TW,action_request,說明機器人無法訂票，只能提供資訊與官方購票連結,釜山「船班」「報到與登船手續」,假裝已完成訂票,planned,chatbot-stage
+Q13,釜山的船可以帶寵物嗎？,zh-TW,ambiguous_route,釜山：Miracle 號目前沒有可帶寵物的商品；上海：官網列為不可攜帶,釜山「乘船限制」與上海「乘船條件與船上服務」,說可以帶寵物,planned,run2
+Q14,大阪去釜山最晚幾點要到碼頭？,zh-TW,conflicting_sources,說明官方有三套說法（出航前 90 分鐘／1 小時 10 分／班次頁 16:10）並建議至少提前 90 分鐘,釜山「報到與登船手續」,只給單一時間且說得很肯定,planned,run2
+Q15,懷孕了可以搭船去釜山嗎？,zh-TW,in_scope,需醫師意見書（出航前 7 日內）；32–36 週意見書須註明可搭船；37 週以上限制,釜山「乘船限制」,說不用任何文件,planned,run2
+Q16,可以帶高爾夫球袋上釜山的船嗎？,zh-TW,in_scope,"不可帶進客房，須託運；3 天前申請免費，當天 ₩20,000",釜山「高爾夫球袋」,說可帶進客房,planned,run2
+Q17,釜山航線的燃油附加費是多少？,zh-TW,in_scope,"2026-11-01 起：釜山出發 ₩27,000、大阪出發 ¥2,700（每人）",釜山「附加費、稅金與旺季」,說金額未公布,planned,run2
+Q18,上海的船票可以退嗎？暫停期間呢？,zh-TW,in_scope,先說明暫停狀態與「已預訂船票免取消費」；暫停以外的取消料見 FAQ 但適用性未說明,上海「目前狀態」「取消與退票」,說可以隨時全額退,planned,run2

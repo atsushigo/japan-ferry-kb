@@ -1,0 +1,27 @@
+query_id,query,query_type,top_k,rank,score,doc,chunk,chunk_topic,label
+Q1,從大阪坐船去上海，現在可以？,in_scope,3,1,0.80,shanghai,Chunk-02,標題段落（H1＋警告）,meta
+Q1,從大阪坐船去上海，現在可以？,in_scope,3,2,0.80,shanghai,Chunk-03,目前狀態（暫停公告）,relevant
+Q1,從大阪坐船去上海，現在可以？,in_scope,3,3,0.79,shanghai,Chunk-01,檔頭 front matter,meta
+Q2,大阪去釜山的船幾點開？,in_scope,3,1,0.83,busan,Chunk-03,船班 Timetable,relevant
+Q2,大阪去釜山的船幾點開？,in_scope,3,2,0.80,busan,Chunk-04,登船手續,relevant
+Q2,大阪去釜山的船幾點開？,in_scope,3,3,0.79,busan,Chunk-02,標題段落（H1＋電話）,meta
+Q3,上海航線的房型和票價？,in_scope,5,1,0.80,shanghai,Chunk-09,票價（上海出發 RMB）,relevant
+Q3,上海航線的房型和票價？,in_scope,5,2,0.79,shanghai,Chunk-08,票價（日本出發 JPY）,relevant
+Q3,上海航線的房型和票價？,in_scope,5,3,0.72,shanghai,Chunk-13,學生票,off_topic
+Q3,上海航線的房型和票價？,in_scope,5,4,0.72,shanghai,Chunk-14,已知缺口,off_topic
+Q3,上海航線的房型和票價？,in_scope,5,5,0.71,shanghai,Chunk-11,行李規定,off_topic
+Q5,取消船票要多少手續費？,in_scope,5,1,0.78,shanghai,Chunk-06,取消與變更（FAQ）,relevant
+Q5,取消船票要多少手續費？,in_scope,5,2,0.78,shanghai,Chunk-10,取消與退票（PDF）,relevant
+Q5,取消船票要多少手續費？,in_scope,5,3,0.76,busan,Chunk-07,取消與退票,relevant
+Q5,取消船票要多少手續費？,in_scope,5,4,0.69,busan,Chunk-05,票價（KRW）,off_topic
+Q5,取消船票要多少手續費？,in_scope,5,5,0.68,shanghai,Chunk-11,行李規定,off_topic
+Q7,去韓國需要簽證嗎？,no_answer_in_kb,5,1,0.73,busan,Chunk-08,入境相關（註明答案未取得）,relevant
+Q7,去韓國需要簽證嗎？,no_answer_in_kb,5,2,0.64,busan,Chunk-04,登船手續,off_topic
+Q7,去韓國需要簽證嗎？,no_answer_in_kb,5,3,0.62,busan,Chunk-02,標題段落（H1＋電話）,meta
+Q7,去韓國需要簽證嗎？,no_answer_in_kb,5,4,0.62,busan,Chunk-01,檔頭 front matter,meta
+Q7,去韓國需要簽證嗎？,no_answer_in_kb,5,5,0.61,busan,Chunk-07,取消與退票,off_topic
+Q8,神戸から高松へのフェリーは？,out_of_scope,5,1,0.70,shanghai,Chunk-02,標題段落（H1＋警告）,meta
+Q8,神戸から高松へのフェリーは？,out_of_scope,5,2,0.69,shanghai,Chunk-01,檔頭 front matter,meta
+Q8,神戸から高松へのフェリーは？,out_of_scope,5,3,0.67,shanghai,Chunk-05,港口與地址,off_topic
+Q8,神戸から高松へのフェリーは？,out_of_scope,5,4,0.67,shanghai,Chunk-03,目前狀態（暫停公告）,off_topic
+Q8,神戸から高松へのフェリーは？,out_of_scope,5,5,0.64,shanghai,Chunk-04,航線與時刻,off_topic
