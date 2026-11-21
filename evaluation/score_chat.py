@@ -29,7 +29,8 @@ from collections import OrderedDict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-CLOSING = "價格與班次可能變動"
+CLOSING_VARIANTS = ("價格與班次可能變動", "価格や運航日程は変更される場合があります", "Prices and schedules may change")
+CLOSING = CLOSING_VARIANTS[0]  # kept for readers of older runs
 URL_RE = re.compile(r"https?://\S+")
 DATE_RE = re.compile(r"20\d\d-\d\d-\d\d")
 
@@ -83,7 +84,7 @@ def check_row(r: dict, q: dict) -> dict:
     invented = sorted(a for a in ans_amt if a not in src_amt)
     out["numeric_grounding"] = "unchecked(no chunks)" if not got_chunks and ans_amt else ("ok" if not invented else "FAIL")
     out["invented_amounts"] = ";".join(invented)
-    out["has_closing_notice"] = (CLOSING in ans) if got_chunks and not any(m in ans[:60] for m in REFUSAL_MARKS) else "n/a"
+    out["has_closing_notice"] = any(c in ans for c in CLOSING_VARIANTS) if got_chunks and not any(m in ans[:60] for m in REFUSAL_MARKS) else "n/a"
 
     hits, human = [], []
     for tok in (q.get("must_not") or "").split(";"):
@@ -117,7 +118,9 @@ def check_row(r: dict, q: dict) -> dict:
         mismatch = kana < 0.15 * max(1, cjk + kana)
     elif lang == "en":
         mismatch = cjk > 0.1 * max(1, cjk + latin)
-    out["language_ok"] = "n/a" if lang not in ("ja", "en") else ("FAIL" if mismatch else "ok")
+    elif lang == "multi":  # three-language button text: v5 rule 3 says answer in Japanese
+        mismatch = kana < 0.15 * max(1, cjk + kana)
+    out["language_ok"] = "n/a" if lang not in ("ja", "en", "multi") else ("FAIL" if mismatch else "ok")
     # glued: the opening words reappear in the middle of a line, stuck right after another word
     # (a truncated generation followed by a complete one). Heuristic only; it can also fire on a
     # natural repeat such as "從大阪到釜山", so flagged rows must be read.

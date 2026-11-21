@@ -1,5 +1,5 @@
 query_id,repeat,query,has_source,has_conf_date,numeric_grounding,invented_amounts,has_closing_notice,must_not_hits,human_only_labels,expectation_check,language_ok,glued_output,status_first,not_buyable_caveat,problems,needs_review,answer,error
-A25,1,大阪到釜山船票多少錢？ How much is a ferry ticket from Osaka to Busan? 大阪から釜山までのフェリー運賃はいくらですか？,True,True,ok,,True,,,,n/a,False,,,,False,"大阪到釜山的單程票價如下（含 2 餐，不含稅金與燃油附加費）：
+A25,1,大阪到釜山船票多少錢？ How much is a ferry ticket from Osaka to Busan? 大阪から釜山までのフェリー運賃はいくらですか？,True,True,ok,,True,,,,FAIL,False,,,language,True,"大阪到釜山的單程票價如下（含 2 餐，不含稅金與燃油附加費）：
 
 總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
 皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
@@ -15,7 +15,7 @@ A25,1,大阪到釜山船票多少錢？ How much is a ferry ticket from Osaka to
 來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q42、Q43、Q44）（確認日期：2026-11-21）
 
 價格與班次可能變動，請以官方最新公告為準。",
-A25,2,大阪到釜山船票多少錢？ How much is a ferry ticket from Osaka to Busan? 大阪から釜山までのフェリー運賃はいくらですか？,True,True,ok,,True,,,,n/a,False,,,,False,"大阪至釜山的單程票價如下：
+A25,2,大阪到釜山船票多少錢？ How much is a ferry ticket from Osaka to Busan? 大阪から釜山までのフェリー運賃はいくらですか？,True,True,ok,,True,,,,FAIL,False,,,language,True,"大阪至釜山的單程票價如下：
 
 總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
 皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
@@ -31,7 +31,7 @@ A25,2,大阪到釜山船票多少錢？ How much is a ferry ticket from Osaka to
 來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q42、Q43、Q44）（確認日期：2026-11-21）
 
 價格與班次可能變動，請以官方最新公告為準。",
-A25,3,大阪到釜山船票多少錢？ How much is a ferry ticket from Osaka to Busan? 大阪から釜山までのフェリー運賃はいくらですか？,True,True,ok,,True,,,,n/a,False,,,,False,"大阪到釜山的單程票價如下（單程票價含 2 餐，稅金與燃油附加費另計）：
+A25,3,大阪到釜山船票多少錢？ How much is a ferry ticket from Osaka to Busan? 大阪から釜山までのフェリー運賃はいくらですか？,True,True,ok,,True,,,,FAIL,False,,,language,True,"大阪到釜山的單程票價如下（單程票價含 2 餐，稅金與燃油附加費另計）：
 
 總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
 皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
@@ -43,7 +43,7 @@ A25,3,大阪到釜山船票多少錢？ How much is a ferry ticket from Osaka to
 來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q42、Q43、Q44）（確認日期：2026-11-21）
 
 價格與班次可能變動，請以官方最新公告為準。",
-A26,1,大阪釜山的取消費怎麼算？ How are cancellation fees calculated for the Osaka–Busan ferry? 大阪―釜山のキャンセル料はどう計算されますか？,True,True,ok,,True,,,,n/a,False,,,,False,"大阪—釜山航線（パンスターミラクル号）的取消規定官方提供兩套不一致的說法，請向購票處確認適用哪一版本。
+A26,1,大阪釜山的取消費怎麼算？ How are cancellation fees calculated for the Osaka–Busan ferry? 大阪―釜山のキャンセル料はどう計算されますか？,True,True,ok,,True,,,,FAIL,False,,,language,True,"大阪—釜山航線（パンスターミラクル号）的取消規定官方提供兩套不一致的說法，請向購票處確認適用哪一版本。
 
 * **韓文官網（一般票）**：
   * 付款後～出航 3 天前：全額退款
@@ -70,7 +70,7 @@ A26,1,大阪釜山的取消費怎麼算？ How are cancellation fees calculated 
 來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q48）；https://www.panstar.jp/article/ ；https://www.panstar.jp/ticketpurchase/（確認日期：2026-11-21）
 
 價格與班次可能變動，請以官方最新公告為準。",
-A26,2,大阪釜山的取消費怎麼算？ How are cancellation fees calculated for the Osaka–Busan ferry? 大阪―釜山のキャンセル料はどう計算されますか？,True,True,ok,,True,,,,n/a,False,,,,False,"大阪—釜山航線（パンスターミラクル号）的取消規定在官網上有兩套不一致的說法，請以購票處的最新說明為準。
+A26,2,大阪釜山的取消費怎麼算？ How are cancellation fees calculated for the Osaka–Busan ferry? 大阪―釜山のキャンセル料はどう計算されますか？,True,True,ok,,True,,,,FAIL,False,,,language,True,"大阪—釜山航線（パンスターミラクル号）的取消規定在官網上有兩套不一致的說法，請以購票處的最新說明為準。
 
 要點：
 - **韓文官網說明（一般票）**：
@@ -88,7 +88,7 @@ A26,2,大阪釜山的取消費怎麼算？ How are cancellation fees calculated 
 來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q48）；https://www.panstar.jp/article/ ；https://www.panstar.jp/ticketpurchase/（確認日期：2026-11-21）
 
 價格與班次可能變動，請以官方最新公告為準。",
-A26,3,大阪釜山的取消費怎麼算？ How are cancellation fees calculated for the Osaka–Busan ferry? 大阪―釜山のキャンセル料はどう計算されますか？,True,True,ok,,True,,,,n/a,False,,,,False,"大阪—釜山航線（パンスターミラクル号）的取消規定官方提供兩套不一致的說法，請向購票處確認適用哪一版本。
+A26,3,大阪釜山的取消費怎麼算？ How are cancellation fees calculated for the Osaka–Busan ferry? 大阪―釜山のキャンセル料はどう計算されますか？,True,True,ok,,True,,,,FAIL,False,,,language,True,"大阪—釜山航線（パンスターミラクル号）的取消規定官方提供兩套不一致的說法，請向購票處確認適用哪一版本。
 
 * **韓文官網（一般票）**：
   * 付款後～出航 3 天前：全額退款
@@ -115,7 +115,7 @@ A26,3,大阪釜山的取消費怎麼算？ How are cancellation fees calculated 
 來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（Q48）；https://www.panstar.jp/article/ ；https://www.panstar.jp/ticketpurchase/（確認日期：2026-11-21）
 
 價格與班次可能變動，請以官方最新公告為準。",
-A27,1,上海航線現在有開嗎？ Is the Shanghai ferry running now? 上海航路は今、運航していますか？,True,True,ok,,True,,,,n/a,False,ok,,,False,"上海航線目前的狀態為：官方於 2025-12-08 公告旅客運送暫停，再開時間未定；官網雖然仍有船班表，但未說明是否恢復載客，這項資料不代表現在可以購買或搭乘。
+A27,1,上海航線現在有開嗎？ Is the Shanghai ferry running now? 上海航路は今、運航していますか？,True,True,ok,,True,,,,FAIL,False,ok,,language,True,"上海航線目前的狀態為：官方於 2025-12-08 公告旅客運送暫停，再開時間未定；官網雖然仍有船班表，但未說明是否恢復載客，這項資料不代表現在可以購買或搭乘。
 
 - 官方 2025-12-08 公告因中國側提出之渡航安全考量，鑑真号的旅客服務暫時中斷，再開時間未定。
 - 官網目前的運航狀況與班次表仍列有「鑑真号」航次，但該頁面不區分旅客與貨物，亦未說明是否恢復載客。
@@ -124,7 +124,7 @@ A27,1,上海航線現在有開嗎？ Is the Shanghai ferry running now? 上海�
 來源：https://www.shinganjin.com/news/ ；https://www.shinganjin.com/status/?pram=jianzhenhao ；https://www.shinganjin.com/wp/wp-content/uploads/2025/06/Notice-of-the-passenger-transportation-resumption.pdf（確認日期：2026-11-21）
 
 價格與班次可能變動，請以官方最新公告為準。",
-A27,2,上海航線現在有開嗎？ Is the Shanghai ferry running now? 上海航路は今、運航していますか？,True,True,ok,,True,,,,n/a,False,ok,,,False,"官方於 2025-12-08 公告旅客運送暫停、再開未定；這項資料不代表現在可以購買或搭乘。官網仍有船班表，但未說明是否恢復載客，請直接向日中国際フェリー確認。
+A27,2,上海航線現在有開嗎？ Is the Shanghai ferry running now? 上海航路は今、運航していますか？,True,True,ok,,True,,,,ok,False,ok,,,False,"官方於 2025-12-08 公告旅客運送暫停、再開未定；這項資料不代表現在可以購買或搭乘。官網仍有船班表，但未說明是否恢復載客，請直接向日中国際フェリー確認。
 
 - 官方於 2025-12-08 公告：「12月6日上海発便から当面の間、中国側の申し入れで皆様の日中間の渡航の安全が確保できないということから、鑑真号での旅客サービスを暫く中断致します」。
 - 再開については未定です。
@@ -133,7 +133,7 @@ A27,2,上海航線現在有開嗎？ Is the Shanghai ferry running now? 上海�
 
 來源：https://www.shinganjin.com/news/ ；https://www.shinganjin.com/status/?pram=jianzhenhao ；https://www.shinganjin.com/wp/wp-content/uploads/2025/06/Notice-of-the-passenger-transportation-resumption.pdf（確認日期：2026-11-21）
 價格與班次可能變動，請以官方最新公告為準。",
-A27,3,上海航線現在有開嗎？ Is the Shanghai ferry running now? 上海航路は今、運航していますか？,True,True,ok,,True,,,,n/a,False,ok,,,False,"上海航線目前的旅客運送暫停，官方未公告再開時間，且這項資料不代表現在可以購買或搭乘。官方 2025-12-08 公告旅客運送暫停、再開未定；官網仍有船班表，但未說明是否恢復載客，請直接向日中国際フェリー確認。
+A27,3,上海航線現在有開嗎？ Is the Shanghai ferry running now? 上海航路は今、運航していますか？,True,True,ok,,True,,,,FAIL,False,ok,,language,True,"上海航線目前的旅客運送暫停，官方未公告再開時間，且這項資料不代表現在可以購買或搭乘。官方 2025-12-08 公告旅客運送暫停、再開未定；官網仍有船班表，但未說明是否恢復載客，請直接向日中国際フェリー確認。
 
 - 官方於 2025-12-08 公告，自 12 月 6 日上海發車航班起暫停鑑真号的旅客服務，再開時間未定。
 - 官網運航狀況頁與運航表仍列有「鑑真号」的航次，但未區分旅客或貨物，亦未說明是否恢復載客。
@@ -141,7 +141,7 @@ A27,3,上海航線現在有開嗎？ Is the Shanghai ferry running now? 上海�
 來源：https://www.shinganjin.com/news/ ；https://www.shinganjin.com/status/?pram=jianzhenhao ；https://www.shinganjin.com/wp/wp-content/uploads/2025/06/Notice-of-the-passenger-transportation-resumption.pdf（確認日期：2026-11-21）
 
 價格與班次可能變動，請以官方最新公告為準。",
-A28,1,搭大阪釜山的船需要準備哪些證件？ What documents do I need for the Osaka–Busan ferry? 大阪―釜山のフェリーに乗るには、どんな書類が必要ですか？,True,True,ok,,True,,,ok,n/a,False,,,,False,"搭乘大阪—釜山（パンスターミラクル号）需要準備護照，領票與出境都需要護照，沒有護照不能領票。此外，若有學生身分需出示學生證，享有折扣者須於出航當天領票時交出折扣證明文件（沒帶可能追加費用）。
+A28,1,搭大阪釜山的船需要準備哪些證件？ What documents do I need for the Osaka–Busan ferry? 大阪―釜山のフェリーに乗るには、どんな書類が必要ですか？,True,True,ok,,True,,,ok,FAIL,False,,,language,True,"搭乘大阪—釜山（パンスターミラクル号）需要準備護照，領票與出境都需要護照，沒有護照不能領票。此外，若有學生身分需出示學生證，享有折扣者須於出航當天領票時交出折扣證明文件（沒帶可能追加費用）。
 
 要點：
 - 護照：領票與出境皆必須具備，沒有護照不能領票。
@@ -151,7 +151,7 @@ A28,1,搭大阪釜山的船需要準備哪些證件？ What documents do I need 
 來源：https://www.panstarcruise.com/support/notice/265 ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
 
 價格與班次可能變動，請以官方最新公告為準。",
-A28,2,搭大阪釜山的船需要準備哪些證件？ What documents do I need for the Osaka–Busan ferry? 大阪―釜山のフェリーに乗るには、どんな書類が必要ですか？,True,True,ok,,True,,,ok,n/a,False,,,,False,"搭乘大阪—釜山（パンスターミラクル号）需要準備護照，領票與出境都需要護照，沒有護照不能領票。
+A28,2,搭大阪釜山的船需要準備哪些證件？ What documents do I need for the Osaka–Busan ferry? 大阪―釜山のフェリーに乗るには、どんな書類が必要ですか？,True,True,ok,,True,,,ok,FAIL,False,,,language,True,"搭乘大阪—釜山（パンスターミラクル号）需要準備護照，領票與出境都需要護照，沒有護照不能領票。
 
 要點：
 - 護照效期：官網寫「海外旅行護照效期至少要剩 6 個月以上」，依登船當天剩餘效期，可能無法出境。實際規定以各國政府為準。
@@ -162,7 +162,7 @@ A28,2,搭大阪釜山的船需要準備哪些證件？ What documents do I need 
 來源：https://www.panstarcruise.com/support/notice/265 ；https://www.panstarcruise.com/support/faq（Q51）；https://www.panstarcruise.com/product/osaka/info ；https://www.panstar.jp/（確認日期：2026-11-21）
 
 價格與班次可能變動，請以官方最新公告為準。",
-A28,3,搭大阪釜山的船需要準備哪些證件？ What documents do I need for the Osaka–Busan ferry? 大阪―釜山のフェリーに乗るには、どんな書類が必要ですか？,True,True,ok,,True,,,ok,n/a,False,,,,False,"搭乘大阪—釜山（パンスターミラクル号）需要準備護照，領票與出境都需要護照，沒有護照不能領票。此外，若有學生身分需出示學生證；若適用折扣，領票時須交出折扣證明文件。
+A28,3,搭大阪釜山的船需要準備哪些證件？ What documents do I need for the Osaka–Busan ferry? 大阪―釜山のフェリーに乗るには、どんな書類が必要ですか？,True,True,ok,,True,,,ok,FAIL,False,,,language,True,"搭乘大阪—釜山（パンスターミラクル号）需要準備護照，領票與出境都需要護照，沒有護照不能領票。此外，若有學生身分需出示學生證；若適用折扣，領票時須交出折扣證明文件。
 
 * 護照：海外旅行護照效期至少要剩 6 個月以上（依登船當天剩餘效期，可能無法出境，實際規定以各國政府為準）
 * 身分證明：學生需出示學生證
@@ -171,7 +171,7 @@ A28,3,搭大阪釜山的船需要準備哪些證件？ What documents do I need 
 來源：https://www.panstarcruise.com/support/notice/265 ；https://www.panstarcruise.com/support/faq（Q10、Q51）等（確認日期：2026-11-21）
 
 價格與班次可能變動，請以官方最新公告為準。",
-A29,1,大阪港到釜山的行李限制是什麼？ What is the luggage limit from Osaka to Busan? 大阪港から釜山までの荷物制限は？,True,True,ok,,True,,,ok,n/a,False,,,,False,"大阪港到釜山的帕ンスターミラクル号（Pan Star）行李規定如下：
+A29,1,大阪港到釜山的行李限制是什麼？ What is the luggage limit from Osaka to Busan? 大阪港から釜山までの荷物制限は？,True,True,ok,,True,,,ok,FAIL,False,,,language,True,"大阪港到釜山的帕ンスターミラクル号（Pan Star）行李規定如下：
 
 - **隨身行李**（韓文官網 FAQ Q22）：三邊合計 200cm 以內、30kg 以內，符合條件則數量不限、免費。釜山國際客運站出入境審查區內不能使用行李推車。
 - **託運行李**：沒有免費額度，在 1 樓行李區依重量計費：1～20kg ₩10,000，每多 5kg 加 ₩5,000。託運需簽「託運行李免責同意書」。
@@ -192,7 +192,7 @@ A29,1,大阪港到釜山的行李限制是什麼？ What is the luggage limit fr
 來源：https://www.panstarcruise.com/support/faq（Q19、Q20、Q21、Q22、Q23、Q24、Q32）；https://www.panstarcruise.com/product/osaka/price；https://www.panstar.jp/article/；https://www.panstarcruise.com/support/notice/313；https://www.panstarcruise.com/support/notice/256（確認日期：2026-11-21）
 
 價格與班次可能變動，請以官方最新公告為準。",
-A29,2,大阪港到釜山的行李限制是什麼？ What is the luggage limit from Osaka to Busan? 大阪港から釜山までの荷物制限は？,True,True,ok,,True,,,ok,n/a,False,,,,False,"大阪港到釜山的パンスターミラクル号行李規定分為隨身行李與託運行李，且有兩種版本的說明。
+A29,2,大阪港到釜山的行李限制是什麼？ What is the luggage limit from Osaka to Busan? 大阪港から釜山までの荷物制限は？,True,True,ok,,True,,,ok,FAIL,False,,,language,True,"大阪港到釜山的パンスターミラクル号行李規定分為隨身行李與託運行李，且有兩種版本的說明。
 
 以下為重點：
 
@@ -209,7 +209,7 @@ A29,2,大阪港到釜山的行李限制是什麼？ What is the luggage limit fr
 來源：https://www.panstarcruise.com/support/faq（Q19、Q20、Q21、Q22、Q23、Q24、Q32）；https://www.panstarcruise.com/product/osaka/price ；https://www.panstar.jp/article/ ；https://www.panstarcruise.com/support/notice/313 ；https://www.panstarcruise.com/support/notice/256（確認日期：2026-11-21）
 
 價格與班次可能變動，請以官方最新公告為準。",
-A29,3,大阪港到釜山的行李限制是什麼？ What is the luggage limit from Osaka to Busan? 大阪港から釜山までの荷物制限は？,True,True,ok,,True,,,ok,n/a,False,,,,False,"知識庫提供的大阪至釜山航線（パンスターミラクル号）行李限制分為隨身行李、託運行李、特殊行李與電池限制：
+A29,3,大阪港到釜山的行李限制是什麼？ What is the luggage limit from Osaka to Busan? 大阪港から釜山までの荷物制限は？,True,True,ok,,True,,,ok,FAIL,False,,,language,True,"知識庫提供的大阪至釜山航線（パンスターミラクル号）行李限制分為隨身行李、託運行李、特殊行李與電池限制：
 
 - 隨身行李（韓文官網 FAQ Q22）：三邊合計 200cm 以內、30kg 以內，符合條件則數量不限、免費。釜山國際客運站出入境審查區內不能使用行李推車。
 - 託運行李：沒有免費額度，在 1 樓行李區依重量計費：1～20kg ₩10,000，每多 5kg 加 ₩5,000（價格頁）。託運需簽「託運行李免責同意書」。
