@@ -25,9 +25,15 @@
 
 ## 一張圖看懂回答流程
 
-![Dify 回答流程：知識檢索、條件分支、LLM、金額檢查、回覆](docs/assets/dify-flow.png)
+**前半：檢索與判斷（1～4）**
 
-*Dify 編排畫面截圖（已發布版本，2026-11-22），紅色編號是本文加註；畫面上的節點名稱是 Dify 的預設名稱。*
+![Dify 回答流程前半：開始、知識檢索、條件分支、LLM、查無資料的固定回覆](docs/assets/dify-flow-1.png)
+
+**後半：LLM 回答之後的金額檢查（5～8）**，從 3 的 LLM 接過來：
+
+![Dify 回答流程後半：程式碼執行、條件分支 2、通過時的回覆、被擋時的固定回覆](docs/assets/dify-flow-2.png)
+
+*Dify 編排畫面匯出圖（已發布版本，2026-11-22），分成兩張以便閱讀；[完整一張圖在這裡](docs/assets/dify-flow.png)。紅色編號是本文加註；畫面上的節點名稱是 Dify 的預設名稱。*
 
 | # | 節點 | 做什麼 | 為什麼這樣設計 |
 |---|---|---|---|
@@ -141,7 +147,8 @@ japan-ferry-kb/
     ├── multilingual-design-options.md       多語言設計選項（已決定延後）
     ├── issues/                     問題與改善紀錄（Jira 格式，FKB-001～）
     └── assets/
-        ├── dify-flow.png              Dify 回答流程截圖（本頁最上方，已標註編號）
+        ├── dify-flow.png              Dify 回答流程匯出圖（完整一張，已標註編號）
+        ├── dify-flow-1.png / -2.png   同圖拆成前、後半（本頁最上方使用）
         ├── threshold-calibration.png  閾值校準圖
         ├── retrieval-scores.png       第一輪（舊版文件）分數分佈
         ├── make_calibration_chart.py  由 run-002／003 產生校準圖
