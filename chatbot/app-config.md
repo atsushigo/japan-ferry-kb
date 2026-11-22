@@ -61,6 +61,6 @@ The ELSE reply also lists three example questions (tested to hit the knowledge b
 
 ## Still to do
 
-- ~~Export the app DSL~~ Done 2026-11-22: [`kansai-ferry-guide.app.yaml`](kansai-ferry-guide.app.yaml) (exported from the draft; the encrypted dataset ID is redacted; no keys present). Settings confirmed from it: retry off, memory window off, model `gemini-3.5-flash-lite`, prompt v5.1, opening statement and five buttons as in `opening-questions.md`.
+- ~~Export the app DSL~~ Done 2026-11-22: [`kansai-ferry-guide.app.yaml`](kansai-ferry-guide.app.yaml) (re-exported after the amount guardrail was published; the encrypted dataset ID is redacted; no keys present). Compared with the first export: three nodes added (code node `程式碼執行`, `條件分支 2`, `直接回覆 3`) and the edges LLM -> code -> if-else -> reply; no existing node changed. Settings confirmed from it: retry off, memory window off, model `gemini-3.5-flash-lite`, prompt v5.1, opening statement and five buttons as in `opening-questions.md`.
 - Verify the retrieval node's threshold in the editor (see above) and, if it is missing in the node, set it there so the flow does not depend on the knowledge base's setting.
 - Set the memory window (multi-turn is not tested yet, [FKB-011](../docs/issues/FKB-011-eval-harness-limitations.md)).

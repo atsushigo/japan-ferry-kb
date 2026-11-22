@@ -1,4 +1,4 @@
-# Dify app export (format dify.app v2, app.yaml of the .ifpkg package), exported 2026-11-22 JST from the DRAFT.
+# Dify app export (format dify.app v2, app.yaml of the .ifpkg package), exported 2026-11-22 JST (after the amount guardrail was published; draft = published at that time).
 # Redacted before committing: dataset_ids (Dify exports an encrypted knowledge-base ID). No API keys or secrets were present
 # (checked against the .env values and common key patterns). The app icon image (i_000001.jpg) and manifest.yaml are not included.
 # To rebuild the app, create it from this file's settings by hand or re-export; the knowledge base must be re-selected in the
@@ -114,19 +114,6 @@ workflow:
     - data:
         isInIteration: false
         isInLoop: false
-        sourceType: llm
-        targetType: answer
-      id: llm-answer
-      selected: false
-      source: llm
-      sourceHandle: source
-      target: answer
-      targetHandle: target
-      type: custom
-      zIndex: 0
-    - data:
-        isInIteration: false
-        isInLoop: false
         sourceType: start
         targetType: knowledge-retrieval
       id: 1795263784429-source-1795263834320-target
@@ -173,6 +160,56 @@ workflow:
       source: '1795264048796'
       sourceHandle: 'false'
       target: '1795264098444'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: llm-source-1795315868188-target
+      selected: false
+      source: llm
+      sourceHandle: source
+      target: '1795315868188'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: if-else
+      id: 1795315868188-source-1795316348470-target
+      selected: false
+      source: '1795315868188'
+      sourceHandle: source
+      target: '1795316348470'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: answer
+      id: 1795316348470-true-answer-target
+      source: '1795316348470'
+      sourceHandle: 'true'
+      target: answer
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: answer
+      id: 1795316348470-false-1795317112751-target
+      source: '1795316348470'
+      sourceHandle: 'false'
+      target: '1795317112751'
       targetHandle: target
       type: custom
       zIndex: 0
@@ -323,11 +360,11 @@ workflow:
       height: 102
       id: answer
       position:
-        x: 1112.8103435052587
-        y: 350.16435167745135
+        x: 1711.4908356657932
+        y: 355.35184285185136
       positionAbsolute:
-        x: 1112.8103435052587
-        y: 350.16435167745135
+        x: 1711.4908356657932
+        y: 355.35184285185136
       selected: false
       sourcePosition: right
       targetPosition: left
@@ -436,8 +473,114 @@ workflow:
       type: custom
       width: 242
       zIndex: 0
+    - data:
+        code: "import json\nimport re\n\n_NUM = r\"\\d[\\d,]*(?:\\.\\d+)?\"\n_SYM\
+          \ = r\"[₩¥￥]\"\n_UNIT = r\"(?:韓元|韓圜|원|KRW|JPY|日圓|日元|円|RMB|CNY|人民幣|元)\"\n\
+          _AMOUNT_RES = [re.compile(rf\"{_SYM}\\s?({_NUM})\"), re.compile(rf\"({_NUM})\\\
+          s?{_UNIT}\"),\n               re.compile(rf\"(?:KRW|JPY|RMB|CNY)\\s?({_NUM})\"\
+          )]\n\n\ndef _amounts(text):\n    found = set()\n    for rx in _AMOUNT_RES:\n\
+          \        for m in rx.finditer(text or \"\"):\n            found.add(m.group(1).replace(\"\
+          ,\", \"\").rstrip(\".\"))\n    return found\n\n\ndef _to_text(x):\n    if\
+          \ isinstance(x, str):\n        return x\n    try:\n        return json.dumps(x,\
+          \ ensure_ascii=False)\n    except (TypeError, ValueError):\n        return\
+          \ str(x)\n\n\ndef main(answer, context):\n    bad = sorted(a for a in _amounts(_to_text(answer))\
+          \ if a not in _amounts(_to_text(context)))\n    return {\"verdict\": \"\
+          block\" if bad else \"pass\", \"bad\": \",\".join(bad)}"
+        code_language: python3
+        outputs:
+          bad:
+            children: null
+            type: string
+          verdict:
+            children: null
+            type: string
+        selected: false
+        title: 程式碼執行
+        type: code
+        variables:
+        - value_selector:
+          - llm
+          - text
+          value_type: string
+          variable: answer
+        - value_selector:
+          - '1795263834320'
+          - result
+          value_type: array[object]
+          variable: context
+      height: 52
+      id: '1795315868188'
+      position:
+        x: 1112.8103435052587
+        y: 350.16435167745135
+      positionAbsolute:
+        x: 1112.8103435052587
+        y: 350.16435167745135
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 0
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: is
+            id: a48292c5-64d9-47ce-96ca-053ae98d0db9
+            value: pass
+            varType: string
+            variable_selector:
+            - '1795315868188'
+            - verdict
+          logical_operator: and
+        selected: false
+        title: 條件分支 2
+        type: if-else
+      height: 124
+      id: '1795316348470'
+      position:
+        x: 1412.8103435052587
+        y: 350.16435167745135
+      positionAbsolute:
+        x: 1412.8103435052587
+        y: 350.16435167745135
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 0
+    - data:
+        answer: '這個回答裡的金額無法與知識庫核對，為避免誤導，已不顯示。請再問一次，或直接查詢官方網站。
+
+
+          The amounts in this answer could not be verified against the knowledge base,
+          so it was not shown to avoid misleading you. Please ask again or check the
+          official website.
+
+
+          この回答に含まれる金額をナレッジベースで確認できなかったため、誤解を避けるために表示を中止しました。もう一度質問するか、公式サイトをご確認ください。'
+        selected: false
+        title: 直接回覆 3
+        type: answer
+        variables: []
+      height: 276
+      id: '1795317112751'
+      position:
+        x: 1711.4908356657932
+        y: 496.35184285185136
+      positionAbsolute:
+        x: 1711.4908356657932
+        y: 496.35184285185136
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 0
     viewport:
-      x: -252.2412566039303
-      y: 21.335608997406325
-      zoom: 0.7937005498131732
+      x: -281.8627464685097
+      y: -58.93416715494675
+      zoom: 0.6299605627737331
   rag_pipeline_variables: []
