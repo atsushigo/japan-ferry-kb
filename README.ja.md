@@ -11,18 +11,27 @@
 
 | 知りたいこと | 移動先 |
 |---|---|
+| 対象の航路は？ | [対象航路](#対象航路) |
 | 質問を受けたボットは何をする？ | [1 枚の図で分かる回答フロー](#1-枚の図で分かる回答フロー) |
-| どんなことが分かった？ | [このプロジェクトで分かったこと](#このプロジェクトで分かったこと) |
 | 情報はどこから来て、どうナレッジベースに入る？ | [データ処理の流れ](#データ処理の流れ) |
+| どんなことが分かった？ | [このプロジェクトで分かったこと](#このプロジェクトで分かったこと) |
 | ボットのルールと制限は？ | [回答ルールと既知の制限](#回答ルールと既知の制限) |
 | どんな問題があり、直った？ | [問題の対応状況](#問題の対応状況)（1 件ずつの記録は [`docs/issues/`](docs/issues/README.md)） |
-| 対象の航路は？ | [対象航路](#対象航路) |
 | ファイルの場所は？ | [プロジェクト構成](#プロジェクト構成) |
 | 自分で再現するには？ | [再現手順](#再現手順) |
 | 次にやることは？ | [ロードマップ](#ロードマップ) |
 | 情報の信頼性とライセンスは？ | [データに関する注意とライセンス](#データに関する注意とライセンス) |
 
 詳細な分析：**[第 1 フェーズ RAG データ監査・検索調整レポート](docs/phase1-rag-audit-report.md)**（中国語）。
+
+## 対象航路
+
+| 航路 | 運航会社 | 状況（2026-11-21 確認） | ナレッジ文書 |
+|---|---|---|---|
+| 大阪 ⇄ 釜山 | PANSTAR Cruise Ferry（日本代理店 サンスターライン） | 公式サイトに運休告知なし。最新の時刻表は確認できず | [`knowledge/osaka-busan-panstar.md`](knowledge/osaka-busan-panstar.md) |
+| 大阪／神戸 ⇄ 上海 | 日中国際フェリー「鑑真号」 | **旅客輸送を中断中**（公式告知）。公式サイトの運航表は矛盾 | [`knowledge/kansai-shanghai-shinganjin.md`](knowledge/kansai-shanghai-shinganjin.md) |
+
+ほかに、航路の概要をまとめた [`knowledge/overview-routes.md`](knowledge/overview-routes.md) があり、「どんな航路があるか」といった概括的な質問に当たるようにしています。Phase 1 はこの 2 つの国際航路のみで、国内航路（神戸〜高松など）は第 2 フェーズで扱います。
 
 ## 1 枚の図で分かる回答フロー
 
@@ -46,6 +55,18 @@
 - オンライン：正しい回答 43 件で誤遮断 0 件。**「遮断」ルートはオンラインでまだ一度も発火していない**ため、ステータスは Done ではなく Mitigated。
 - 検出できないもの：金額は本物だが客室タイプが違う場合、通貨記号のない数字。
 
+## データ処理の流れ
+
+```mermaid
+flowchart LR
+  A["公式サイトと PDF<br/>調査・整理・人手で確認"] --> C["knowledge/*.md<br/>1 チャンク 1 トピック<br/>出典と確認日つき"]
+  C --> D["Dify ナレッジベース<br/>gemini-embedding-2"]
+  D --> E["ベクトル検索<br/>Top K 4 · 閾値 0.71"]
+  E --> F["チャットボット<br/>Gemini 3.5 Flash-Lite"]
+  F --> G["ユーザー"]
+  F -.-> H["Phase 2<br/>FastAPI + PostgreSQL"]
+```
+
 ## このプロジェクトで分かったこと
 
 1. **公式情報どうしが矛盾しており、そのままモデルに渡せない。**
@@ -61,18 +82,6 @@
 ![閾値の較正図](docs/assets/threshold-calibration.png)
 
 *図のラベルは中国語です。第 1 回（手動・旧版文書）のスコア分布は [レポート 4.3](docs/phase1-rag-audit-report.md) を参照。*
-
-## データ処理の流れ
-
-```mermaid
-flowchart LR
-  A["公式サイトと PDF<br/>調査・整理・人手で確認"] --> C["knowledge/*.md<br/>1 チャンク 1 トピック<br/>出典と確認日つき"]
-  C --> D["Dify ナレッジベース<br/>gemini-embedding-2"]
-  D --> E["ベクトル検索<br/>Top K 4 · 閾値 0.71"]
-  E --> F["チャットボット<br/>Gemini 3.5 Flash-Lite"]
-  F --> G["ユーザー"]
-  F -.-> H["Phase 2<br/>FastAPI + PostgreSQL"]
-```
 
 ## 回答ルールと既知の制限
 
@@ -101,15 +110,6 @@ LLM の段階では、システムプロンプトのルールが回答の仕方�
 | In Progress | 1 | FKB-005（回答レベルのテスト） |
 
 詳細は [`docs/issues/README.md`](docs/issues/README.md)。数値の誤り（ハルシネーション）への対処レベルと実例は [`docs/hallucination-mitigation-options.md`](docs/hallucination-mitigation-options.md) にあります。
-
-## 対象航路
-
-| 航路 | 運航会社 | 状況（2026-11-21 確認） | ナレッジ文書 |
-|---|---|---|---|
-| 大阪 ⇄ 釜山 | PANSTAR Cruise Ferry（日本代理店 サンスターライン） | 公式サイトに運休告知なし。最新の時刻表は確認できず | [`knowledge/osaka-busan-panstar.md`](knowledge/osaka-busan-panstar.md) |
-| 大阪／神戸 ⇄ 上海 | 日中国際フェリー「鑑真号」 | **旅客輸送を中断中**（公式告知）。公式サイトの運航表は矛盾 | [`knowledge/kansai-shanghai-shinganjin.md`](knowledge/kansai-shanghai-shinganjin.md) |
-
-ほかに、航路の概要をまとめた [`knowledge/overview-routes.md`](knowledge/overview-routes.md) があり、「どんな航路があるか」といった概括的な質問に当たるようにしています。Phase 1 はこの 2 つの国際航路のみで、国内航路（神戸〜高松など）は第 2 フェーズで扱います。
 
 ## プロジェクト構成
 
