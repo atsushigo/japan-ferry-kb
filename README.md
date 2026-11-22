@@ -4,9 +4,46 @@
 
 > 日本語版：[README.ja.md](README.ja.md)
 >
-> **狀態（2026-11-22）**：Phase 1 進行中。知識庫、召回調校、Dify 聊天機器人（Chatflow）與回答層自動測試已完成；剩餘：整理文件。多語言回答只部分改善，已決定延後。
-> 問題與修正過程以 Jira 風格逐條記錄在 [`docs/issues/`](docs/issues/README.md)。
-> 完整分析見 **[第一階段 RAG 資料稽核與檢索調校報告](docs/phase1-rag-audit-report.md)**。
+> **狀態（2026-11-22）**：Phase 1 進行中。知識庫、召回調校、Dify 聊天機器人（Chatflow）、回答層自動測試與金額輸出驗證已完成；剩餘：整理文件。多語言回答只部分改善，已決定延後。
+
+## 目錄
+
+| 想知道… | 跳到 |
+|---|---|
+| 機器人收到問題後怎麼處理？ | [一張圖看懂回答流程](#一張圖看懂回答流程) |
+| 做了哪些發現？ | [這個專案發現了什麼](#這個專案發現了什麼) |
+| 資料從哪來、怎麼進知識庫？ | [資料處理架構](#資料處理架構) |
+| 機器人遵守哪些規則？有什麼限制？ | [回答規則與已知限制](#回答規則與已知限制) |
+| 出過什麼問題、修好了沒？ | [問題處理狀態](#問題處理狀態)（逐條紀錄在 [`docs/issues/`](docs/issues/README.md)） |
+| 涵蓋哪些航線？ | [涵蓋的航線](#涵蓋的航線) |
+| 檔案放在哪？ | [專案結構](#專案結構) |
+| 怎麼自己重做一遍？ | [重現步驟](#重現步驟) |
+| 接下來做什麼？ | [Roadmap](#roadmap) |
+| 資料可靠嗎？授權？ | [資料聲明與授權](#資料聲明與授權) |
+
+完整分析報告：**[第一階段 RAG 資料稽核與檢索調校報告](docs/phase1-rag-audit-report.md)**。
+
+## 一張圖看懂回答流程
+
+![Dify 回答流程：知識檢索、條件分支、LLM、金額檢查、回覆](docs/assets/dify-flow.png)
+
+*Dify 編排畫面截圖（已發布版本，2026-11-22），紅色編號是本文加註；畫面上的節點名稱是 Dify 的預設名稱。*
+
+| # | 節點 | 做什麼 | 為什麼這樣設計 |
+|---|---|---|---|
+| 1 | 開始 → **知識檢索** | 把使用者的問題拿去知識庫做向量檢索，取最相關的 4 段；分數低於 **0.71** 的段落直接丟掉 | 閾值是用 24 題實測校準的，安全區間很窄（[發現 4](#這個專案發現了什麼)） |
+| 2 | **條件分支** | 有沒有檢索到段落？有 → 4；沒有 → 3 | 庫外問題不要交給 LLM 自由發揮 |
+| 3 | **直接回覆 2** | 固定的三語「知識庫沒有這項資料」訊息，附 3 個可以問的範例 | 這條路**完全不呼叫 LLM**，所以不可能編造；範例問題是為了補救閾值擋掉概括性問題（[FKB-012](docs/issues/FKB-012-overview-questions-miss-threshold.md)） |
+| 4 | **LLM** | Gemini 3.5 Flash-Lite + 系統提示詞（v5.1），只准依檢索結果回答；「失敗時重試」關閉 | 規則與每條的依據見 [`chatbot/system-prompt.md`](chatbot/system-prompt.md)；重試會造成兩段輸出拼接（[FKB-008](docs/issues/FKB-008-glued-two-generations.md)） |
+| 5 | **程式碼執行** | 金額檢查：找出回答中每個帶貨幣符號的金額，逐一比對檢索結果 | 提示詞只能降低錯價機率，這是不靠模型的把關（[FKB-007](docs/issues/FKB-007-nondeterministic-price-hallucination.md)、[FKB-013](docs/issues/FKB-013-output-amount-guardrail.md)） |
+| 6 | **條件分支 2** | 檢查結果 `verdict` 是不是 `pass`？是 → 7；否 → 8 | |
+| 7 | **直接回覆** | 顯示 LLM 的回答（含來源與確認日期） | |
+| 8 | **直接回覆 3** | 不顯示這個回答，改顯示三語固定訊息：「金額無法與知識庫核對，請再問一次或查官網」 | 寧可不答，也不要給出沒有依據的價格 |
+
+這道金額檢查的效果與限制（詳見 [FKB-013](docs/issues/FKB-013-output-amount-guardrail.md)）：
+- 離線：過去 230 則回答只擋下 3 則，正好是已知的 3 個錯價；人造的 524 個錯價全擋。
+- 線上：43 次正確回答 0 誤擋。**「擋下」這條路還沒在線上真的觸發過**，所以狀態是 Mitigated，不是 Done。
+- 抓不到：金額是真的但配錯艙等；沒有貨幣符號的數字。
 
 ## 這個專案發現了什麼
 
@@ -25,30 +62,19 @@
 
 *第一輪（手動、舊版文件）的分數分佈見 [報告 4.3](docs/phase1-rag-audit-report.md)。*
 
-## 架構
+## 資料處理架構
 
 ```mermaid
 flowchart LR
   A["官方網站與 PDF<br/>查證、整理、人工核對"] --> C["knowledge/*.md<br/>一段一個主題<br/>附來源與確認日期"]
   C --> D["Dify 知識庫<br/>gemini-embedding-2"]
-  D --> E["向量檢索<br/>Top K 5 · 閾值 0.71"]
+  D --> E["向量檢索<br/>Top K 4 · 閾值 0.71"]
   E --> F["聊天機器人<br/>Gemini 3.5 Flash-Lite"]
   F --> G["使用者"]
   F -.-> H["Phase 2<br/>FastAPI + PostgreSQL"]
 ```
 
-## 聊天機器人的回答流程
-
-```mermaid
-flowchart LR
-  Q["提問"] --> R["檢索<br/>Top K 5 · 閾值 0.71"]
-  R --> E{"有達閾值的段落？"}
-  E -- 否 --> N["固定訊息：沒有資料<br/>附建議問題（三語）"]
-  E -- 是 --> L["LLM（系統提示詞）<br/>只依檢索結果回答"]
-  L --> G["金額檢查（程式碼）<br/>金額都在檢索結果裡？"]
-  G -- 是 --> F["答案 + 來源 + 確認日期"]
-  G -- 否 --> X["不顯示，改固定訊息<br/>（三語）"]
-```
+## 回答規則與已知限制
 
 LLM 這一步由系統提示詞的規則決定怎麼回答（完整規則與每條的依據見 [`chatbot/system-prompt.md`](chatbot/system-prompt.md)）：
 
@@ -76,7 +102,7 @@ LLM 這一步由系統提示詞的規則決定怎麼回答（完整規則與每�
 
 詳見 [`docs/issues/README.md`](docs/issues/README.md)；數字幻覺的處理層級與實例見 [`docs/hallucination-mitigation-options.md`](docs/hallucination-mitigation-options.md)。
 
-## 目前涵蓋的航線
+## 涵蓋的航線
 
 | 航線 | 營運公司 | 狀態（2026-11-21 確認） | 知識文件 |
 |---|---|---|---|
@@ -115,13 +141,14 @@ japan-ferry-kb/
     ├── multilingual-design-options.md       多語言設計選項（已決定延後）
     ├── issues/                     問題與改善紀錄（Jira 格式，FKB-001～）
     └── assets/
-        ├── threshold-calibration.png  閾值校準圖（本頁上方）
+        ├── dify-flow.png              Dify 回答流程截圖（本頁最上方，已標註編號）
+        ├── threshold-calibration.png  閾值校準圖
         ├── retrieval-scores.png       第一輪（舊版文件）分數分佈
         ├── make_calibration_chart.py  由 run-002／003 產生校準圖
         └── make_retrieval_chart.py    由 run-001 產生第一輪圖
 ```
 
-## 重現
+## 重現步驟
 
 1. 依 [`docs/dify-setup.md`](docs/dify-setup.md) 設定模型供應商與知識庫（需自備 Gemini API key，**不要提交 key**）。
 2. 上傳 `knowledge/` 底下的兩份文件。
@@ -138,7 +165,7 @@ japan-ferry-kb/
 | Phase 2 | FastAPI 串接 Dify API、PostgreSQL、國內航線資料 | 未開始 |
 | Phase 3 以後 | 工作流程自動化、人工審核、品質評測、部署 | 未規劃細節 |
 
-## 資料聲明
+## 資料聲明與授權
 
 `knowledge/` 的內容是本專案從營運公司官方網站與公告**整理的摘要**，確認日期見各段落結尾。票價、班次與規定會變動，**可能已過期，不構成訂票或搭乘建議**，請以營運公司官方資訊為準。沒有官方依據的項目一律標示「未取得」，不補編。
 
