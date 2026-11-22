@@ -32,9 +32,9 @@
 | # | 節點 | 做什麼 | 為什麼這樣設計 |
 |---|---|---|---|
 | 1 | 開始 → **知識檢索** | 把使用者的問題拿去知識庫做向量檢索，取最相關的 4 段；分數低於 **0.71** 的段落直接丟掉 | 閾值是用 24 題實測校準的，安全區間很窄（[發現 4](#這個專案發現了什麼)） |
-| 2 | **條件分支** | 有沒有檢索到段落？有 → 4；沒有 → 3 | 庫外問題不要交給 LLM 自由發揮 |
-| 3 | **直接回覆 2** | 固定的三語「知識庫沒有這項資料」訊息，附 3 個可以問的範例 | 這條路**完全不呼叫 LLM**，所以不可能編造；範例問題是為了補救閾值擋掉概括性問題（[FKB-012](docs/issues/FKB-012-overview-questions-miss-threshold.md)） |
-| 4 | **LLM** | Gemini 3.5 Flash-Lite + 系統提示詞（v5.1），只准依檢索結果回答；「失敗時重試」關閉 | 規則與每條的依據見 [`chatbot/system-prompt.md`](chatbot/system-prompt.md)；重試會造成兩段輸出拼接（[FKB-008](docs/issues/FKB-008-glued-two-generations.md)） |
+| 2 | **條件分支** | 有沒有檢索到段落？有 → 3；沒有 → 4 | 庫外問題不要交給 LLM 自由發揮 |
+| 3 | **LLM** | Gemini 3.5 Flash-Lite + 系統提示詞（v5.1），只准依檢索結果回答；「失敗時重試」關閉 | 規則與每條的依據見 [`chatbot/system-prompt.md`](chatbot/system-prompt.md)；重試會造成兩段輸出拼接（[FKB-008](docs/issues/FKB-008-glued-two-generations.md)） |
+| 4 | **直接回覆 2** | 固定的三語「知識庫沒有這項資料」訊息，附 3 個可以問的範例 | 這條路**完全不呼叫 LLM**，所以不可能編造；範例問題是為了補救閾值擋掉概括性問題（[FKB-012](docs/issues/FKB-012-overview-questions-miss-threshold.md)） |
 | 5 | **程式碼執行** | 金額檢查：找出回答中每個帶貨幣符號的金額，逐一比對檢索結果 | 提示詞只能降低錯價機率，這是不靠模型的把關（[FKB-007](docs/issues/FKB-007-nondeterministic-price-hallucination.md)、[FKB-013](docs/issues/FKB-013-output-amount-guardrail.md)） |
 | 6 | **條件分支 2** | 檢查結果 `verdict` 是不是 `pass`？是 → 7；否 → 8 | |
 | 7 | **直接回覆** | 顯示 LLM 的回答（含來源與確認日期） | |
