@@ -1,0 +1,271 @@
+query_id,repeat,query,has_source,has_conf_date,numeric_grounding,invented_amounts,has_closing_notice,must_not_hits,human_only_labels,expectation_check,routes_check,language_ok,glued_output,status_first,not_buyable_caveat,problems,needs_review,answer,error
+A1,1,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪到釜山的單程票價如下：
+
+- 總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+- 皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+- 陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+- 海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+- 內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+- 團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,2,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪至釜山的票價如下：
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,3,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪至釜山的票價如下：
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,4,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪到釜山的單程票價如下：
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,5,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪至釜山的單程票價如下：
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,6,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪至釜山的單程票價如下：
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,7,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪至釜山的單程票價如下（含2餐，稅金與燃油附加費另計）：
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,8,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪至釜山的票價如下：
+
+- 總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+- 皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+- 陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+- 海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+- 內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+- 團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。日圓票價官方沒有公布。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,9,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪至釜山的單程票價如下：
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+單程票價含 2 餐（晚餐、早餐），稅金與燃油附加費另計。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,10,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪至釜山的票價如下：
+
+- 總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000／來回 ₩2,400,000（客房人數：2 人）
+- 皇家套房 ROYAL SUITE：單程 ₩700,000／來回 ₩1,400,000（客房人數：3 人）
+- 陽台套房 BALCONY SUITE：單程 ₩500,000／來回 ₩1,000,000（客房人數：2 人）
+- 海景房 OCEAN VIEW：單程 ₩250,000／來回 ₩500,000（客房人數：4 人）
+- 內側房 INSIDE CABIN：單程 ₩200,000／來回 ₩400,000（客房人數：4 人）
+- 團體房 GROUP：單程 ₩180,000／來回 ₩360,000（客房人數：8 人）
+
+單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,11,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪至釜山的單程票價如下：
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,12,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪到釜山的船票價格依艙等而定，以下為單程與來回票價（不含稅金與燃油附加費）：
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000 / 來回 ₩2,400,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000 / 來回 ₩1,400,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000 / 來回 ₩1,000,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000 / 來回 ₩500,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000 / 來回 ₩400,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000 / 來回 ₩360,000（客房人數：8 人）
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,13,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪到釜山的單程票價如下：
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,14,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪至釜山的單程票價如下：
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。官方未公布日圓票價。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,15,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪至釜山的單程票價如下：
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,16,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪到釜山的單程票價如下：
+
+- 總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+- 皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+- 陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+- 海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+- 內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+- 團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,17,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪至釜山的票價如下：
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,18,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪至釜山的單程票價如下：
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。官方未公布日圓票價。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,19,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪至釜山的單程票價如下：
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",
+A1,20,大阪到釜山船票多少錢？,True,True,ok,,True,,,,,n/a,False,,,,False,"大阪至釜山的單程票價如下：
+
+總統套房 PRESIDENTIAL SUITE：單程 ₩1,200,000（客房人數：2 人）
+皇家套房 ROYAL SUITE：單程 ₩700,000（客房人數：3 人）
+陽台套房 BALCONY SUITE：單程 ₩500,000（客房人數：2 人）
+海景房 OCEAN VIEW：單程 ₩250,000（客房人數：4 人）
+內側房 INSIDE CABIN：單程 ₩200,000（客房人數：4 人）
+團體房 GROUP：單程 ₩180,000（客房人數：8 人）
+
+單程票價含 2 餐（晚餐、早餐）。稅金與燃油附加費另計。
+
+來源：https://www.panstarcruise.com/product/osaka/price ；https://www.panstarcruise.com/support/faq（確認日期：2026-11-21）
+
+價格與班次可能變動，請以官方最新公告為準。",

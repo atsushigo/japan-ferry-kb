@@ -20,7 +20,10 @@
 flowchart LR
     S[Start: query] --> K[Knowledge retrieval<br/>Top K 4, threshold 0.71]
     K --> C{result not empty?}
-    C -- IF --> L[LLM<br/>system prompt + context] --> A[Direct reply: LLM text]
+    C -- IF --> L[LLM<br/>system prompt + context] --> G[Code node<br/>amount check]
+    G --> V{verdict = pass?}
+    V -- IF --> A[Direct reply: LLM text]
+    V -- ELSE --> B[Direct reply 3: fixed text<br/>amounts could not be verified]
     C -- ELSE --> F[Direct reply 2: fixed text<br/>ZH / EN / JA + suggested questions]
 ```
 

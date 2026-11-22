@@ -45,7 +45,9 @@ flowchart LR
   R --> E{"有達閾值的段落？"}
   E -- 否 --> N["固定訊息：沒有資料<br/>附建議問題（三語）"]
   E -- 是 --> L["LLM（系統提示詞）<br/>只依檢索結果回答"]
-  L --> F["答案 + 來源 + 確認日期"]
+  L --> G["金額檢查（程式碼）<br/>金額都在檢索結果裡？"]
+  G -- 是 --> F["答案 + 來源 + 確認日期"]
+  G -- 否 --> X["不顯示，改固定訊息<br/>（三語）"]
 ```
 
 LLM 這一步由系統提示詞的規則決定怎麼回答（完整規則與每條的依據見 [`chatbot/system-prompt.md`](chatbot/system-prompt.md)）：
@@ -68,9 +70,9 @@ LLM 這一步由系統提示詞的規則決定怎麼回答（完整規則與每�
 | 狀態 | 數量 | 項目 |
 |---|---|---|
 | Done | 4 | FKB-002、003、004、012 |
-| Mitigated（已有處置，樣本小） | 4 | FKB-001、007、008、010 |
+| Mitigated（已有處置，樣本小） | 5 | FKB-001、007、008、010、013（金額輸出驗證，已接進 Dify） |
 | Open | 3 | FKB-006（模型比較）、009（多語言，延後）、011（測試工具限制） |
-| In Progress | 2 | FKB-005（回答層測試）、013（金額輸出驗證：程式與離線驗證完成，待接進 Dify） |
+| In Progress | 1 | FKB-005（回答層測試） |
 
 詳見 [`docs/issues/README.md`](docs/issues/README.md)；數字幻覺的處理層級與實例見 [`docs/hallucination-mitigation-options.md`](docs/hallucination-mitigation-options.md)。
 
